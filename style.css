@@ -1,5 +1,16 @@
-head, body{padding:0; margin:0;}
+/* eliminate unwanted padding and margin on head and body tags, set defailt font */
 
+head, body, *{padding:0; margin:0;  font: 25px arial, sans-serif;}
+
+/* --Frame Tags for smaller devices-- */
+
+@viewport {
+width:device-width;
+zoom:1;
+}
+
+
+/* div for panels at top of screen */
 div#header{
 width:100%;
 max-height:250px;
@@ -9,14 +20,70 @@ padding-top:20px;
 padding-bottom:20px;
 }
 
+
+/* div with "Panel Attack" title text */
 div#title_text{
 background-image: url("images/text.png");
 width:90%;
-max-width: 376px;
+max-width: 291px;
 height:158px;
 margin: 20px 5% 20px 5%;
+margin:0 auto;
+margin-top: 20px;
+margin-bottom: 20px;
 background-repeat: no-repeat;
 background-size: contain;
 }
 
-div#nav
+
+/*Main body container*/
+div#body
+{
+max-width:100%;
+padding:0px 40px 20px 40px;
+padding-left:40px;
+padding-right:40px;
+}
+
+/*Main navigation container*/
+div#nav{
+width:100%;
+margin-botom:100px;
+}
+
+ul.nav
+{
+list-style-type:none;
+padding:0;
+padding-top:20px;
+margin:20px, 0, 20px, 0;
+margin:0 auto;
+margin-top:20px;
+margin-bottom:20px;
+width:440px;
+max-width:100%;
+min-height:50px;
+}
+
+li.nav
+{
+font-size:24px;
+font-weight:bold;
+float:left;
+padding:3px 4px;
+display:block;
+margin-right:20px;
+}
+li.last{
+margin:0px;
+}
+li.nav:hover{
+color:#666;
+font-size:26px;
+cursor:pointer;
+}
+li.nav:active{
+color:#33c;
+font-size:26px;
+cursor:pointer;
+}
