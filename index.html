@@ -5,9 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="Panel Attack" />
 <meta name="kewords" content="Panel Attack, Panel-de-pon, Tetris Attack, Pokemon Puzzle League, puzzle game, match-3, match three">
+<meta charset="utf-8"/>
 <link rel="stylesheet" type="text/css" href="style.css">
 <title>Panel Attack</title>
 <link rel="shortcut icon" href="images/icon.png">
+<script>
+window.onload = function() {
+  var nav = document.getElementById("nav");
+  var button = document.getElementById("mobile_nav");
+  var open = false;
+  button.onclick = function(){
+    if(open){
+      open = false;
+      button.style = "-ms-transform: rotate(0deg);transform: rotate(0deg);transition: .5s;-moz-transition: .5s;-webkit-transition: .5s;-o-transition: .5s;";
+      nav.style = "height:0px;transition: .5s;-moz-transition: .5s;-webkit-transition: .5s;-o-transition: .5s;";
+    }else{
+      open = true;
+      button.style = "-ms-transform: rotate(90deg);transform: rotate(90deg);transition: .5s;-moz-transition: .5s;-webkit-transition: .5s;-o-transition: .5s;";
+      nav.style = "height:220px;transition: .5s;-moz-transition: .5s;-webkit-transition: .5s;-o-transition: .5s;";
+    }
+  }
+  window.addEventListener("resize",function(){button.style="";nav.style="";open=false;});
+}
+</script>
 
 </head>
 <body>
@@ -16,6 +36,16 @@
 <div id="title_text"></div>
 </div><!--header div-->
 <div id="body">
+
+<div id="mobile_nav"></div>
+<div id="nav">
+<ul class="nav">
+<li class="nav"><a href="./">Home</a></li>
+<li class="nav"><a href="/panel.zip" target="_blank">Download</a></li>
+<li class="nav"><a href="replays/">Public Replays</a></li>
+<li class="nav"><a href="https://github.com/panel-attack/panel-attack" target="_blank">GitHub</a></li>
+<li class="nav"><a href="faq.html">FAQ</a></li>
+</ul></div><!--nav div-->
 
 <h1>Welcome to Panel Attack!</h1>
 
@@ -39,11 +69,10 @@
 
 <div class="container1"><!--Container to limit container2 width-->
 <div class="container2"><!--Container to determine iframe height-->
-<iframe class="video" src="https://www.youtube.com/embed/NSgZG1dwYSk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="video" src="https://www.youtube.com/embed/lXhdGV-DbTc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 </div>
 <br class="clear">
-
 
 
 </div><!--body div-->
