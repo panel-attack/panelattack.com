@@ -25,7 +25,11 @@ window.onload = function() {
       nav.style = "height:220px;transition: .5s;-moz-transition: .5s;-webkit-transition: .5s;-o-transition: .5s;";
     }
   }
-  window.addEventListener("resize",function(){button.style="";nav.style="";open=false;});
+  window.addEventListener("resize",function(){
+    if(window.innerWidth > 700){
+      button.style="";nav.style="";open=false;
+    }
+  });
 }
 </script>
 
@@ -53,7 +57,7 @@ window.onload = function() {
 
 <a href="http://discord.panelattack.com/" target="_blank"><p class="button">Join the Discord!</p></a>
 
-<p class="clear">The discord server is where we go to hang out and talk about the game, as well as download and share custom graphics packs, sound packs, and puzzles.  You can use the <span class="grey">#matchmaking</span> channel to find an opponent, and you can join in bi-weekly and seasonal tournaments too!</p>
+<p class="clear">The discord server is where we go to hang out and talk about the game, as well as download and share custom graphics packs, sound packs, and puzzles.  You can use the <span class="code">#matchmaking</span> channel to find an opponent, and you can join in bi-weekly and seasonal tournaments too!</p>
 
 <br><h1>Download the game</h1>
 
