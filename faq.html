@@ -35,8 +35,11 @@ window.onload = function() {
       nav.style = "height:220px;transition: .5s;-moz-transition: .5s;-webkit-transition: .5s;-o-transition: .5s;";
     }
   }
-  window.addEventListener("resize",function(){button.style="";nav.style="";open=false;});
-
+  window.addEventListener("resize",function(){
+    if(window.innerWidth > 700){
+      button.style="";nav.style="";open=false;
+    }
+  });
   var q = document.getElementById("questions").children;
   for(i=0; i<q.length; i++){
     q[i].className = i;
