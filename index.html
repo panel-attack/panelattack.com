@@ -17,17 +17,17 @@ window.onload = function() {
   button.onclick = function(){
     if(open){
       open = false;
-      button.style = "-ms-transform: rotate(0deg);transform: rotate(0deg);transition: .5s;-moz-transition: .5s;-webkit-transition: .5s;-o-transition: .5s;";
-      nav.style = "height:0px;transition: .5s;-moz-transition: .5s;-webkit-transition: .5s;-o-transition: .5s;";
+      button.className = "";
+      nav.className = "";
     }else{
       open = true;
-      button.style = "-ms-transform: rotate(90deg);transform: rotate(90deg);transition: .5s;-moz-transition: .5s;-webkit-transition: .5s;-o-transition: .5s;";
-      nav.style = "height:220px;transition: .5s;-moz-transition: .5s;-webkit-transition: .5s;-o-transition: .5s;";
+      button.className = "open";
+      nav.className = "open";
     }
   }
   window.addEventListener("resize",function(){
     if(window.innerWidth > 700){
-      button.style="";nav.style="";open=false;
+      button.className="";nav.className="";open=false;
     }
   });
 }

@@ -192,10 +192,35 @@ overflow:initial;
 @media all and (max-width:700px){
 div#mobile_nav{
 display:block;
+-ms-transform: rotate(0deg);
+transform: rotate(0deg);
+transition: .5s;
+-moz-transition: .5s;
+-webkit-transition: .5s;
+-o-transition: .5s;
+}
+div#mobile_nav.open{
+-ms-transform: rotate(90deg);
+transform: rotate(90deg);
+transition: .5s;
+-moz-transition: .5s;
+-webkit-transition: .5s;
+-o-transition: .5s;
 }
 div#nav{
-height:0px;
 overflow:hidden;
+height:0px;
+transition: .5s;
+-moz-transition: .5s;
+-webkit-transition: .5s;
+-o-transition: .5s;
+}
+div#nav.open{
+height:220px;
+transition: .5s;
+-moz-transition: .5s;
+-webkit-transition: .5s;
+-o-transition: .5s;
 }
 li.nav{
 display:block;
@@ -243,4 +268,20 @@ font-weight:500px;
 }
 .code>p:last-child{
 margin:0px;
+}
+
+.fadein{
+background: #cccccc;
+transition: 1s;
+-moz-transition: 1s;
+-webkit-transition: 1s;
+-o-transition: 1s;
+}
+
+.fadeout{
+"background: #ffffff;
+transition: 1s;
+-moz-transition: 1s;
+-webkit-transition: 1s;
+-o-transition: 1s;
 }
