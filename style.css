@@ -277,9 +277,23 @@ transition: 1s;
 -webkit-transition: 1s;
 -o-transition: 1s;
 }
+.fadein .code{
+background-color:#bbb;
+border:1px solid #aaa;
+transition: 1s;
+-moz-transition: 1s;
+-webkit-transition: 1s;
+-o-transition: 1s;
+}
 
 .fadeout{
 "background: #ffffff;
+transition: 1s;
+-moz-transition: 1s;
+-webkit-transition: 1s;
+-o-transition: 1s;
+}
+.fadeout .code{
 transition: 1s;
 -moz-transition: 1s;
 -webkit-transition: 1s;
