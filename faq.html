@@ -10,19 +10,6 @@
 <title>FAQ - Panel Attack</title>
 <link rel="shortcut icon" href="images/icon.png">
 <script>
-function scrollTo(dest){
-  var curtop = 0;
-  if (dest.offsetParent) {
-    do{
-      curtop += dest.offsetTop;
-    }
-    while (dest == dest.offsetParent);
-    curtop -= 35;
-  }
-  window.scroll(0, curtop);
-  setTimeout(function(){dest.className = "fadeout";}, 1200);
-  dest.className = "fadein";
-}
 window.onload = function() {
   var nav = document.getElementById("nav");
   var button = document.getElementById("mobile_nav");
@@ -44,10 +31,13 @@ window.onload = function() {
     }
   });
   var q = document.getElementById("questions").children;
-  for(i=0; i<q.length; i++){
+  for(var i=0; i<q.length; i++){
     q[i].setAttribute("tag", i);
     q[i].onclick = function(e){
-      scrollTo(document.getElementById("answers").children[e.target.getAttribute("tag")]);
+      var dest = document.getElementById("answers").children[e.target.getAttribute("tag")];
+      window.scroll(0, (dest.offsetTop - 35));
+      setTimeout(function(){dest.className = "fadeout";}, 1200);
+      dest.className = "fadein";
     };
   }
 }
@@ -85,7 +75,7 @@ window.onload = function() {
 
 <div id="answers">
   <div>
-    <p class="q" id="0"><span class="q">Q:</span>  I messed up my controls in Panel Attack, and now it's going crazy.  Help?</p>
+    <p class="q"><span class="q">Q:</span>  I messed up my controls in Panel Attack, and now it's going crazy.  Help?</p>
     <p><span class="a">A:</span>  You need to close Panel Attack and delete the file that saves your input settings.
     On windows, you can type this into the start menu search to get to the right folder:
 
@@ -98,7 +88,7 @@ window.onload = function() {
   </div>
 
   <div>
-    <p class="q" id="1"><span class="q">Q:</span> How do I set Player 2's controls for local play in Panel Attack?</p>
+    <p class="q"><span class="q">Q:</span> How do I set Player 2's controls for local play in Panel Attack?</p>
     <p><span class="a">A:</span>  While in the place for setting Player 1's controls, press right to get to Player 2's controls.
     </p>
   </div>
