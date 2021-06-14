@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Panel Attack" />
+<meta name="keywords" content="Panel Attack, Panel-de-pon, Tetris Attack, Pokemon Puzzle League, puzzle game, match-3, match three, match-three">
+<meta charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>Panel Attack</title>
+<link rel="shortcut icon" href="images/icon.png">
+<script>
+window.onload = function() {
+  var nav = document.getElementById("nav");
+  var button = document.getElementById("mobile_nav");
+  var open = false;
+  button.onclick = function(){
+    if(open){
+      open = false;
+      button.className = "";
+      nav.className = "";
+    }else{
+      open = true;
+      button.className = "open";
+      nav.className = "open";
+    }
+  }
+  window.addEventListener("resize",function(){
+    if(window.innerWidth > 700){
+      button.className="";nav.className="";open=false;
+    }
+  });
+}
+</script>
+
+</head>
+<body>
+
+<div id="header">
+<div id="title_text"></div>
+</div><!--header div-->
+<div id="body">
+
+<div id="mobile_nav"></div>
+<div id="nav">
+<ul class="nav">
+<li class="nav"><a href="./">Home</a></li>
+<li class="nav"><a href="/panel.zip" target="_blank">Download</a></li>
+<li class="nav"><a href="cal.html">Tournaments</a></li>
+<li class="nav"><a href="replays/" target="_blank">Public Replays</a></li>
+<li class="nav"><a href="https://github.com/panel-attack/panel-attack" target="_blank">GitHub</a></li>
+<li class="nav"><a href="faq.html">FAQ</a></li>
+</ul></div><!--nav div-->
+
+<h1>Panel Attack/ Panel de Pon Tournaments</h1>
+
+<p>Our tournaments are mostly hosted on our <a href="https://tetrisattackonline.challonge.com/">Challonge</a> page.
+As a general rule of thumb, we host Panel de Pon tournaments using Nintendo Switch Online every first and third weekend
+of the month, and Panel Attack tournaments every second and fourth weekends. Please refer to the calendar below 
+for the most up to date details, and the associated discord page for additional information or questions.</p>
+
+<h1>Upcoming Events</h1>
+
+<h3>Summer Seasonal:</h3>
+<p>TetrisAttackOnline is hosting our Panel Attack/ Panel de Pon summer seasonal tournament 
+<em>Saturday, July 25</em> at <em>1:00 pm ET</em> (UTC -4). 
+Solitaire will be providing live commentary for Panel Attack, featuring submissions from our summer modding contest. 
+For Panel de Pon, we hope that participants with capture cards will stream their matches. 
+You are welcome to participate in both tournaments if you wish! 
+Signups and full details and in the discord.
+</p>
+
+<img src="images/summer-seasonal.png" style="width:500px">
+
+<h1>Full Schedule</h1>
+<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York&amp;src=ZGVmNm5oMmRub2dlZGwxNG9lY3M0b252c2tAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23AD1457" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
+</div><!--body div-->
+<div id="footer">&#169 Copyright <script>document.write(new Date().getFullYear());</script></div>
+</body>
+</html>
