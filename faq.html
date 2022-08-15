@@ -1,142 +1,174 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="Panel Attack FAQ" />
-<meta name="kewords" content="Panel Attack, Panel-de-pon, Tetris Attack, Pokemon Puzzle League, puzzle game, match-3, match three">
-<meta charset="utf-8"/>
-<link rel="stylesheet" type="text/css" href="style.css">
-<title>FAQ - Panel Attack</title>
-<link rel="shortcut icon" href="images/icon.png">
-<script>
-window.onload = function() {
-  var nav = document.getElementById("nav");
-  var button = document.getElementById("mobile_nav");
-  var open = false;
-  button.onclick = function(){
-    if(open){
-      open = false;
-      button.className = "";
-      nav.className = "";
-    }else{
-      open = true;
-      button.className = "open";
-      nav.className = "open";
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Panel Attack FAQ" />
+  <meta name="kewords"
+    content="Panel Attack, Panel-de-pon, Tetris Attack, Pokemon Puzzle League, puzzle game, match-3, match three">
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>FAQ - Panel Attack</title>
+  <link rel="shortcut icon" href="images/icon.png">
+  <script>
+    window.onload = function () {
+      var nav = document.getElementById("nav");
+      var button = document.getElementById("mobile_nav");
+      var open = false;
+      button.onclick = function () {
+        if (open) {
+          open = false;
+          button.className = "";
+          nav.className = "";
+        } else {
+          open = true;
+          button.className = "open";
+          nav.className = "open";
+        }
+      }
+      window.addEventListener("resize", function () {
+        if (window.innerWidth > 700) {
+          button.className = ""; nav.className = ""; open = false;
+        }
+      });
+      var q = document.getElementById("questions").children;
+      for (var i = 0; i < q.length; i++) {
+        q[i].setAttribute("tag", i);
+        q[i].onclick = function (e) {
+          var dest = document.getElementById("answers").children[e.target.getAttribute("tag")];
+          window.scroll(0, (dest.offsetTop - 35));
+          setTimeout(function () { dest.className = "fadeout"; }, 1200);
+          dest.className = "fadein";
+        };
+      }
     }
-  }
-  window.addEventListener("resize",function(){
-    if(window.innerWidth > 700){
-      button.className="";nav.className="";open=false;
-    }
-  });
-  var q = document.getElementById("questions").children;
-  for(var i=0; i<q.length; i++){
-    q[i].setAttribute("tag", i);
-    q[i].onclick = function(e){
-      var dest = document.getElementById("answers").children[e.target.getAttribute("tag")];
-      window.scroll(0, (dest.offsetTop - 35));
-      setTimeout(function(){dest.className = "fadeout";}, 1200);
-      dest.className = "fadein";
-    };
-  }
-}
-</script>
+  </script>
 
 </head>
+
 <body>
 
-<div id="header">
-<div id="title_text"></div>
-</div><!--header div-->
-<div id="body">
-
-<div id="mobile_nav"></div>
-<div id="nav"><ul class="nav">
-<li class="nav"><a href="./">Home</a></li>
-<li class="nav"><a href="/panel.zip" target="_blank">Download</a></li>
-<li class="nav"><a href="cal.html">Tournaments</a></li>
-<li class="nav"><a href="replays/" target="_blank">Public Replays</a></li>
-<li class="nav"><a href="https://github.com/panel-attack/panel-attack" target="_blank">GitHub</a></li>
-<li class="nav"><a href="faq.html">FAQ</a></li>
-</ul></div><!--nav div-->
-
-<h1>Frequently Asked Questions</h1>
-
-<br class="clear">
-
-<div class="code" id="questions">
-  <p><span class="q">Q:</span>  I messed up my controls in Panel Attack, and now it's going crazy.  Help?</p>
-  <p><span class="q">Q:</span> How do I set Player 2's controls for local play in Panel Attack?</p>
-  <p><span class="q">Q:</span> I have two computers.  Can I use the same Panel Attack ranking system user_id on both, so all my matches get tracked to the same account?</p>
-  <p><span class="q">Q:</span> The game seems to be going too fast!</p>
-  <p><span class="q">Q:</span> How do I access replays?</p>
-</div>
-
-
-<div id="answers">
-  <div>
-    <p class="q"><span class="q">Q:</span>  I messed up my controls in Panel Attack, and now it's going crazy.  Help?</p>
-    <p><span class="a">A:</span>  You need to close Panel Attack and delete the file that saves your input settings.
-    On windows, you can type this into the start menu search to get to the right folder:
-
-    <div class="code">%appdata%\Panel Attack</div>
-
-    then delete <span class="code">keysV2.txt</span>
-
-    Thanks to gamerX459 for making a <a href="https://youtu.be/aQK0MKbNSkA" target="_blank">video demonstration</a> of how to fix the above problem.
-    </p>
+  <div id="header">
+    <div id="title_text"></div>
   </div>
+  <!--header div-->
+  <div id="body">
 
-  <div>
-    <p class="q"><span class="q">Q:</span> How do I set Player 2's controls for local play in Panel Attack?</p>
-    <p><span class="a">A:</span>  While in the place for setting Player 1's controls, press right to get to Player 2's controls.
-    </p>
+    <div id="mobile_nav"></div>
+    <div id="nav">
+      <ul class="nav">
+        <li class="nav"><a href="./">Home</a></li>
+        <li class="nav"><a href="/panel.zip" target="_blank">Download</a></li>
+        <li class="nav"><a href="cal.html">Tournaments</a></li>
+        <li class="nav"><a href="replays/" target="_blank">Public Replays</a></li>
+        <li class="nav"><a href="https://github.com/panel-attack/panel-attack" target="_blank">GitHub</a></li>
+        <li class="nav"><a href="faq.html">FAQ</a></li>
+        <li class="nav"><a href="communities.html">Communities</a></li>
+      </ul>
+    </div>
+    <!--nav div-->
+
+    <h1>Frequently Asked Questions</h1>
+
+    <br class="clear">
+
+    <div class="code" id="questions">
+      <p><span class="q">Q:</span> I messed up my controls in Panel Attack, and now it's going crazy. Help?</p>
+      <p><span class="q">Q:</span> How do I set Player 2's controls for local play in Panel Attack?</p>
+      <p><span class="q">Q:</span> I have two computers. Can I use the same Panel Attack ranking system user_id on both,
+        so all my matches get tracked to the same account?</p>
+      <p><span class="q">Q:</span> The game seems to be going too fast!</p>
+      <p><span class="q">Q:</span> How do I access replays?</p>
+    </div>
+
+
+    <div id="answers">
+      <div>
+        <p class="q"><span class="q">Q:</span> I messed up my controls in Panel Attack, and now it's going crazy. Help?
+        </p>
+        <p><span class="a">A:</span> You need to close Panel Attack and delete the file that saves your input settings.
+          On windows, you can type this into the start menu search to get to the right folder:
+
+        <div class="code">%appdata%\Panel Attack</div>
+
+        then delete <span class="code">keysV2.txt</span>
+
+        Thanks to gamerX459 for making a <a href="https://youtu.be/aQK0MKbNSkA" target="_blank">video demonstration</a>
+        of how to fix the above problem.
+        </p>
+      </div>
+
+      <div>
+        <p class="q"><span class="q">Q:</span> How do I set Player 2's controls for local play in Panel Attack?</p>
+        <p><span class="a">A:</span> While in the place for setting Player 1's controls, press right to get to Player
+          2's controls.
+        </p>
+      </div>
+
+      <div>
+        <p class="q"><span class="q">Q:</span> I have two computers. Can I use the same Panel Attack ranking system
+          user_id on both, so all my matches get tracked to the same account?</p>
+        <p><span class="a">A:</span> Yes, please do.
+          <br>After you've logged into the Panel Attack server(s) once on your first computer, copy your "servers"
+          folder to the appropriate location on your other computer.
+          <br>Here are the folder locations, per operating system.
+          <br><br>NOTE: replace "user" with whatever your operating system username is.
+          <br>Windows 10, 8, 7, or Vista: <span class="code">C:\Users\user\AppData\Roaming\Panel Attack</span> or search
+          for <span class="code">%appdata%\Panel Attack</span>
+          <br>Mac: <span class="code">/Users/user/Library/Application Support/Panel Attack</span>
+          <br>Linux: <span class="code">$XDG_DATA_HOME/Panel Attack</span> or <span
+            class="code">~/.local/share/love/</span>
+          <br>Windows XP <span class="code">C:\Documents</span> and <span class="code">Settings\user\Application
+            Data\Panel Attack</span>
+          <br>This folder contains your user_ids for each server, which Panel Attack uses to log in to the ranking
+          system.
+        </p>
+      </div>
+
+
+      <div>
+        <p class="q"><span class="q">Q:</span> The game seems to be going too fast!</p>
+
+        <p><span class="a">A:</span> The menus may go too fast if you have a monitor that has a refresh rate greater
+          than 60hz. We released an update to fix this mid April 2019, redownload the game if you haven't already since
+          then.
+          <br><br>Gameplay should be normal though. If the FPS counter shows about 60 during gameplay, and it seems like
+          it's going too fast, it could be that you've set your L or R button (raise stack button) to a pressure
+          sensitive trigger, and the game thinks you are constantly pressing that button. This happens especially on
+          Xbox controllers. Use a button such as a bumper instead of a trigger.
+        </p>
+      </div>
+
+
+      <div>
+        <p class="q"><span class="q">Q:</span> How do I access replays?</p>
+
+        <p><span class="a">A:</span> A local replay browser has been implemented.
+          <br><br>Replays of all the games your client has played or spectated are stored as .txt files on your computer
+          in <span class="code">%appdata%\Panel Attack\replays</span>
+          <br>Publicly saved replays are <a href="replays/" target="_blank">stored here</a>. You can adjust whether your
+          replays are saved publicly in the Panel Attack options menu.
+          They are arranged into folders by Panel Attack version, then date (UTC time), then player names.
+          <br><br>Once you have the .txt file for the replay you want to watch, copy it to <span
+            class="code">%appdata%\Panel Attack\replays</span>, then relaunch panel attack and find it with the Replay
+          Browser at the main menu.
+      </div>
+    </div>
+    <!--answers-->
+
+
+    <p class="q"><a href="#header">Back to top</a></p>
+
+
+    <br class="clear">
+
+
   </div>
-
-  <div>
-    <p class="q"><span class="q">Q:</span> I have two computers.  Can I use the same Panel Attack ranking system user_id on both, so all my matches get tracked to the same account?</p>
-    <p><span class="a">A:</span>  Yes, please do.
-    <br>After you've logged into the Panel Attack server(s) once on your first computer, copy your "servers" folder to the appropriate location on your other computer.
-    <br>Here are the folder locations, per operating system.
-    <br><br>NOTE: replace "user" with whatever your operating system username is.
-    <br>Windows 10, 8, 7, or Vista: <span class="code">C:\Users\user\AppData\Roaming\Panel Attack</span> or search for <span class="code">%appdata%\Panel Attack</span>
-    <br>Mac: <span class="code">/Users/user/Library/Application Support/Panel Attack</span>
-    <br>Linux: <span class="code">$XDG_DATA_HOME/Panel Attack</span> or <span class="code">~/.local/share/love/</span>
-    <br>Windows XP <span class="code">C:\Documents</span> and <span class="code">Settings\user\Application Data\Panel Attack</span>
-    <br>This folder contains your user_ids for each server, which Panel Attack uses to log in to the ranking system.
-    </p>
+  <!--body div-->
+  <div id="footer">&#169 Copyright
+    <script>document.write(new Date().getFullYear());</script>
   </div>
-
-
-  <div>
-    <p class="q"><span class="q">Q:</span> The game seems to be going too fast!</p>
-
-    <p><span class="a">A:</span> The menus may go too fast if you have a monitor that has a refresh rate greater than 60hz.  We released an update to fix this mid April 2019, redownload the game if you haven't already since then.
-    <br><br>Gameplay should be normal though.  If the FPS counter shows about 60 during gameplay, and it seems like it's going too fast, it could be that you've set your L or R button (raise stack button) to a pressure sensitive trigger, and the game thinks you are constantly pressing that button.  This happens especially on Xbox controllers.  Use a button such as a bumper instead of a trigger.
-    </p>
-  </div>
-
-
-  <div>
-    <p class="q"><span class="q">Q:</span> How do I access replays?</p>
-
-    <p><span class="a">A:</span> A local replay browser has been implemented.
-    <br><br>Replays of all the games your client has played or spectated are stored as .txt files on your computer in <span class="code">%appdata%\Panel Attack\replays</span>
-    <br>Publicly saved replays are <a href="replays/" target="_blank">stored here</a>. You can adjust whether your replays are saved publicly in the Panel Attack options menu.
-    They are arranged into folders by Panel Attack version, then date (UTC time), then player names.
-    <br><br>Once you have the .txt file for the replay you want to watch, copy it to <span class="code">%appdata%\Panel Attack\replays</span>, then relaunch panel attack and find it with the Replay Browser at the main menu.
-  </div>
-</div><!--answers-->
-
-
-<p class="q"><a href="#header">Back to top</a></p>
-
-
-<br class="clear">
-
-
-</div><!--body div-->
-<div id="footer">&#169 Copyright <script>document.write(new Date().getFullYear());</script></div>
 </body>
+
 </html>

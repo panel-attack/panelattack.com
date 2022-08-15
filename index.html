@@ -1,97 +1,124 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="Panel Attack" />
-<meta name="keywords" content="Panel Attack, Panel-de-pon, Tetris Attack, Pokemon Puzzle League, puzzle game, match-3, match three, match-three">
-<meta charset="utf-8"/>
-<link rel="stylesheet" type="text/css" href="style.css">
-<title>Panel Attack</title>
-<link rel="shortcut icon" href="images/icon.png">
-<script>
-window.onload = function() {
-  var nav = document.getElementById("nav");
-  var button = document.getElementById("mobile_nav");
-  var open = false;
-  button.onclick = function(){
-    if(open){
-      open = false;
-      button.className = "";
-      nav.className = "";
-    }else{
-      open = true;
-      button.className = "open";
-      nav.className = "open";
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Panel Attack" />
+  <meta name="keywords"
+    content="Panel Attack, Panel-de-pon, Tetris Attack, Pokemon Puzzle League, puzzle game, match-3, match three, match-three">
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Panel Attack</title>
+  <link rel="shortcut icon" href="images/icon.png">
+  <script>
+    window.onload = function () {
+      var nav = document.getElementById("nav");
+      var button = document.getElementById("mobile_nav");
+      var open = false;
+      button.onclick = function () {
+        if (open) {
+          open = false;
+          button.className = "";
+          nav.className = "";
+        } else {
+          open = true;
+          button.className = "open";
+          nav.className = "open";
+        }
+      }
+      window.addEventListener("resize", function () {
+        if (window.innerWidth > 700) {
+          button.className = ""; nav.className = ""; open = false;
+        }
+      });
     }
-  }
-  window.addEventListener("resize",function(){
-    if(window.innerWidth > 700){
-      button.className="";nav.className="";open=false;
-    }
-  });
-}
-</script>
+  </script>
 
 </head>
+
 <body>
 
-<div id="header">
-<div id="title_text"></div>
-</div><!--header div-->
-<div id="body">
+  <div id="header">
+    <div id="title_text"></div>
+  </div>
+  <!--header div-->
+  <div id="body">
 
-<div id="mobile_nav"></div>
-<div id="nav">
-<ul class="nav">
-<li class="nav"><a href="./">Home</a></li>
-<li class="nav"><a href="/panel.zip" target="_blank">Download</a></li>
-<li class="nav"><a href="cal.html">Tournaments</a></li>
-<li class="nav"><a href="replays/" target="_blank">Public Replays</a></li>
-<li class="nav"><a href="https://github.com/panel-attack/panel-attack" target="_blank">GitHub</a></li>
-<li class="nav"><a href="faq.html">FAQ</a></li>
-</ul></div><!--nav div-->
+    <div id="mobile_nav"></div>
+    <div id="nav">
+      <ul class="nav">
+        <li class="nav"><a href="./">Home</a></li>
+        <li class="nav"><a href="/panel.zip" target="_blank">Download</a></li>
+        <li class="nav"><a href="cal.html">Tournaments</a></li>
+        <li class="nav"><a href="replays/" target="_blank">Public Replays</a></li>
+        <li class="nav"><a href="https://github.com/panel-attack/panel-attack" target="_blank">GitHub</a></li>
+        <li class="nav"><a href="faq.html">FAQ</a></li>
+        <li class="nav"><a href="communities.html">Communities</a></li>
+      </ul>
+    </div>
+    <!--nav div-->
 
-<h1>Welcome to Panel Attack!</h1>
+    <h1>Welcome to Panel Attack!</h1>
 
-<p>Panel Attack is a very accurate, free, open-source, online multiplayer Panel de Pon / Tetris Attack clone for Windows/Mac/Linux/Android</p>
+    <p>Panel Attack is a very accurate, free, open-source, online multiplayer Panel de Pon / Tetris Attack clone for
+      Windows/Mac/Linux/Android</p>
 
-<a href="http://discord.panelattack.com/" target="_blank"><p class="button">Join the Discord!</p></a>
+    <a href="http://discord.panelattack.com/" target="_blank">
+      <p class="button">Join the Discord!</p>
+    </a>
 
-<p class="clear">The discord server is where we go to hang out and talk about the game, as well as download and share custom graphics packs, sound packs, and puzzles.  You can use the matchmaking channels to find opponents for Panel Attack or Nintendo Switch Online, and you can join monthly <a href="cal.html">tournaments</a> for different skill levels too!</p>
+    <p class="clear">The discord server is where we go to hang out and talk about the game, as well as download and
+      share custom graphics packs, sound packs, and puzzles. You can use the matchmaking channels to find opponents for
+      Panel Attack or Nintendo Switch Online, and you can join monthly <a href="cal.html">tournaments</a> for different
+      skill levels too!</p>
 
-<h1>Download the game</h1>
+    <h1>Download the game</h1>
 
-<p>Panel Attack is very easy to set up. Just download the zip file below, unzip it, and run panel.exe.  Set your controls, set your name, and you're ready to go!  Click the button below to download the latest version of the game.</p>
+    <p>Panel Attack is very easy to set up. Just download the zip file below, unzip it, and run panel.exe. Set your
+      controls, set your name, and you're ready to go! Click the button below to download the latest version of the
+      game.</p>
 
-<a href="/panel.zip" target="_blank"><p class="button">Download panel.zip</p></a>
+    <a href="/panel.zip" target="_blank">
+      <p class="button">Download panel.zip</p>
+    </a>
 
-<br class="clear">
+    <br class="clear">
 
-<h1>Setting up Panel Attack on Mac, Linux or Android</h1>
-<p>Download and install love2d 11.4 for Mac or your distribution of Linux, or the android.apk:<br class="clear">
-<a href="https://github.com/love2d/love/releases" target="_blank">https://github.com/love2d/love/releases</a>
-</p>
-<p>
-    You can then download the windows release of Panel Attack, unzip it, and change the file extension of the panel.exe from .exe to .love. </p>
-    <p>On your Mac, or Linux machine you should be able to double-click it to run it after that.</p>  
-    <p>On Android, use a file browser to open panel.love and choose the love2d app when prompted which app to open the file with. Some file browser apps on Android do not offer this option so you may have to install a different one, e.g. X-plore.
-</p>
+    <h1>Setting up Panel Attack on Mac, Linux or Android</h1>
+    <p>Download and install love2d 11.4 for Mac or your distribution of Linux, or the android.apk:<br class="clear">
+      <a href="https://github.com/love2d/love/releases" target="_blank">https://github.com/love2d/love/releases</a>
+    </p>
+    <p>
+      You can then download the windows release of Panel Attack, unzip it, and change the file extension of the
+      panel.exe from .exe to .love. </p>
+    <p>On your Mac, or Linux machine you should be able to double-click it to run it after that.</p>
+    <p>On Android, use a file browser to open panel.love and choose the love2d app when prompted which app to open the
+      file with. Some file browser apps on Android do not offer this option so you may have to install a different one,
+      e.g. X-plore.
+    </p>
 
-<h1>Introduction Video</h1>
-<p>Here's an introduction video, by community member Graff:</p>
+    <h1>Introduction Video</h1>
+    <p>Here's an introduction video, by community member Graff:</p>
 
-<br class="clear">
+    <br class="clear">
 
-<div class="container1"><!--Container to limit container2 width-->
-<div class="container2"><!--Container to determine iframe height-->
-<iframe class="video" src="https://www.youtube.com/embed/NSgZG1dwYSk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-</div>
-<br class="clear">
+    <div class="container1">
+      <!--Container to limit container2 width-->
+      <div class="container2">
+        <!--Container to determine iframe height-->
+        <iframe class="video" src="https://www.youtube.com/embed/NSgZG1dwYSk" frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <br class="clear">
 
 
-</div><!--body div-->
-<div id="footer">&#169 Copyright <script>document.write(new Date().getFullYear());</script></div>
+  </div>
+  <!--body div-->
+  <div id="footer">&#169 Copyright
+    <script>document.write(new Date().getFullYear());</script>
+  </div>
 </body>
+
 </html>
