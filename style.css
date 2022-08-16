@@ -1,311 +1,337 @@
 /* eliminate unwanted padding and margin on head and body tags, set defailt font */
 
-head, body, *{padding:0; margin:0;  font: 18px arial, sans-serif; color:#000;}
-
-a{
-color:blue;
+head,
+body,
+* {
+  padding: 0;
+  margin: 0;
+  font: 18px arial, sans-serif;
+  color: #000;
 }
 
-h1, p{
-margin-bottom:18px;
+a {
+  color: blue;
 }
 
-h1{
-font-size:22px;
-font-weight:bold;
+h1,
+p {
+  margin-bottom: 18px;
 }
 
-h2{
-font-size:20px;
-font-weight:bold;
+h1 {
+  font-size: 22px;
+  font-weight: bold;
 }
 
-h3{
-font-size:18px;
-font-weight:bold;
+h2 {
+  font-size: 20px;
+  font-weight: bold;
 }
 
-p.button{
-float:left;
-clear:both;
-padding:5px;
-border:1px solid #aaa;
-border-radius:4px;
-font-weight:bold;
-margin-bottom:18px;
-background-color:#BCCDFF;
-box-shadow:-1px -1px 2px 2px #7A9BFF inset;
-}
-p.button:hover{
-cursor:pointer;
-}
-p.button:active{
-background-color:#BCCDFF;
-cursor:pointer;
-box-shadow:none;
-border:1px solid #666;
-margin-top:1px;
-margin-bottom:17px;
+h3 {
+  font-size: 18px;
+  font-weight: bold;
 }
 
-.clear{
-clear:both;
+p.button {
+  float: left;
+  /*clear:both;*/
+  padding: 5px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-bottom: 18px;
+  margin-right: 5px;
+  background-color: #BCCDFF;
+  box-shadow: -1px -1px 2px 2px #7A9BFF inset;
+}
+
+p.button:hover {
+  cursor: pointer;
+}
+
+p.button:active {
+  background-color: #BCCDFF;
+  cursor: pointer;
+  box-shadow: none;
+  border: 1px solid #666;
+  margin-top: 1px;
+  margin-bottom: 17px;
+}
+
+.clear {
+  clear: both;
 }
 
 
 /* --Frame Tags for smaller devices-- */
 
 @viewport {
-width:device-width;
-zoom:1;
+  width: device-width;
+  zoom: 1;
 }
 
 
 /* div for panels at top of screen */
-div#header{
-width:100%;
-max-height:250px;
-background-image: url("images/background.png");
-box-shadow: 0px 10px 5px grey;
-padding-top:28px;
-padding-bottom:35px;
+div#header {
+  width: 100%;
+  max-height: 250px;
+  background-image: url("images/background.png");
+  box-shadow: 0px 10px 5px grey;
+  padding-top: 28px;
+  padding-bottom: 35px;
 }
 
 
 /* div with "Panel Attack" title text */
-div#title_text{
-background-image: url("images/text.png");
-width:90%;
-max-width: 350px;
-height:174px;
-margin:0 auto;
-margin-top: 0px;
-background-repeat: no-repeat;
-background-size: contain;
+div#title_text {
+  background-image: url("images/text.png");
+  width: 90%;
+  max-width: 350px;
+  height: 174px;
+  margin: 0 auto;
+  margin-top: 0px;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 
 /* MAIN CONTAINER TAGS */
 
-div#body
-{
-max-width:100%;
-padding:50px 40px 20px 40px;
-padding-left:40px;
-padding-right:40px;
+div#body {
+  max-width: 100%;
+  padding: 50px 40px 20px 40px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
-div#footer{
-width:100%;
-box-shadow: 0px -3px 5px grey;
-height:30px;
-margin-top:60px;
-font: 14px arial, sans-serif; color:#333;
-text-align:center;
-padding-top:5px;
-clear:both;
+div#footer {
+  width: 100%;
+  box-shadow: 0px -3px 5px grey;
+  height: 30px;
+  margin-top: 60px;
+  font: 14px arial, sans-serif;
+  color: #333;
+  text-align: center;
+  padding-top: 5px;
+  clear: both;
 }
 
 
 /* TAGS FOR YOUTUBE VIDEO */
 /* iframes don't like having fluid size, so we've made the div.container2 with fluid width and padding as a percentage so it will maintain aspect ratio.  But this will always make the video 100% of the width, which on large screens is unwanted, so div.container1 sets the max-width.  Setting a max-width on div.container2 would not work because it messes up the padding ratio. */
 
-div.container1{
-width:100%;
-max-width:560px;
+div.container1 {
+  width: 100%;
+  max-width: 560px;
 }
 
-div.container2{
-position: relative;
-padding-bottom: 56.25%; /* 16:9 */
-padding-top: 25px;
-height: 0;
+div.container2 {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
 }
 
-.video{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 
 /* NAV TAGS */
 
-div#nav{
-width:100%;
+div#nav {
+  width: 100%;
 }
 
-ul.nav
-{
-list-style-type:none;
-padding:0;
-padding-top:20px;
-margin:0 auto;
-margin-bottom:40px;
-//width:440px;
-max-width:100%;
-min-height:50px;
-text-align:center;
+ul.nav {
+  list-style-type: none;
+  padding: 0;
+  padding-top: 20px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  /*width:440px;*/
+  max-width: 100%;
+  min-height: 50px;
+  text-align: center;
 }
 
-li.nav
-{
-font-size:24px;
-font-weight:bold;
-padding:3px 4px;
-display:inline;
-padding-right:20px;
+li.nav {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 3px 4px;
+  display: inline;
+  padding-right: 20px;
 }
-li.nav:last-child{
-padding:0px;
+
+li.nav:last-child {
+  padding: 0px;
 }
-li.nav:hover{
-color:#666;
-font-size:26px;
-cursor:pointer;
+
+li.nav:hover {
+  color: #666;
+  font-size: 26px;
+  cursor: pointer;
 }
-li.nav:active{
-color:#33c;
-font-size:26px;
-cursor:pointer;
+
+li.nav:active {
+  color: #33c;
+  font-size: 26px;
+  cursor: pointer;
 }
 
 li>a {
-font: inherit;
-color: inherit;
-text-decoration: none;
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
 }
 
-div#mobile_nav{
-margin:0 auto;
-width:35px;
-height:35px;
-background-image: url("images/menu.png");
-background-size:cover;
-cursor:pointer;
-display:none;
-margin-bottom:10px;
+div#mobile_nav {
+  margin: 0 auto;
+  width: 35px;
+  height: 35px;
+  background-image: url("images/menu.png");
+  background-size: cover;
+  cursor: pointer;
+  display: none;
+  margin-bottom: 10px;
 }
 
-@media all and (min-width:701px){
-div#mobile_nav{
-display:none;
-}
-div#nav{
-height:auto;
-overflow:initial;
-}
+@media all and (min-width:701px) {
+  div#mobile_nav {
+    display: none;
+  }
+
+  div#nav {
+    height: auto;
+    overflow: initial;
+  }
 }
 
-@media all and (max-width:700px){
-div#mobile_nav{
-display:block;
--ms-transform: rotate(0deg);
-transform: rotate(0deg);
-transition: .5s;
--moz-transition: .5s;
--webkit-transition: .5s;
--o-transition: .5s;
-}
-div#mobile_nav.open{
--ms-transform: rotate(90deg);
-transform: rotate(90deg);
-transition: .5s;
--moz-transition: .5s;
--webkit-transition: .5s;
--o-transition: .5s;
-}
-div#nav{
-overflow:hidden;
-height:0px;
-transition: .5s;
--moz-transition: .5s;
--webkit-transition: .5s;
--o-transition: .5s;
-}
-div#nav.open{
-height:220px;
-transition: .5s;
--moz-transition: .5s;
--webkit-transition: .5s;
--o-transition: .5s;
-}
-li.nav{
-display:block;
-text-align:left;
-}
-ul.nav{
-width:220px;
-margin-top:0px;
-background-color:#eee;
-border:1px solid #ddd;
-padding:14px;
-border-radius:3px;
-box-shadow: 0px 5px 5px grey;
-}
-h1:first-of-type{
-margin-top:65px;
-}
+@media all and (max-width:700px) {
+  div#mobile_nav {
+    display: block;
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+  }
+
+  div#mobile_nav.open {
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+  }
+
+  div#nav {
+    overflow: hidden;
+    height: 0px;
+    transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+  }
+
+  div#nav.open {
+    height: 220px;
+    transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+  }
+
+  li.nav {
+    display: block;
+    text-align: left;
+  }
+
+  ul.nav {
+    width: 220px;
+    margin-top: 0px;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    padding: 14px;
+    border-radius: 3px;
+    box-shadow: 0px 5px 5px grey;
+  }
+
+  h1:first-of-type {
+    margin-top: 65px;
+  }
 }
 
 
 /* FAQ PAGE TAGS */
 
-span.q, span.a{font-weight:600;}
-
-p.q{
-margin-top:60px;
+span.q,
+span.a {
+  font-weight: 600;
 }
 
-.code{
-display:inline-block;
-background-color:#eee;
-padding: 5px;
-border:1px solid #ddd;
-border-radius:4px;
-margin-top:5px;
-margin-bottom:5px;
-font-size:16px;
+p.q {
+  margin-top: 60px;
 }
 
-.code>p{
-margin:0px;
-margin-bottom:10px;
-cursor:pointer;
-font-weight:500px;
-}
-.code>p:last-child{
-margin:0px;
-}
-
-.fadein{
-background: #cccccc;
-transition: 1s;
--moz-transition: 1s;
--webkit-transition: 1s;
--o-transition: 1s;
-}
-.fadein .code{
-background-color:#bbb;
-border:1px solid #aaa;
-transition: 1s;
--moz-transition: 1s;
--webkit-transition: 1s;
--o-transition: 1s;
+.code {
+  display: inline-block;
+  background-color: #eee;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 16px;
 }
 
-.fadeout{
-"background: #ffffff;
-transition: 1s;
--moz-transition: 1s;
--webkit-transition: 1s;
--o-transition: 1s;
+.code>p {
+  margin: 0px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-weight: 500px;
 }
-.fadeout .code{
-transition: 1s;
--moz-transition: 1s;
--webkit-transition: 1s;
--o-transition: 1s;
+
+.code>p:last-child {
+  margin: 0px;
+}
+
+.fadein {
+  background: #cccccc;
+  transition: 1s;
+  -moz-transition: 1s;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+}
+
+.fadein .code {
+  background-color: #bbb;
+  border: 1px solid #aaa;
+  transition: 1s;
+  -moz-transition: 1s;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+}
+
+.fadeout {
+  background: #ffffff;
+  transition: 1s;
+  -moz-transition: 1s;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+}
+
+.fadeout .code {
+  transition: 1s;
+  -moz-transition: 1s;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
 }
