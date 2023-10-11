@@ -243,7 +243,7 @@ div#mobile_nav {
   }
 
   div#nav.open {
-    height: 220px;
+    height: 270px;
     transition: .5s;
     -moz-transition: .5s;
     -webkit-transition: .5s;
