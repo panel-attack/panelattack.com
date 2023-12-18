@@ -13,88 +13,99 @@
 </head>
 
 <body>
-  <div class="navContainer">
-    <div class="navItem"><a href="index.html"><img height="100" src="images/PanelAttackLogo.png" alt="Panel Attack"/></a></div>
-    <div class="navItem"><a href="communities.html">Community</a></div>
-    <div class="navItem"><a href="help.html">Help</a></div>
-    <div class="navItem download"><a href="download.html">Download</a></div>
+  <!-- HEADER START COPY THIS TO EACH PAGE -->
+  <div class="header">
+    <div class="topnav" id="myTopnav">
+      <a class="logo" href="index.html"><img height="32" src="images/PanelAttackLogoWide.png" alt="Panel Attack"/></a>
+      <a href="communities.html">Community</a>
+      <a href="help.html">Help</a>
+      <a href="download.html">Download</a>
+      <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
   </div>
 
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
+  <!-- HEADER END COPY THIS TO EACH PAGE -->
+
   <div id="body">
-    <div class="flexContainer">
+    <div class="flexContainer fullWidth">
       <div class="flexItem">
 
         <h1>Frequently Asked Questions</h1>
+    
+        <p class="q"><span class="q">Q:</span> I messed up my controls in Panel Attack, and now it's going crazy. Help?
+        </p>
+        <p><span class="a">A:</span> You need to close Panel Attack and delete the file that saves your input settings.
+          On windows, you can type this into the start menu search to get to the right folder:
 
-        <div id="answers">
-          <div>
-            <p class="q"><span class="q">Q:</span> I messed up my controls in Panel Attack, and now it's going crazy. Help?
-            </p>
-            <p><span class="a">A:</span> You need to close Panel Attack and delete the file that saves your input settings.
-              On windows, you can type this into the start menu search to get to the right folder:
+        <div class="code">%appdata%\Panel Attack</div>
 
-            <div class="code">%appdata%\Panel Attack</div>
+        then delete <span class="code">keysV2.txt</span>
+        </p>
+      </div>
 
-            then delete <span class="code">keysV2.txt</span>
-            </p>
-          </div>
+      <div class="flexItem">
+        <p class="q"><span class="q">Q:</span> How do I set Player 2's controls for local play in Panel Attack?</p>
+        <p><span class="a">A:</span> While in the place for setting Player 1's controls, press right to get to Player
+          2's controls.
+        </p>
+      </div>
 
-          <div>
-            <p class="q"><span class="q">Q:</span> How do I set Player 2's controls for local play in Panel Attack?</p>
-            <p><span class="a">A:</span> While in the place for setting Player 1's controls, press right to get to Player
-              2's controls.
-            </p>
-          </div>
+      <div class="flexItem">
+        <p class="q"><span class="q">Q:</span> I have two computers. Can I use the same Panel Attack ranking system
+          user_id on both, so all my matches get tracked to the same account?</p>
+        <p><span class="a">A:</span> Yes, please do.
+          <br>After you've logged into the Panel Attack server(s) once on your first computer, copy your "servers"
+          folder to the appropriate location on your other computer.
+          <br>Here are the folder locations, per operating system.
+          <br><br>NOTE: replace "user" with whatever your operating system username is.
+          <br>Windows 10, 8, 7, or Vista: <span class="code">C:\Users\user\AppData\Roaming\Panel Attack</span> or search
+          for <span class="code">%appdata%\Panel Attack</span>
+          <br>Mac: <span class="code">/Users/user/Library/Application Support/Panel Attack</span>
+          <br>Linux: <span class="code">$XDG_DATA_HOME/Panel Attack</span> or <span
+            class="code">~/.local/share/love/</span>
+          <br>Windows XP <span class="code">C:\Documents</span> and <span class="code">Settings\user\Application
+            Data\Panel Attack</span>
+          <br>This folder contains your user_ids for each server, which Panel Attack uses to log in to the ranking
+          system.
+        </p>
+      </div>
 
-          <div>
-            <p class="q"><span class="q">Q:</span> I have two computers. Can I use the same Panel Attack ranking system
-              user_id on both, so all my matches get tracked to the same account?</p>
-            <p><span class="a">A:</span> Yes, please do.
-              <br>After you've logged into the Panel Attack server(s) once on your first computer, copy your "servers"
-              folder to the appropriate location on your other computer.
-              <br>Here are the folder locations, per operating system.
-              <br><br>NOTE: replace "user" with whatever your operating system username is.
-              <br>Windows 10, 8, 7, or Vista: <span class="code">C:\Users\user\AppData\Roaming\Panel Attack</span> or search
-              for <span class="code">%appdata%\Panel Attack</span>
-              <br>Mac: <span class="code">/Users/user/Library/Application Support/Panel Attack</span>
-              <br>Linux: <span class="code">$XDG_DATA_HOME/Panel Attack</span> or <span
-                class="code">~/.local/share/love/</span>
-              <br>Windows XP <span class="code">C:\Documents</span> and <span class="code">Settings\user\Application
-                Data\Panel Attack</span>
-              <br>This folder contains your user_ids for each server, which Panel Attack uses to log in to the ranking
-              system.
-            </p>
-          </div>
+      <div class="flexItem">
+        <p class="q"><span class="q">Q:</span> How do I access replays?</p>
 
-
-          <div>
-            <p class="q"><span class="q">Q:</span> How do I access replays?</p>
-
-            <p><span class="a">A:</span>Replays of all the games your client has played or spectated are stored as .txt files on your computer
-              in <span class="code">%appdata%\Panel Attack\replays</span>
-              <br>Publicly saved replays are <a href="replays/" target="_blank">stored here</a>. You can adjust whether your
-              replays are saved publicly in the Panel Attack options menu.
-              They are arranged into folders by Panel Attack version, then date (UTC time), then player names.
-              <br><br>Once you have the .txt file for the replay you want to watch, copy it to <span
-                class="code">%appdata%\Panel Attack\replays</span>, then relaunch panel attack and find it with the Replay
-              Browser at the main menu.
-          </div>
+        <p><span class="a">A:</span>Replays of all the games your client has played or spectated are stored as .txt files on your computer
+          in <span class="code">%appdata%\Panel Attack\replays</span>
+          <br>Publicly saved replays are <a href="replays/" target="_blank">stored here</a>. You can adjust whether your
+          replays are saved publicly in the Panel Attack options menu.
+          They are arranged into folders by Panel Attack version, then date (UTC time), then player names.
+          <br><br>Once you have the .txt file for the replay you want to watch, copy it to <span
+            class="code">%appdata%\Panel Attack\replays</span>, then relaunch panel attack and find it with the Replay
+          Browser at the main menu.
+      </div>
+      
+      <div class="flexItem">
+        <p class="q"><span class="q">Q:</span> Panel Attack only shows a black screen, what can I do?</p>
         
-          <div>
-            <p class="q"><span class="q">Q:</span> Panel Attack only shows a black screen, what can I do?</p>
-            
-            <p><span class="a">A:</span> The AMD 22.7.1 graphics driver is known to cause rendering problems with all LOVE2D games, including Panel Attack.
-              <br />Please upgrade your graphics driver to 22.8.1 or higher.</p>
-          </div>
+        <p><span class="a">A:</span> The AMD 22.7.1 graphics driver is known to cause rendering problems with all LOVE2D games, including Panel Attack.
+          <br />Please upgrade your graphics driver to 22.8.1 or higher.</p>
+      </div>
 
-          <div>
-            <p class="q"><span class="q">Q:</span> Can I help contribute to Panel Attack?</p>
-            <p><span class="a">A:</span> We are always looking for more contributors, please reach out to us on discord and take a look at the GitHub page and we can discuss how to get started.
-              <a href="https://github.com/panel-attack/panel-attack">GitHub</a>
-            </span>
-            </p>
-          </div>
-        </div>
+      <div class="flexItem">
+        <p class="q"><span class="q">Q:</span> Can I help contribute to Panel Attack?</p>
+        <p><span class="a">A:</span> We are always looking for more contributors, please reach out to us on discord and take a look at the GitHub page and we can discuss how to get started.
+          <a href="https://github.com/panel-attack/panel-attack">GitHub</a>
+        </span>
+        </p>
       </div>
     </div>
   </div>

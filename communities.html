@@ -13,18 +13,33 @@
 </head>
 
 <body>
-  <div class="navContainer">
-    <div class="navItem"><a href="index.html"><img height="100" src="images/PanelAttackLogo.png" alt="Panel Attack"/></a></div>
-    <div class="navItem"><a href="communities.html">Community</a></div>
-    <div class="navItem"><a href="help.html">Help</a></div>
-    <div class="navItem download"><a href="download.html">Download</a></div>
+  <!-- HEADER START COPY THIS TO EACH PAGE -->
+  <div class="header">
+    <div class="topnav" id="myTopnav">
+      <a class="logo" href="index.html"><img height="32" src="images/PanelAttackLogoWide.png" alt="Panel Attack"/></a>
+      <a href="communities.html">Community</a>
+      <a href="help.html">Help</a>
+      <a href="download.html">Download</a>
+      <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
   </div>
 
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
+  <!-- HEADER END COPY THIS TO EACH PAGE -->
+
   <div id="body">
-    <div class="flexContainer">
-      <div class="flexItem">
-        
-            
+    <div class="flexContainer fullWidth">
+      <div class="flexItem">    
+        <h1>Discord</h1>
         <p class="clear">The discord server is where we go to hang out and talk about the game, as well as download and
           share custom graphics packs, sound packs, and puzzles. You can use the matchmaking channels to find opponents for
           Panel Attack or Nintendo Switch Online, and you can join monthly tournaments for different skill levels too!</p>
@@ -37,7 +52,8 @@
         <br />
         <br />
 
-
+      </div>
+      <div class="flexItem">
         <h1>Swapette Showdown</h1>
 
         <p>Swapette Showdown is a competitive magical girl puzzle battle game for 1-4 players! Swap your blocks to create
@@ -66,8 +82,9 @@
           <p class="button">Facebook</p>
         </a>
 
-        <br class="clear">
 
+      </div>
+      <div class="flexItem">
         <h1>League of Puzzle Speedrunners</h1>
 
         <p>League of Puzzle Speedrunners (LPS) is a group built around speedrunning games from the arcade puzzler era. LPS
@@ -89,8 +106,8 @@
           <p class="button">Twitter</p>
         </a>
 
-        <br class="clear">
-
+      </div>
+      <div class="flexItem">
         <h1>/r/PanelDePon</h1>
 
         <p>/r/PanelDePon provides a welcoming community for players of all skill levels with a comfortable, cozy social
