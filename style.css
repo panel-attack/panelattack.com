@@ -94,7 +94,7 @@ div.fullWidth {
 
 div.flexItem {
   background-color: rgba(0, 0, 0, 0.5);
-  border: 2px solid #222;
+  border: 2px solid #444;
   padding: 14px 14px 2px 14px;
   border-radius: 10px;
 }
@@ -115,24 +115,17 @@ div#footer {
 }
 
 /* TAGS FOR YOUTUBE VIDEO */
-/* iframes don't like having fluid size, so we've made the div.container2 with fluid width and padding as a percentage so it will maintain aspect ratio.  But this will always make the video 100% of the width, which on large screens is unwanted, so div.container1 sets the max-width.  Setting a max-width on div.container2 would not work because it messes up the padding ratio. */
 
-div.container1 {
-  width: 100%;
-  max-width: 560px;
-  margin: auto;
-  padding-bottom: 32px;
-}
-
-div.container2 {
+.embed-container {
   position: relative;
   padding-bottom: 56.25%;
-  /* 16:9 */
-  padding-top: 25px;
   height: 0;
+  overflow: hidden;
+  max-width: 500px;
+  margin: auto;
 }
 
-.video {
+.embed-container iframe, .embed-container object, .embed-container embed {
   position: absolute;
   top: 0;
   left: 0;
@@ -148,8 +141,7 @@ div.container2 {
 
 .topnav {
   overflow: hidden;
-  margin: auto;
-  width: 600px;
+  margin: 0px 40px;
 }
 
 .navItem {
@@ -169,7 +161,7 @@ div.container2 {
 }
 
 .topnav .logo {
-  padding: 8px 90px 2px 0px;
+  padding: 8px 8px 2px 2px;
 }
 
 .active {
