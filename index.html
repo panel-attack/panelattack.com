@@ -2,139 +2,72 @@
 <html>
 
 <head>
-
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Panel Attack" />
-  <meta name="keywords"
-    content="Panel Attack, Panel-de-pon, Tetris Attack, Pokemon Puzzle League, puzzle game, match-3, match three, match-three">
+  <meta name="description" content="Panel Attack is a free puzzle game inspired by popular games such as Tetris Attack and Pokemon Puzzle League while still maintaining authentic mechanics. Arrange colored panels in rows and columns of three or more to match matches that clear. Panels then fall from gravity and can make chains that give bonuses or attack the other player." />
+  <meta name="keywords" content="Panel Attack, Pokemon Puzzle League, Panel de Pon, Tetris Attack, Puzzle League, online puzzle game, match 3, match three, Planet Puzzle League, Pokemon Puzzle Challenge, action puzzle, online multiplayer">
   <meta charset="utf-8" />
   <link rel="stylesheet" type="text/css" href="style.css">
-  <title>Panel Attack</title>
+  <title>Panel Attack - Swapping Puzzle Game</title>
   <link rel="shortcut icon" href="images/icon.png">
-  <script>
-    window.onload = function () {
-      var nav = document.getElementById("nav");
-      var button = document.getElementById("mobile_nav");
-      var open = false;
-      button.onclick = function () {
-        if (open) {
-          open = false;
-          button.className = "";
-          nav.className = "";
-        } else {
-          open = true;
-          button.className = "open";
-          nav.className = "open";
-        }
-      }
-      window.addEventListener("resize", function () {
-        if (window.innerWidth > 700) {
-          button.className = ""; nav.className = ""; open = false;
-        }
-      });
-    }
-  </script>
-
 </head>
 
 <body>
 
-  <div id="header">
-    <div id="title_text"></div>
+  <!-- HEADER START COPY THIS TO EACH PAGE -->
+  <div class="header">
+    <div class="topnav" id="myTopnav">
+      <a class="logo" href="index.html"><img height="32" src="images/PanelAttackLogoWide.png" alt="Panel Attack"/></a>
+      <a href="communities.html">Community</a>
+      <a href="help.html">Help</a>
+      <a href="download.html">Download</a>
+      <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
   </div>
-  <!--header div-->
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
+  <!-- HEADER END COPY THIS TO EACH PAGE -->
+
   <div id="body">
 
-    <div id="mobile_nav"></div>
-    <div id="nav">
-      <ul class="nav">
-        <li class="nav"><a href="./">Home</a></li>
-        <li class="nav"><a href="/panel.zip" target="_blank">Download</a></li>
-        <li class="nav"><a href="cal.html">Tournaments</a></li>
-        <li class="nav"><a href="replays/" target="_blank">Public Replays</a></li>
-        <li class="nav"><a href="https://github.com/panel-attack/panel-attack" target="_blank">GitHub</a></li>
-        <li class="nav"><a href="faq.html">FAQ</a></li>
-        <li class="nav"><a href="communities.html">Communities</a></li>
-      </ul>
-    </div>
-    <!--nav div-->
 
-    <h1>Welcome to Panel Attack!</h1>
+    <div class="flexContainer">
 
-    <p>Panel Attack is a very accurate, free, open-source, online multiplayer Panel de Pon / Tetris Attack clone for
-      Windows/Mac/Linux/Android</p>
+      <iframe frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/lm5zW5yPsr0?si=DwL3I1sRpaTObv-1"></iframe>
 
-    <a href="http://discord.panelattack.com/" target="_blank">
-      <p class="button">Join the Discord!</p>
-    </a>
+      <div class="flexItem fullWidth">
+        <h2 class="center">A Modern Classic</h2>
+        <p class="center">
+          Panel Attack is a free modern puzzle game inspired by popular games such as Tetris Attack and Pokemon Puzzle League while still maintaining authentic mechanics. Arrange colored panels in rows and columns of three or more to match matches that clear. Panels then fall from gravity and can make chains that give bonuses or attack the other player.
+        </p>
+      </div>
+        
+      <div class="flexItem fullWidth">
+        <h2 class="center">Custom Mods</h2>
+        <p class="center">
+          You can also customize graphics, and sound to add in your favorite characters or go for that retro feel from the classic games.
+        </p>
+      </div>
 
-    <p class="clear">The discord server is where we go to hang out and talk about the game, as well as download and
-      share custom graphics packs, sound packs, and puzzles. You can use the matchmaking channels to find opponents for
-      Panel Attack or Nintendo Switch Online, and you can join monthly <a href="cal.html">tournaments</a> for different
-      skill levels too!</p>
-
-    <h1>Download the game</h1>
-
-    <a href="/panel.zip" target="_blank">
-      <p class="button">Download panel.zip</p>
-    </a>
-
-    <p class="clear">Panel Attack is very easy to set up. On Windows, just download the zip file above, unzip it, and run panel.exe. Set your
-      controls, set your name, and you're ready to go!</p>
-    <p>Here's an introduction video for Windows, by community member Graff:</p>
-
-    <div class="container1">
-      <!--Container to limit container2 width-->
-      <div class="container2">
-        <!--Container to determine iframe height-->
-        <iframe class="video" src="https://www.youtube.com/embed/lm5zW5yPsr0" frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="flexItem fullWidth">
+        <h2 class="center">Robust Online Multiplayer</h2>
+        <p class="center">
+          Panel Attack was designed to be completely lagfree with network latency up to 1000ms. Rollback code works to allow players to interact and resolve differences.
+        </p>
       </div>
     </div>
-
-    <br class="clear">
-
-    <h1>Setting up Panel Attack on Mac</h1>
-    <p>Download and install love 11.5 for Mac from
-      <a href="https://love2d.org/" target="_blank">https://love2d.org/</a>.
-    <br />
-      Download <a href="/panel.zip" target="_blank">panel.zip</a>, unzip it, and change the file extension of
-      <span class="code">panel.exe</span> from .exe to .love.
-    <br />
-      After that you can start the game by doubleclicking <span class="code">panel.love</span>.
-    </p>
-
-    <h1>Setting up Panel Attack on Linux</h1>
-    <p>Download the AppImage from
-      <a href="https://love2d.org/" target="_blank">https://love2d.org/</a>.
-      <br />
-      Right-click the file and select <span class="code">Properties</span> -> <span class="code">Permissions</span>. Check the option that allows the file to run as a program.
-      <br />
-      Download <a href="/panel.zip" target="_blank">panel.zip</a>, unzip it, and change the file extension of
-    <span class="code">panel.exe</span> from .exe to .love.
-    <br />
-      After that you can start the game by dragging and dropping <span class="code">panel.love</span> on top of the AppImage or start the AppImage
-      via the terminal and pass <span class="code">panel.love</span> as the argument.
-    </p>
-
-    <h1>Setting up Panel Attack on Android</h1>
-    <p>Download and install the Android APK from
-      <a href="https://love2d.org/" target="_blank">https://love2d.org/</a>.
-      <br />
-      The love release in the Play Store is outdated and explicitly not recommended!
-      <br />
-      Download <a href="/panel.zip" target="_blank">panel.zip</a>, unzip it, and change the file extension of
-      <span class="code">panel.exe</span> from .exe to .love.
-      <br />
-      Start the LÖVE Loader app, browse to where you saved <span class="code">panel.love</span> and select it to start.
-    </p>
-
-    <br class="clear">
-
   </div>
-  <!--body div-->
-  <div id="footer">&#169 Copyright
-    <script>document.write(new Date().getFullYear());</script>
+  
+  <div id="footer">
+    &#169 Copyright <script>document.write(new Date().getFullYear());</script>
   </div>
 </body>
 

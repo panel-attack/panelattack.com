@@ -2,149 +2,122 @@
 <html>
 
 <head>
-
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Panel Attack Communities" />
-  <meta name="keywords"
-    content="Panel Attack, Panel-de-pon, Tetris Attack, Pokemon Puzzle League, puzzle game, match-3, match three">
+  <meta name="description" content="Join the Panel Attack community and learn about other communities that play similar games." />
+  <meta name="keywords" content="Panel Attack, Pokemon Puzzle League, Panel de Pon, Tetris Attack, Puzzle League, online puzzle game, match 3, match three, Planet Puzzle League, Pokemon Puzzle Challenge, action puzzle, online multiplayer">
   <meta charset="utf-8" />
   <link rel="stylesheet" type="text/css" href="style.css">
-  <title>Communities - Panel Attack</title>
+  <title>Panel Attack - Communities</title>
   <link rel="shortcut icon" href="images/icon.png">
-  <script>
-    window.onload = function () {
-      var nav = document.getElementById("nav");
-      var button = document.getElementById("mobile_nav");
-      var open = false;
-      button.onclick = function () {
-        if (open) {
-          open = false;
-          button.className = "";
-          nav.className = "";
-        } else {
-          open = true;
-          button.className = "open";
-          nav.className = "open";
-        }
-      }
-      window.addEventListener("resize", function () {
-        if (window.innerWidth > 700) {
-          button.className = ""; nav.className = ""; open = false;
-        }
-      });
-      var q = document.getElementById("questions").children;
-      for (var i = 0; i < q.length; i++) {
-        q[i].setAttribute("tag", i);
-        q[i].onclick = function (e) {
-          var dest = document.getElementById("answers").children[e.target.getAttribute("tag")];
-          window.scroll(0, (dest.offsetTop - 35));
-          setTimeout(function () { dest.className = "fadeout"; }, 1200);
-          dest.className = "fadein";
-        };
-      }
-    }
-  </script>
-
 </head>
 
 <body>
-
-  <div id="header">
-    <div id="title_text"></div>
-  </div>
-  <!--header div-->
-  <div id="body">
-
-    <div id="mobile_nav"></div>
-    <div id="nav">
-      <ul class="nav">
-        <li class="nav"><a href="./">Home</a></li>
-        <li class="nav"><a href="/panel.zip" target="_blank">Download</a></li>
-        <li class="nav"><a href="cal.html">Tournaments</a></li>
-        <li class="nav"><a href="replays/" target="_blank">Public Replays</a></li>
-        <li class="nav"><a href="https://github.com/panel-attack/panel-attack" target="_blank">GitHub</a></li>
-        <li class="nav"><a href="faq.html">FAQ</a></li>
-        <li class="nav"><a href="communities.html">Communities</a></li>
-      </ul>
+  <!-- HEADER START COPY THIS TO EACH PAGE -->
+  <div class="header">
+    <div class="topnav" id="myTopnav">
+      <a class="logo" href="index.html"><img height="32" src="images/PanelAttackLogoWide.png" alt="Panel Attack"/></a>
+      <a href="communities.html">Community</a>
+      <a href="help.html">Help</a>
+      <a href="download.html">Download</a>
+      <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
     </div>
-    <!--nav div-->
-
-    <h1>Swapette Showdown</h1>
-
-    <p>Swapette Showdown is a competitive magical girl puzzle battle game for 1-4 players! Swap your blocks to create
-      matches and attacks. Battle as/against cute magical girls a.k.a. the Swapettes. Currently still in development,
-      find us on Steam to wishlist.</p>
-
-    <div class="button"></div>
-    <a href="https://swapetteshowdown.com/" target="_blank">
-      <p class="button">Website</p>
-    </a>
-    <a href="https://store.steampowered.com/app/862900/Swapette_Showdown/" target="_blank">
-      <p class="button">Steam</p>
-    </a>
-    <a href="https://discord.gg/8rzC7TAGEr" target="_blank">
-      <p class="button">Discord</p>
-    </a>
-    <a href="https://patreon.com/SwapetteShowdown" target="_blank">
-      <p class="button">Patreon</p>
-    </a>
-    <a href="https://twitter.com/SwapetteGame" target="_blank">
-      <p class="button">Twitter</p>
-    </a>
-    <a href="https://www.instagram.com/swapettegame" target="_blank">
-      <p class="button">Instagram</p>
-    </a>
-    <a href="https://www.facebook.com/SwapetteGame" target="_blank">
-      <p class="button">Facebook</p>
-    </a>
-
-    <br class="clear">
-
-    <h1>League of Puzzle Speedrunners</h1>
-
-    <p>League of Puzzle Speedrunners (LPS) is a group built around speedrunning games from the arcade puzzler era. LPS
-      is a great community to learn/share about puzzle speedruns, enjoy casual race nights, and participate in seasonal
-      tournaments offering cash prizes. The LPS community was founded around the Puzzle League series, but also includes
-      games such as Dr. Mario, Wario's Woods, Tetris, Puyo Puyo, and many more!</p>
-
-    <div class="button"></div>
-    <a href="https://tinyurl.com/LeagueofPuzzleSpeedrunners" target="_blank">
-      <p class="button">Discord</p>
-    </a>
-    <a href="https://www.twitch.tv/PuzzleSpeedrun" target="_blank">
-      <p class="button">Twitch</p>
-    </a>
-    <a href="https://www.youtube.com/c/LeagueofPuzzleSpeedrunners" target="_blank">
-      <p class="button">Youtube</p>
-    </a>
-    <a href="https://twitter.com/PuzzleSpeedrun" target="_blank">
-      <p class="button">Twitter</p>
-    </a>
-
-    <br class="clear">
-
-    <h1>/r/PanelDePon</h1>
-
-    <p>/r/PanelDePon provides a welcoming community for players of all skill levels with a comfortable, cozy social
-      atmosphere. It's also home of both the Panepon GC translation and GBC restoration projects too, so come and visit
-      if you're looking for the most recent patch for either.</p>
-
-    <div class="button"></div>
-    <a href="https://www.reddit.com/r/PanelDePon/" target="_blank">
-      <p class="button">Reddit</p>
-    </a>
-    <a href="https://discord.gg/75Bm23nggy" target="_blank">
-      <p class="button">Discord</p>
-    </a>
-
-    <br class="clear">
   </div>
 
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
+  <!-- HEADER END COPY THIS TO EACH PAGE -->
 
+  <div id="body">
+    <div class="flexContainer">
+      <div class="flexItem fullWidth">    
+        <h1>Discord</h1>
+        <p class="clear">The discord server is where we go to hang out and talk about the game, share mods, graphics and have community events. You can join monthly tournaments for different skill levels too!</p>
 
-  <!--body div-->
-  <div id="footer">&#169 Copyright
-    <script>document.write(new Date().getFullYear());</script>
+        <a href="http://discord.panelattack.com/" target="_blank">
+          <p class="button">Join the Discord!</p>
+        </a>
+      </div>
+      <div class="flexItem fullWidth">
+        <h1>Swapette Showdown</h1>
+
+        <p>Swapette Showdown is a competitive magical girl puzzle battle game for 1-4 players! Swap your blocks to create
+          matches and attacks. Battle as/against cute magical girls a.k.a. the Swapettes. Currently still in development,
+          find us on Steam to wishlist.</p>
+
+        <a href="https://swapetteshowdown.com/" target="_blank">
+          <p class="button">Website</p>
+        </a>
+        <a href="https://store.steampowered.com/app/862900/Swapette_Showdown/" target="_blank">
+          <p class="button">Steam</p>
+        </a>
+        <a href="https://discord.gg/8rzC7TAGEr" target="_blank">
+          <p class="button">Discord</p>
+        </a>
+        <a href="https://patreon.com/SwapetteShowdown" target="_blank">
+          <p class="button">Patreon</p>
+        </a>
+        <a href="https://twitter.com/SwapetteGame" target="_blank">
+          <p class="button">Twitter</p>
+        </a>
+        <a href="https://www.instagram.com/swapettegame" target="_blank">
+          <p class="button">Instagram</p>
+        </a>
+        <a href="https://www.facebook.com/SwapetteGame" target="_blank">
+          <p class="button">Facebook</p>
+        </a>
+      </div>
+
+      <div class="flexItem fullWidth">
+        <h1>League of Puzzle Speedrunners</h1>
+
+        <p>League of Puzzle Speedrunners (LPS) is a group built around speedrunning games from the arcade puzzler era. LPS
+          is a great community to learn/share about puzzle speedruns, enjoy casual race nights, and participate in seasonal
+          tournaments offering cash prizes. The LPS community was founded around the Puzzle League series, but also includes
+          games such as Dr. Mario, Wario's Woods, Tetris, Puyo Puyo, and many more!</p>
+
+        <div class="button"></div>
+        <a href="https://tinyurl.com/LeagueofPuzzleSpeedrunners" target="_blank">
+          <p class="button">Discord</p>
+        </a>
+        <a href="https://www.twitch.tv/PuzzleSpeedrun" target="_blank">
+          <p class="button">Twitch</p>
+        </a>
+        <a href="https://www.youtube.com/c/LeagueofPuzzleSpeedrunners" target="_blank">
+          <p class="button">Youtube</p>
+        </a>
+        <a href="https://twitter.com/PuzzleSpeedrun" target="_blank">
+          <p class="button">Twitter</p>
+        </a>
+      </div>
+
+      <div class="flexItem fullWidth">
+        <h1>/r/PanelDePon</h1>
+
+        <p>/r/PanelDePon provides a welcoming community for players of all skill levels with a comfortable, cozy social
+          atmosphere. It's also home of both the Panepon GC translation and GBC restoration projects too, so come and visit
+          if you're looking for the most recent patch for either.</p>
+
+        <div class="button"></div>
+        <a href="https://www.reddit.com/r/PanelDePon/" target="_blank">
+          <p class="button">Reddit</p>
+        </a>
+        <a href="https://discord.gg/75Bm23nggy" target="_blank">
+          <p class="button">Discord</p>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div id="footer">
+    &#169 Copyright <script>document.write(new Date().getFullYear());</script>
   </div>
 </body>
 

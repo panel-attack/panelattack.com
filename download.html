@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Download the game for free for Windows, Mac, Linux and Android." />
+  <meta name="keywords" content="Panel Attack, Pokemon Puzzle League, Panel de Pon, Tetris Attack, Puzzle League, online puzzle game, match 3, match three, Planet Puzzle League, Pokemon Puzzle Challenge, action puzzle, online multiplayer">
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Panel Attack - Download</title>
+  <link rel="shortcut icon" href="images/icon.png">
+</head>
+
+<body>
+  <!-- HEADER START COPY THIS TO EACH PAGE -->
+  <div class="header">
+    <div class="topnav" id="myTopnav">
+      <a class="logo" href="index.html"><img height="32" src="images/PanelAttackLogoWide.png" alt="Panel Attack"/></a>
+      <a href="communities.html">Community</a>
+      <a href="help.html">Help</a>
+      <a href="download.html">Download</a>
+      <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+  </div>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
+  <!-- HEADER END COPY THIS TO EACH PAGE -->
+
+  <div id="body">
+    <div class="flexContainer">
+
+      <div class="flexItem fullWidth">
+        <h1>Download the game</h1>
+
+        <a href="/panel.zip" target="_blank">
+          <p class="button">Download</p>
+        </a>
+
+        <p class="clear">Panel Attack is very easy to set up. On Windows, just download the zip file above, unzip it, and run panel.exe. Set your
+          controls, set your name, and you're ready to go!</p>
+
+      </div>  
+
+      <div class="flexItem fullWidth">
+        <h1>Setting up Panel Attack on Mac</h1>
+        <p>Download and install love 11.5 for Mac from
+          <a href="https://love2d.org" target="_blank">https://love2d.org</a>.
+        <br />
+          Download <a href="/panel.zip" target="_blank">panel.zip</a>, unzip it, and change the file extension of
+          <span class="code">panel.exe</span> from .exe to .love. After that you can start the game by doubleclicking <span class="code">panel.love</span>.
+        </p>
+      </div>  
+
+      <div class="flexItem fullWidth">
+        <h1>Setting up Panel Attack on Linux</h1>
+        <p>Download the AppImage from
+          <a href="https://love2d.org" target="_blank">https://love2d.org</a>.
+          <br />
+          Right-click the file and select <span class="code">Properties</span> -> <span class="code">Permissions</span>. Check the option that allows the file to run as a program.
+          <br />
+          Download <a href="/panel.zip" target="_blank">panel.zip</a>, unzip it, and change the file extension of
+        <span class="code">panel.exe</span> from .exe to .love.
+        <br />
+          After that you can start the game by dragging and dropping <span class="code">panel.love</span> on top of the AppImage or start the AppImage
+          via the terminal and pass <span class="code">panel.love</span> as the argument.
+        </p>
+      </div>  
+
+      <div class="flexItem fullWidth">
+        <h1>Setting up Panel Attack on Android</h1>
+        <p>Download and install the Android APK from
+          <a href="https://love2d.org" target="_blank">https://love2d.org</a>.
+          <br />
+          The love release in the Play Store is outdated and explicitly not recommended!
+          <br />
+          Download <a href="/panel.zip" target="_blank">panel.zip</a>, unzip it, and change the file extension of
+          <span class="code">panel.exe</span> from .exe to .love. 
+          Start the LÖVE Loader app, browse to where you saved <span class="code">panel.love</span> and select it to start.
+        </p>
+
+      </div>
+
+    </div>
+  </div>
+  
+  <div id="footer">
+    &#169 Copyright <script>document.write(new Date().getFullYear());</script>
+  </div>
+</body>
+
+</html>
