@@ -9,6 +9,7 @@ body,
 
 body {
   background-image: url("images/pacci_background.png");
+  background-color: black;
 }
 
 a {
