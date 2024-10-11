@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Download the game for free for Windows, Mac, Linux and Android." />
+  <meta name="keywords" content="Panel Attack, Pokemon Puzzle League, Panel de Pon, Tetris Attack, Puzzle League, online puzzle game, match 3, match three, Planet Puzzle League, Pokemon Puzzle Challenge, action puzzle, online multiplayer">
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Panel Attack - Download</title>
+  <link rel="shortcut icon" href="images/icon.png">
+</head>
+
+<body>
+  <!-- HEADER START COPY THIS TO EACH PAGE -->
+  <div class="header">
+    <div class="topnav" id="myTopnav">
+      <a class="logo" href="index.html"><img height="32" src="images/PanelAttackLogoWide.png" alt="Panel Attack"/></a>
+      <a href="communities.html">Community</a>
+      <a href="help.html">Help</a>
+      <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+  </div>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
+  <!-- HEADER END COPY THIS TO EACH PAGE -->
+
+  <div id="body">
+    <h2 id="there-is-a-new-updater-for-panel-attack-">There is a new updater for Panel Attack!</h1>
+    <p>You can find out about what is changing below and also why things are changing.</p>
+
+    <h3>Download for</h3>
+    <a href="/downloads/updater/windows/panel-attack.zip" target="_blank">
+      <p class="button">Windows</p>
+    </a>
+    <a href="/downloads/updater/mac/panel-attack.zip" target="_blank">
+      <p class="button">MacOS</p>
+    </a>
+    <a href="/downloads/updater/linux/panel-attack.AppImage" target="_blank">
+      <p class="button">Linux</p>
+    </a>
+    <a href="/downloads/updater/android/panel-attack.apk" target="_blank">
+      <p class="button">Android</p>
+    </a>
+    <br />
+    <br />
+    <br />
+
+    <h1 id="changes">Changes</h1>
+
+    <h2 id="for-all-operating-systems">For all operating systems</h2>
+    <p>
+      If you have been on the discord you will know that we have 3 release streams at the moment.<br>
+      When using the new updater you can now change the release stream in the Options -> General menu so you no longer need multiple updaters.
+    </p>
+    <a href="images/migration/releaseStreamSelection.png"><img height="104" src="images/migration/releaseStreamSelection.png" alt="Picking the release stream in the options menu"/></a>
+
+
+    <h2 id="windows">Windows</h2>
+    <p>
+      If you have many mods installed you may have been experiencing cryptic graphics-related crashes.<br>
+      This happened because the old client was made for 32-bit systems. (strongly simplified explanation)<br>
+      The new updater is made for 64-bit systems and these crashes should no longer occur.<br>
+      The minimum Windows version to run Panel Attack is now Windows 7 SP1 (64 bit).
+    </p>
+
+
+    <h2 id="macos-and-linux">MacOS and Linux</h2>
+    <p>Panel Attack now comes as a native app that you can simply doubleclick to run!  </p>
+    <p>Because they are now native apps, the save directory is moving up by one directory.  </p>
+    <a href="images/migration/savedirmove.png"><img height="240" src="images/migration/savedirmove.png" alt="New save dir location in a file tree"/></a>
+    
+    <p>The game will try to automatically migrate your old save directory on first start with the new updater.  </p>
+    <a href="images/migration/migration.png"><img height="180" src="images/migration/migration.png" alt="Panel Attack migrating the save directory on startup"/></a>
+    
+    <p>Additionally the minimum version to run Panel Attack on Mac is now 10.15 (Catalina).</p>
+
+
+    <h2 id="android">Android</h2>
+    <p>
+      Panel Attack now comes as a native apk that you can sideload on your device.<br>
+      If you were using the test version for touch inputs, this version should cleanly update it.<br>
+      If you ready up using touch, the game should automatically switch into portrait mode on game start.<br>
+      The game will also (finally!) respect your rotation lock setting with the new updater.
+    </p>
+    
+    <p>
+      Old data from installs launched with the LOVE app unfortunately cannot be transferred due to android&#39;s filesystem restrictions :-(<br>
+      You can try to move the data manually but whether you will succeed will depend on your device, your OS version, your skill and some luck, no guarantees.
+    </p>
+
+
+    <h1 id="why-">Why?</h1>
+    <p>
+      The Panel Attack server now supports https but our updater does not!<br>
+      The new updater supports https and will allow us to remove http support from our website.<br>
+      Additionally, the new updater upgrades the version of the game framework we use for Panel Attack to the next major version.<br>
+    </p>
+    
+  </div>
+
+  <div id="footer">
+    &#169 Copyright <script>document.write(new Date().getFullYear());</script>
+  </div>
+</body>
+
+</html>

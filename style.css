@@ -9,6 +9,7 @@ body,
 
 body {
   background-image: url("images/pacci_background.png");
+  background-color: black;
 }
 
 a {
@@ -81,7 +82,8 @@ div#body {
 div.flexContainer {
   max-width: 1200px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: stretch;
   gap: 20px 20px;
@@ -98,6 +100,7 @@ div.flexItem {
   padding: 14px 14px 2px 14px;
   border-radius: 10px;
   max-width: 880px;
+  margin: auto;
 }
 
 div#footer {
