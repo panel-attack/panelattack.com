@@ -8,8 +8,8 @@ body,
 }
 
 body {
-  background-image: url("images/pacci_background.png");
   background-color: black;
+  background: linear-gradient( rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35) ), url(images/pacci_background.png);
 }
 
 a {

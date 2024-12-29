@@ -101,6 +101,14 @@
       </div>
 
       <div class="flexItem fullWidth">
+        <p class="q"><span class="q">Q:</span>When trying to start Panel Attack on Linux it does not open, what can I do?</p>
+
+        <p><span class="a">A:</span> AppImages rely on the FUSE library being present in version 2 on your OS. Some distributions don't have it.
+        <br />You can run the game in a terminal with the <span class="code">--appimage-extract</span> argument to unpack it. The extracted executable is located in <span class="code">squashfs-root/bin/</span> .</p>
+        <p>See <a href="https://github.com/AppImage/AppImageKit/wiki/FUSE">here</a> for more information.</p>
+      </div>
+
+      <div class="flexItem fullWidth">
         <p class="q"><span class="q">Q:</span> Can I help contribute to Panel Attack?</p>
         <p><span class="a">A:</span> We are always looking for more contributors, please reach out to us on discord and take a look at the GitHub page and we can discuss how to get started.
           <a href="https://github.com/panel-attack/panel-game">GitHub</a>
