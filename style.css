@@ -37,10 +37,6 @@ h3 {
   font-weight: bold;
 }
 
-.center {
-  text-align: center;
-}
-
 p.button {
   display: inline-flex;
   align-items: center;
@@ -96,10 +92,6 @@ p.button:active {
   object-fit: contain;
 }
 
-.clear {
-  clear: both;
-}
-
 /* Button container styling to ensure proper containment */
 div[style*="text-align: center"] {
   display: flex;
@@ -149,9 +141,6 @@ div.flexItem.character-container {
   padding: 0;
   margin-bottom: 10px;
 }
-
-
-
 
 div#footer {
   width: 100%;
@@ -203,7 +192,6 @@ iframe {
   padding: 8px 8px 2px 2px;
 }
 
-
 .topnav .icon {
   display: none;
 }
@@ -214,7 +202,7 @@ iframe {
 }
 
 @media screen and (max-width: 600px) {
-  .topnav a:not(:first-child), .dropdown .dropbtn {
+  .topnav a:not(:first-child) {
     display: none;
   }
   .topnav a.icon {
@@ -222,17 +210,6 @@ iframe {
     display: block;
   }
   
-  /* Adjust platform button styling for mobile */
-  .platform-button {
-    gap: 6px;
-    font-size: 16px;
-  }
-  
-  .platform-icon {
-    width: 48px;
-    height: 48px;
-    padding: 6px;
-  }
 }
 
 @media screen and (max-width: 600px) {
@@ -247,13 +224,7 @@ iframe {
     display: block;
     text-align: left;
   }
-  .topnav.responsive .dropdown {float: none;}
-  .topnav.responsive .dropdown-content {position: relative;}
-  .topnav.responsive .dropdown .dropbtn {
-    display: block;
-    width: 100%;
-    text-align: left;
-  }
+  
 }
 
 /* WORLD SECTION - CHARACTER STYLE */
@@ -264,7 +235,6 @@ div.flexItem.world-container {
   padding: 0;
   margin-bottom: 10px;
 }
-
 
 /* WORLD CARDS - MIRRORING CHARACTER CARDS */
 .world-card {
@@ -383,7 +353,6 @@ div.flexItem.panel-container {
   margin-bottom: 10px;
 }
 
-
 /* PANEL CARDS - MIRRORING CHARACTER CARDS */
 .panel-card {
   background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
@@ -473,7 +442,6 @@ div.flexItem.panel-container {
 .sharp-theme .panel-name {
   color: #87CEEB;
 }
-
 
 /* Panel card staggered animation delays */
 .flexItem:nth-of-type(6) .panel-card { animation-delay: 0.4s; }
