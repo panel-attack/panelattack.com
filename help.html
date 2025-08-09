@@ -38,97 +38,79 @@
   <div id="body">
     <div class="flexContainer">
 
-      <div class="flexItem fullWidth world-container">
-        <div class="world-card crystal-theme">
-          <div class="world-header">
-            <h3 class="world-name">Frequently Asked Questions</h3>
-          </div>
-          <p class="world-desc">Find answers to common questions about Panel Attack below. If you need additional help, join our Discord community!</p>
+      <div class="flexItem fullWidth card crystal-theme">
+        <div class="card-header">
+          <h3 class="card-name">Frequently Asked Questions</h3>
         </div>
+        <p class="card-desc">Find answers to common questions about Panel Attack below. If you need additional help, join our Discord community!</p>
       </div>
 
-      <div class="flexItem fullWidth world-container">
-        <div class="world-card gear-theme">
-          <div class="world-header">
-            <h3 class="world-name">Controls Issue</h3>
-          </div>
-          <p class="world-desc"><strong>Q:</strong> I messed up my controls in Panel Attack, and now it's going crazy. Help?</p>
-          <p class="world-desc"><strong>A:</strong> Try clicking on the "Configure Input" menu item and then "Reset to default controls" with your mouse. If that doesn't work you need to close Panel Attack and delete the file that saves your input settings. On windows, you can type this into the start menu search to get to the right folder:</p>
-          <div class="code">%appdata%\Panel Attack</div>
-          <p class="world-desc">then delete <span class="code">keysV2.txt</span> and <span class="code">keysV3.json</span></p>
+      <div class="flexItem fullWidth card gear-theme">
+        <div class="card-header">
+          <h3 class="card-name">Controls Issue</h3>
         </div>
+        <p class="card-desc"><strong>Q:</strong> I messed up my controls in Panel Attack, and now it's going crazy. Help?</p>
+        <p class="card-desc"><strong>A:</strong> Try clicking on the "Configure Input" menu item and then "Reset to default controls" with your mouse. If that doesn't work you need to close Panel Attack and delete the file that saves your input settings. On windows, you can type this into the start menu search to get to the right folder:</p>
+        <div class="code">%appdata%\Panel Attack</div>
+        <p class="card-desc">then delete <span class="code">keysV2.txt</span> and <span class="code">keysV3.json</span></p>
       </div>
 
-      <div class="flexItem fullWidth world-container">
-        <div class="world-card pipe-theme">
-          <div class="world-header">
-            <h3 class="world-name">Controller Detection</h3>
-          </div>
-          <p class="world-desc"><strong>Q:</strong> What can I do if my controller inputs aren't detected even though the controller works in other games?</p>
-          <p class="world-desc"><strong>A:</strong> Please make sure that Steam is fully closed when starting Panel Attack. Steam has its own compatibility tools to make sure controllers work with games in Steam and sometimes intercepts controller signals. If you are starting the game for the first time you also have to bind the controller inputs to Panel Attack's controls via "Configure Input" in the main menu.</p>
+      <div class="flexItem fullWidth card pipe-theme">
+        <div class="card-header">
+          <h3 class="card-name">Controller Detection</h3>
         </div>
+        <p class="card-desc"><strong>Q:</strong> What can I do if my controller inputs aren't detected even though the controller works in other games?</p>
+        <p class="card-desc"><strong>A:</strong> Please make sure that Steam is fully closed when starting Panel Attack. Steam has its own compatibility tools to make sure controllers work with games in Steam and sometimes intercepts controller signals. If you are starting the game for the first time you also have to bind the controller inputs to Panel Attack's controls via "Configure Input" in the main menu.</p>
       </div>
 
-      <div class="flexItem fullWidth world-container">
-        <div class="world-card crystal-theme">
-          <div class="world-header">
-            <h3 class="world-name">Multiple Computers</h3>
-          </div>
-          <p class="world-desc"><strong>Q:</strong> I have two computers. Can I use the same name / user_id on both, so all my matches get tracked to the same account?</p>
-          <p class="world-desc"><strong>A:</strong> Yes, please do. After you've logged into the Panel Attack server(s) once: On your first computer, Go to "Options" → "Modify User ID" → "panelattack.com" and write down the number listed there. Then go to the same spot on your second computer and type or paste that number in.</p>
+      <div class="flexItem fullWidth card crystal-theme">
+        <div class="card-header">
+          <h3 class="card-name">Multiple Computers</h3>
         </div>
+        <p class="card-desc"><strong>Q:</strong> I have two computers. Can I use the same name / user_id on both, so all my matches get tracked to the same account?</p>
+        <p class="card-desc"><strong>A:</strong> Yes, please do. After you've logged into the Panel Attack server(s) once: On your first computer, Go to "Options" → "Modify User ID" → "panelattack.com" and write down the number listed there. Then go to the same spot on your second computer and type or paste that number in.</p>
       </div>
 
-      <div class="flexItem fullWidth world-container">
-        <div class="world-card gear-theme">
-          <div class="world-header">
-            <h3 class="world-name">Accessing Replays</h3>
-          </div>
-          <p class="world-desc"><strong>Q:</strong> How do I access replays?</p>
-          <p class="world-desc"><strong>A:</strong> Replays of all the games your client has played or spectated are stored as files on your computer in <span class="code">%appdata%\Panel Attack\replays</span>. Publicly saved replays are <a href="replays/" target="_blank">stored here</a>. You can adjust whether your replays are saved publicly in the Panel Attack options menu. They are arranged into folders by Panel Attack version, then date (UTC time), then player names.</p>
-          <p class="world-desc">Once you have downloaded the file for the replay you want to watch, copy it to <span class="code">%appdata%\Panel Attack\replays</span>, then relaunch panel attack and find it with the Replay Browser at the main menu.</p>
+      <div class="flexItem fullWidth card gear-theme">
+        <div class="card-header">
+          <h3 class="card-name">Accessing Replays</h3>
         </div>
+        <p class="card-desc"><strong>Q:</strong> How do I access replays?</p>
+        <p class="card-desc"><strong>A:</strong> Replays of all the games your client has played or spectated are stored as files on your computer in <span class="code">%appdata%\Panel Attack\replays</span>. Publicly saved replays are <a href="replays/" target="_blank">stored here</a>. You can adjust whether your replays are saved publicly in the Panel Attack options menu. They are arranged into folders by Panel Attack version, then date (UTC time), then player names.</p>
+        <p class="card-desc">Once you have downloaded the file for the replay you want to watch, copy it to <span class="code">%appdata%\Panel Attack\replays</span>, then relaunch panel attack and find it with the Replay Browser at the main menu.</p>
       </div>
 
-      <div class="flexItem fullWidth world-container">
-        <div class="world-card pipe-theme">
-          <div class="world-header">
-            <h3 class="world-name">Creating and Installing Mods</h3>
-          </div>
-          <p class="world-desc"><strong>Q:</strong> How can I create and install mods?</p>
-          <p class="world-desc"><strong>A:</strong> Please check <a href="https://github.com/panel-attack/panel-game/blob/beta/docs/installMods.md">here</a> for instructions on installing mods. Documentation on mods is available ingame under "Options" → "About".</p>
+      <div class="flexItem fullWidth card pipe-theme">
+        <div class="card-header">
+          <h3 class="card-name">Creating and Installing Mods</h3>
         </div>
+        <p class="card-desc"><strong>Q:</strong> How can I create and install mods?</p>
+        <p class="card-desc"><strong>A:</strong> Please check <a href="https://github.com/panel-attack/panel-game/blob/beta/docs/installMods.md">here</a> for instructions on installing mods. Documentation on mods is available ingame under "Options" → "About".</p>
       </div>
 
-      <div class="flexItem fullWidth world-container">
-        <div class="world-card crystal-theme">
-          <div class="world-header">
-            <h3 class="world-name">Black Screen Issue</h3>
-          </div>
-          <p class="world-desc"><strong>Q:</strong> Panel Attack only shows a black screen, what can I do?</p>
-          <p class="world-desc"><strong>A:</strong> The AMD 22.7.1 graphics driver is known to cause rendering problems with all LOVE2D games, including Panel Attack. Please upgrade your graphics driver to 22.8.1 or higher.</p>
+      <div class="flexItem fullWidth card crystal-theme">
+        <div class="card-header">
+          <h3 class="card-name">Black Screen Issue</h3>
         </div>
+        <p class="card-desc"><strong>Q:</strong> Panel Attack only shows a black screen, what can I do?</p>
+        <p class="card-desc"><strong>A:</strong> The AMD 22.7.1 graphics driver is known to cause rendering problems with all LOVE2D games, including Panel Attack. Please upgrade your graphics driver to 22.8.1 or higher.</p>
       </div>
 
-      <div class="flexItem fullWidth world-container">
-        <div class="world-card gear-theme">
-          <div class="world-header">
-            <h3 class="world-name">Linux Startup Issue</h3>
-          </div>
-          <p class="world-desc"><strong>Q:</strong> When trying to start Panel Attack on Linux it does not open, what can I do?</p>
-          <p class="world-desc"><strong>A:</strong> AppImages rely on the FUSE library being present in version 2 on your OS. Some distributions don't have it. You can run the game in a terminal with the <span class="code">--appimage-extract</span> argument to unpack it. The extracted executable is located in <span class="code">squashfs-root/bin/</span>.</p>
-          <p class="world-desc">See <a href="https://github.com/AppImage/AppImageKit/wiki/FUSE">here</a> for more information.</p>
+      <div class="flexItem fullWidth card gear-theme">
+        <div class="card-header">
+          <h3 class="card-name">Linux Startup Issue</h3>
         </div>
+        <p class="card-desc"><strong>Q:</strong> When trying to start Panel Attack on Linux it does not open, what can I do?</p>
+        <p class="card-desc"><strong>A:</strong> AppImages rely on the FUSE library being present in version 2 on your OS. Some distributions don't have it. You can run the game in a terminal with the <span class="code">--appimage-extract</span> argument to unpack it. The extracted executable is located in <span class="code">squashfs-root/bin/</span>.</p>
+        <p class="card-desc">See <a href="https://github.com/AppImage/AppImageKit/wiki/FUSE">here</a> for more information.</p>
       </div>
 
-      <div class="flexItem fullWidth world-container">
-        <div class="world-card pipe-theme">
-          <div class="world-header">
-            <h3 class="world-name">Contributing to Panel Attack</h3>
-          </div>
-          <p class="world-desc"><strong>Q:</strong> Can I help contribute to Panel Attack?</p>
-          <p class="world-desc"><strong>A:</strong> We are always looking for more contributors, please reach out to us on discord and take a look at the <a href="https://github.com/panel-attack/panel-game">GitHub</a> page and we can discuss how to get started.</p>
+      <div class="flexItem fullWidth card pipe-theme">
+        <div class="card-header">
+          <h3 class="card-name">Contributing to Panel Attack</h3>
         </div>
+        <p class="card-desc"><strong>Q:</strong> Can I help contribute to Panel Attack?</p>
+        <p class="card-desc"><strong>A:</strong> We are always looking for more contributors, please reach out to us on discord and take a look at the <a href="https://github.com/panel-attack/panel-game">GitHub</a> page and we can discuss how to get started.</p>
       </div>
 
     </div>
