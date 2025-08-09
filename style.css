@@ -302,7 +302,7 @@ div.flexItem.world-container {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  border: 3px solid;
+  border: none;
   transition: box-shadow 0.2s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   flex-shrink: 0;
@@ -417,13 +417,18 @@ div.flexItem.panel-container {
 
 /* Panel face images - mirroring character face styling */
 .panel-face {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  border: 3px solid;
+  width: 62px;
+  height: 62px;
+  border-radius: 10px; /* rounded square to avoid clipping */
+  border: none;
   transition: box-shadow 0.2s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   flex-shrink: 0;
+  /* Ensure full image fits within frame without clipping */
+  object-fit: contain;
+  padding: 6px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .panel-face:hover {
