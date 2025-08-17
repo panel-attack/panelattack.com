@@ -547,6 +547,10 @@ iframe {
   border-color: #A80000;
 }
 
+.madamq-theme a {
+  color: #FF4444;
+}
+
 .magellan-theme {
   border-color: #73ABD8;
   background: linear-gradient(135deg, rgba(115, 171, 216, 0.15), rgba(115, 171, 216, 0.05));
