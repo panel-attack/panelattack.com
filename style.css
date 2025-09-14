@@ -1270,16 +1270,19 @@ iframe {
   }
 }
 
-/* GUIDE PAGE GLOSSARY SIDEBAR LAYOUT */
+/* UNIFIED SIDEBAR LAYOUT */
 
-.glossary-container {
+#body {
   display: flex;
   gap: 20px;
-  margin-top: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  align-items: flex-start;
 }
 
-.glossary-sidebar {
-  width: 280px;
+.unified-sidebar {
+  width: 320px;
   position: sticky;
   top: 20px;
   height: fit-content;
@@ -1293,15 +1296,15 @@ iframe {
   flex-shrink: 0;
 }
 
-.glossary-sidebar-header {
+.sidebar-header {
   margin-bottom: 20px;
   padding-bottom: 15px;
   border-bottom: 2px solid #53C3AD;
 }
 
-.glossary-sidebar-header h4 {
+.sidebar-header h3 {
   color: #C0EEBF;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: bold;
   margin: 0;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
@@ -1309,8 +1312,287 @@ iframe {
   letter-spacing: 0.04em;
 }
 
-/* Wikipedia-style collapsible TOC sections */
-.glossary-sidebar-links {
+.main-content-area {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Navigation Sections */
+.main-nav-section,
+.glossary-nav-section {
+  margin-bottom: 20px;
+}
+
+.nav-section-header {
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(83, 195, 173, 0.3);
+}
+
+.nav-section-header h4 {
+  color: #C0EEBF;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Main Navigation Tabs */
+.main-nav-items {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.nav-tab {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid transparent;
+  color: #CCC;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.nav-tab:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #FFF;
+  transform: translateX(4px);
+}
+
+.nav-tab.active {
+  background: rgba(255, 255, 255, 0.15);
+  color: #FFF;
+  border-color: currentColor;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transform: translateX(6px);
+}
+
+.nav-tab-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* Tab color themes for navigation */
+.nav-tab.crystal-tab.active {
+  border-color: #53C3AD;
+  color: #C0EEBF;
+}
+
+.nav-tab.copper-tab.active {
+  border-color: #B87333;
+  color: #D2B48C;
+}
+
+.nav-tab.bronze-tab.active {
+  border-color: #CD7F32;
+  color: #F4A460;
+}
+
+.nav-tab.silver-tab.active {
+  border-color: #C0C0C0;
+  color: #E5E5E5;
+}
+
+.nav-tab.gold-tab.active {
+  border-color: #FFD700;
+  color: #FFF8DC;
+}
+
+.nav-tab.diamond-tab.active {
+  border-color: #B9F2FF;
+  color: #E0F6FF;
+}
+
+.nav-tab.glossary-tab.active {
+  border-color: #7fd0ff;
+  color: #E0F6FF;
+}
+
+/* Glossary Navigation Items */
+.glossary-nav-items {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Tier system styles */
+.tier-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  position: relative;
+}
+
+.tier-header:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.tier-toggle {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 4px;
+  font-size: 14px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.tier-toggle:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+}
+
+.tier-toggle:focus {
+  outline: 2px solid rgba(127, 208, 255, 0.6);
+  outline-offset: 2px;
+}
+
+.tier-toggle-icon {
+  transition: transform 0.2s ease;
+}
+
+.tier-content {
+  padding: 16px 0;
+  margin-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tier-item {
+  margin-bottom: 20px;
+}
+
+.tier-item:last-child {
+  margin-bottom: 0;
+}
+
+.tier-item h4 {
+  color: #f0f0f3;
+  font-size: 18px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+/* Glossary inline styles for tier system */
+.glossary-card-inline {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+}
+
+.glossary-card-inline:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(83, 195, 173, 0.3);
+  transform: translateY(-2px);
+}
+
+.glossary-card-inline:last-child {
+  margin-bottom: 0;
+}
+
+.glossary-inline-content h5 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #f0f0f3;
+  margin: 0 0 8px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.glossary-inline-content p {
+  color: #cfd0d6;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 12px 0;
+}
+
+.glossary-inline-content .glossary-diagram {
+  display: block;
+  margin: 12px auto 0;
+  image-rendering: pixelated;
+  width: clamp(80px, 25vw, 150px);
+  height: auto;
+  filter: drop-shadow(0 2px 0 rgba(0,0,0,.6)) drop-shadow(0 8px 22px rgba(0,0,0,.35));
+  transition: transform 0.2s ease;
+}
+
+.glossary-card-inline:hover .glossary-diagram {
+  transform: scale(1.05);
+}
+
+/* Tier Navigation in Sidebar */
+.tier-nav-section {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tier-nav-items {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 8px;
+}
+
+.tier-nav-item {
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  color: #cfd0d6;
+}
+
+.tier-nav-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(127, 208, 255, 0.3);
+  color: #e0f0ff;
+  transform: translateY(-1px);
+}
+
+.tier-nav-item.active {
+  background: rgba(127, 208, 255, 0.15);
+  border-color: rgba(127, 208, 255, 0.5);
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.tier-nav-text {
+  display: block;
+}
+
+/* Main tier content styling */
+.tier-content-main {
+  padding: 0;
+  margin-top: 0;
+  border: none;
+}
+
+/* Legacy glossary styles - maintain for compatibility but not actively used */
+.glossary-nav-items {
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -1415,36 +1697,41 @@ iframe {
   min-width: 0;
 }
 
-/* Update existing glossary grid to work within the new container */
-.glossary-container .glossary-grid {
-  margin-top: 0;
+/* Update glossary grid to work outside container */
+.glossary-grid {
+  margin-top: 20px;
 }
 
-/* Responsive adjustments for glossary sidebar */
-@media screen and (max-width: 1024px) {
-  .glossary-container {
+/* Responsive adjustments for unified sidebar */
+@media screen and (max-width: 1200px) {
+  #body {
     gap: 15px;
+    padding: 15px;
   }
   
-  .glossary-sidebar {
-    width: 250px;
+  .unified-sidebar {
+    width: 280px;
   }
 }
 
 @media screen and (max-width: 900px) {
-  .glossary-container {
+  #body {
     flex-direction: column;
     gap: 20px;
   }
   
-  .glossary-sidebar {
+  .unified-sidebar {
     width: 100%;
-    position: relative;
-    max-height: none;
+    position: static;
+    max-height: 500px;
     order: -1;
   }
   
-  .glossary-sidebar-links {
+  .content-area {
+    width: 100%;
+  }
+  
+  .glossary-nav-items {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 8px;
@@ -1464,15 +1751,17 @@ iframe {
 }
 
 @media screen and (max-width: 600px) {
-  .glossary-container {
+  #body {
     gap: 15px;
+    padding: 12px;
   }
   
-  .glossary-sidebar {
+  .unified-sidebar {
     padding: 15px;
+    max-height: 400px;
   }
   
-  .glossary-sidebar-links {
+  .glossary-nav-items {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
   
@@ -1482,15 +1771,15 @@ iframe {
 }
 
 @media screen and (max-width: 480px) {
-  .glossary-sidebar {
+  .unified-sidebar {
     padding: 12px;
   }
   
-  .glossary-sidebar-header h4 {
+  .sidebar-header h3 {
     font-size: 16px;
   }
   
-  .glossary-sidebar-links {
+  .glossary-nav-items {
     grid-template-columns: 1fr;
   }
   
@@ -1532,19 +1821,19 @@ html {
   background-color: rgba(83, 195, 173, 0.7);
 }
 
-/* Glossary sidebar - slightly more subtle */
-.glossary-sidebar::-webkit-scrollbar {
+/* Unified sidebar - slightly more subtle */
+.unified-sidebar::-webkit-scrollbar {
   width: 8px;
 }
 
-.glossary-sidebar::-webkit-scrollbar-thumb {
+.unified-sidebar::-webkit-scrollbar-thumb {
   background-color: rgba(83, 195, 173, 0.25);
   border-radius: 4px;
   border: 1px solid transparent;
   background-clip: content-box;
 }
 
-.glossary-sidebar::-webkit-scrollbar-thumb:hover {
+.unified-sidebar::-webkit-scrollbar-thumb:hover {
   background-color: rgba(83, 195, 173, 0.4);
 }
 
@@ -1554,8 +1843,119 @@ html {
   scrollbar-color: rgba(83, 195, 173, 0.4) transparent;
 }
 
-.glossary-sidebar {
+.unified-sidebar {
   scrollbar-color: rgba(83, 195, 173, 0.3) transparent;
+}
+
+/* HELP PAGE NAVIGATION */
+.help-container {
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.help-nav {
+  flex: 0 0 250px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 20px;
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+}
+
+.help-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.nav-section {
+  margin-bottom: 8px;
+}
+
+.nav-header {
+  padding: 12px 16px;
+  background: #333;
+  border: 1px solid #666;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+  position: relative;
+}
+
+.nav-header:hover {
+  background: #444;
+}
+
+.nav-header::after {
+  content: '▶';
+  position: absolute;
+  right: 16px;
+  transition: transform 0.2s;
+}
+
+.nav-section.expanded .nav-header::after {
+  transform: rotate(90deg);
+}
+
+.nav-subsections {
+  display: none;
+  margin-top: 4px;
+  margin-left: 16px;
+}
+
+.nav-section.expanded .nav-subsections {
+  display: block;
+}
+
+.nav-subsection {
+  padding: 8px 12px;
+  background: #222;
+  border: 1px solid #444;
+  border-radius: 4px;
+  margin-bottom: 2px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+.nav-subsection:hover {
+  background: #333;
+}
+
+.nav-subsection.active {
+  background: #22A;
+  border-color: #66C;
+}
+
+.content-section {
+  display: none;
+}
+
+.content-section.active {
+  display: block;
+}
+
+.content-subsection {
+  margin-bottom: 20px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .help-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .help-nav {
+    flex: none;
+    position: static;
+    margin-bottom: 20px;
+  }
 }
 
 
