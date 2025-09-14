@@ -305,9 +305,6 @@
       
       <!-- Tier Navigation (shows when a section is selected) -->
       <div class="tier-nav-section" id="tier-nav-section" style="display: none;">
-        <div class="nav-section-header">
-          <h4 id="tier-nav-title">Tiers</h4>
-        </div>
         <div id="tier-nav-items" class="tier-nav-items"></div>
       </div>
       
@@ -365,230 +362,13 @@
 
   <!-- TAB SWITCHING JAVASCRIPT -->
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const tabs = document.querySelectorAll('.nav-tab'); // New unified sidebar navigation
-      const dropdownTabs = document.querySelectorAll('.tab-dropdown .tab');
-      const tabContents = document.querySelectorAll('.tab-content');
-      const menuToggle = document.getElementById('tab-menu-toggle');
-      const dropdown = document.getElementById('tab-dropdown');
-
-      // Function to switch tabs
-      function switchTab(targetTab) {
-        const tabId = targetTab.dataset.tab;
-        
-        // Remove active class from all main tabs and dropdown current selection
-        tabs.forEach(t => t.classList.remove('active'));
-        dropdownTabs.forEach(t => t.classList.remove('current-selection'));
-        tabContents.forEach(content => content.classList.remove('active'));
-        
-        // Find and activate the main tab with matching data-tab
-        const mainTab = document.querySelector(`.nav-tab[data-tab="${tabId}"]`);
-        if (mainTab) {
-          mainTab.classList.add('active');
-        }
-        
-        // Mark current selection in dropdown
-        const dropdownTab = document.querySelector(`.tab-dropdown .tab[data-tab="${tabId}"]`);
-        if (dropdownTab) {
-          dropdownTab.classList.add('current-selection');
-        }
-        
-        // Show corresponding content
-        const targetContent = document.getElementById(tabId);
-        if (targetContent) {
-          targetContent.classList.add('active');
-        }
-        
-        // Close dropdown
-        dropdown.classList.remove('show');
-      }
-
-      // Handle main tab clicks
-      tabs.forEach(tab => {
-        tab.addEventListener('click', (e) => {
-          switchTabWithTiers(tab);
-        });
-      });
-
-      // Handle dropdown tab clicks
-      dropdownTabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-          switchTabWithTiers(tab);
-        });
-      });
-
-      // Handle hamburger menu toggle
-      if (menuToggle) {
-        menuToggle.addEventListener('click', (e) => {
-          e.stopPropagation();
-          dropdown.classList.toggle('show');
-        });
-      }
-
-      // Close dropdown when clicking outside
-      document.addEventListener('click', (e) => {
-        if (dropdown && menuToggle && !dropdown.contains(e.target) && !menuToggle.contains(e.target)) {
-          dropdown.classList.remove('show');
-        }
-      });
-
-      // Initialize current selection in dropdown
-      const currentActiveTab = document.querySelector('.nav-tab.active');
-      if (currentActiveTab) {
-        const currentTabId = currentActiveTab.dataset.tab;
-        const currentDropdownTab = document.querySelector(`.tab-dropdown .tab[data-tab="${currentTabId}"]`);
-        if (currentDropdownTab) {
-          currentDropdownTab.classList.add('current-selection');
-        }
-      }
-
-      // Keyboard navigation (arrow keys)
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
-          const activeTab = document.querySelector('.nav-tab.active');
-          const allTabs = Array.from(tabs);
-          const currentIndex = allTabs.indexOf(activeTab);
-          
-          let nextIndex;
-          if (e.key === 'ArrowLeft') {
-            nextIndex = currentIndex > 0 ? currentIndex - 1 : allTabs.length - 1;
-          } else {
-            nextIndex = currentIndex < allTabs.length - 1 ? currentIndex + 1 : 0;
-          }
-          
-          switchTabWithTiers(allTabs[nextIndex]);
-        }
-        
-        // Escape key closes dropdown
-        if (e.key === 'Escape') {
-          dropdown.classList.remove('show');
-        }
-      });
-    });
 
     // Global variables for tier system
     let SECTION_DATA = {};
-    let currentlyExpandedTier = null;
     let currentSection = 'overview';
-    let currentTier = null;
 
-    // Global function to create table of contents for selected section
-    function showTiersInSidebar(sectionId) {
-      const sectionData = SECTION_DATA[sectionId];
 
-      if (!sectionData || !sectionData.tiers) {
-        const tierNavSection = document.getElementById('tier-nav-section');
-        if (tierNavSection) {
-          tierNavSection.style.display = 'none';
-        }
-        return;
-      }
 
-      const tierNavSection = document.getElementById('tier-nav-section');
-      const tierNav = document.getElementById('tier-nav-items');
-
-      if (!tierNavSection || !tierNav) return;
-
-      tierNavSection.style.display = 'block';
-      tierNav.innerHTML = '';
-
-      // Create table of contents entries
-      Object.entries(sectionData.tiers).forEach(([tierName, tierItems]) => {
-        const tierNavItem = document.createElement('div');
-        tierNavItem.className = 'tier-nav-item';
-        tierNavItem.textContent = tierName;
-        tierNavItem.dataset.section = sectionId;
-        tierNavItem.dataset.tier = tierName;
-
-        // Scroll to section when clicked
-        tierNavItem.addEventListener('click', function() {
-          setUserScrolling(); // Set flag before scrolling
-          highlightTOCItem(sectionId, tierName); // Manually highlight this item
-          const targetElement = document.getElementById(`${sectionId}-${tierName.replace(/\s+/g, '-').toLowerCase()}`);
-          if (targetElement) {
-            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-        });
-
-        tierNav.appendChild(tierNavItem);
-      });
-
-      // Display all content continuously
-      renderAllTierContent(sectionId, sectionData);
-    }
-
-    // Global function to switch tabs with tier support
-    function switchTabWithTiers(tabElement) {
-      const tabId = tabElement.dataset.tab;
-      if (!tabId) return;
-
-      // Get references to elements
-      const tabs = document.querySelectorAll('.nav-tab');
-      const dropdownTabs = document.querySelectorAll('.tab-dropdown .tab');
-      const tabContents = document.querySelectorAll('.tab-content');
-
-      // Remove active from all tabs and tab contents
-      tabs.forEach(t => t.classList.remove('active'));
-      dropdownTabs.forEach(t => t.classList.remove('current-selection'));
-      tabContents.forEach(content => content.classList.remove('active'));
-
-      // Find and activate the main tab with matching data-tab
-      const mainTab = document.querySelector(`.nav-tab[data-tab="${tabId}"]`);
-      if (mainTab) {
-        mainTab.classList.add('active');
-      }
-
-      // Mark current selection in dropdown
-      const dropdownTab = document.querySelector(`.tab-dropdown .tab[data-tab="${tabId}"]`);
-      if (dropdownTab) {
-        dropdownTab.classList.add('current-selection');
-      }
-
-      // Show the selected tab content
-      const selectedContent = document.getElementById(tabId);
-      if (selectedContent) {
-        selectedContent.classList.add('active');
-      }
-
-      // Show tiers for this section in sidebar
-      showTiersInSidebar(tabId);
-
-      // Close dropdown if it was open
-      const dropdown = document.getElementById('tab-dropdown');
-      if (dropdown) {
-        dropdown.classList.remove('show');
-      }
-    }
-
-    // Global function to select a tier
-    function selectTier(sectionId, tierName) {
-      console.log(`selectTier called: ${tierName} in section: ${sectionId}`);
-
-      currentSection = sectionId;
-      currentTier = tierName;
-
-      // Remove active class from all tier nav items
-      document.querySelectorAll('.tier-nav-item').forEach(item => {
-        item.classList.remove('active');
-      });
-
-      // Add active class to selected tier
-      const selectedTierNavItem = document.querySelector(`[data-section="${sectionId}"][data-tier="${tierName}"]`);
-      console.log('selectedTierNavItem:', selectedTierNavItem);
-      if (selectedTierNavItem) {
-        selectedTierNavItem.classList.add('active');
-      }
-
-      const sectionData = SECTION_DATA[sectionId];
-      console.log('sectionData for selectTier:', sectionData);
-      console.log('tierData:', sectionData && sectionData.tiers && sectionData.tiers[tierName]);
-
-      if (sectionData && sectionData.tiers && sectionData.tiers[tierName]) {
-        renderTierContent(sectionId, tierName, sectionData.tiers[tierName], sectionData);
-      } else {
-        console.log('No tier data found for rendering');
-      }
-    }
 
     // Global function to render all tier content continuously (Wikipedia style)
     function renderAllTierContent(sectionId, sectionData) {
@@ -672,97 +452,7 @@
       });
     }
 
-    // Global function to render tier content in main content area
-    function renderTierContent(sectionId, tierName, tierItems, sectionData) {
-      const tabContent = document.getElementById(sectionId);
-      if (!tabContent) return;
 
-      // Clear all tier-related content
-      const tierCards = tabContent.querySelectorAll('.tier-card');
-      tierCards.forEach(card => card.remove());
-
-      // Create tier content card
-      const tierCard = document.createElement('div');
-      tierCard.className = `flexItem fullWidth card ${sectionData.theme} tier-card`;
-
-      const tierHeader = document.createElement('div');
-      tierHeader.className = 'card-header';
-      tierHeader.innerHTML = `<h3 class="card-name">${tierName}</h3>`;
-
-      const tierContent = document.createElement('div');
-      tierContent.className = 'tier-content-main';
-
-      // Render tier content based on data type
-      if (sectionId === 'glossary') {
-        // Special handling for glossary items
-        tierItems.forEach(item => {
-          const glossaryCard = document.createElement('div');
-          glossaryCard.className = 'glossary-card-inline';
-          glossaryCard.id = item.id;
-          glossaryCard.innerHTML = `
-            <div class="glossary-inline-content">
-              <h5>${item.title}</h5>
-              <p>${item.body}</p>
-              <img class="glossary-diagram" src="images/glossary/${item.diagram}" alt="${item.title} diagram" onerror="this.style.display='none'">
-            </div>
-          `;
-          tierContent.appendChild(glossaryCard);
-        });
-      } else {
-        // Standard tier content
-        tierItems.forEach(item => {
-          const itemDiv = document.createElement('div');
-          itemDiv.className = 'tier-item';
-          itemDiv.innerHTML = `
-            <h4>${item.title}</h4>
-            <p class="card-desc">${item.description || ''}</p>
-            ${item.links ? item.links.map(link => `<p class="card-desc">• <a href="${link.url}" target="_blank">${link.text}</a></p>`).join('') : ''}
-            ${item.goals ? item.goals.map(goal => `<p class="card-desc">• <strong>Goal:</strong> ${goal}</p>`).join('') : ''}
-          `;
-          tierContent.appendChild(itemDiv);
-        });
-      }
-
-      tierCard.appendChild(tierHeader);
-      tierCard.appendChild(tierContent);
-      tabContent.appendChild(tierCard);
-    }
-
-    // Global function to render section intro (always visible)
-    function renderSectionIntro(sectionId) {
-      const sectionData = SECTION_DATA[sectionId];
-      if (!sectionData) return;
-
-      const tabContent = document.getElementById(sectionId);
-      if (!tabContent) return;
-
-      // Clear all content
-      tabContent.innerHTML = '';
-
-      // Add intro card for sections that need it (all except overview)
-      if (sectionId !== 'overview' && sectionData.skillRange) {
-        const introCard = document.createElement('div');
-        introCard.className = `flexItem fullWidth card ${sectionData.theme}`;
-
-        let badgeImg = '';
-        if (sectionData.badges) {
-          badgeImg = sectionData.badges.map(badge => `<img src="${badge}" alt="${sectionData.title} Badge" class="face face--league" style="border-color: #B87333;">`).join('');
-        } else if (sectionData.badge) {
-          badgeImg = `<img src="${sectionData.badge}" alt="${sectionData.title} Badge" class="face face--league" style="border-color: #B87333;">`;
-        }
-
-        introCard.innerHTML = `
-          <div class="card-header">
-            ${badgeImg}
-            <h3 class="card-name">${sectionData.title}</h3>
-          </div>
-          <p class="card-desc"><strong>Skill Range:</strong> ${sectionData.skillRange}</p>
-          <p class="card-desc">${sectionData.description}</p>
-        `;
-
-        tabContent.appendChild(introCard);
-      }
-    }
 
     // Global function to add scroll spy functionality
     function addScrollSpy() {
@@ -1386,18 +1076,6 @@
         overviewTab.classList.add('active');
       }
 
-      // Hide the main section navigation since everything is now in TIERS
-      const mainNavTabs = document.querySelectorAll('.nav-tab');
-      mainNavTabs.forEach(tab => {
-        tab.style.display = 'none';
-      });
-
-      // Set overview tab as active in navigation
-      const overviewNavTab = document.querySelector('[data-tab="overview"]');
-      if (overviewNavTab) {
-        document.querySelectorAll('.nav-tab').forEach(tab => tab.classList.remove('active'));
-        overviewNavTab.classList.add('active');
-      }
     }
 
     // Unified tier system for all sections
