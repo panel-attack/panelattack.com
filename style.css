@@ -581,16 +581,16 @@ iframe {
 
 /* League Theme Colors */
 .copper-theme {
-  border-color: #B87333;
-  background: linear-gradient(135deg, rgba(184, 115, 51, 0.15), rgba(184, 115, 51, 0.05));
+  border-color: #A0522D;
+  background: linear-gradient(135deg, rgba(160, 82, 45, 0.15), rgba(160, 82, 45, 0.05));
 }
-.copper-theme .card-name { color: #D2B48C; }
+.copper-theme .card-name { color: #D2691E; }
 
 .bronze-theme {
-  border-color: #CD7F32;
-  background: linear-gradient(135deg, rgba(205, 127, 50, 0.15), rgba(205, 127, 50, 0.05));
+  border-color: #DAA520;
+  background: linear-gradient(135deg, rgba(218, 165, 32, 0.15), rgba(218, 165, 32, 0.05));
 }
-.bronze-theme .card-name { color: #F4A460; }
+.bronze-theme .card-name { color: #F4E99B; }
 
 .silver-theme {
   border-color: #C0C0C0;
