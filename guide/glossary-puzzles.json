@@ -1,0 +1,732 @@
+{
+  "Version": 3,
+  "Puzzle Sets": [
+    {
+      "Set Name": "chain",
+      "Description": "Glossary: Chain",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000000000000000000000000000000000000000000000000000000000000001000113393",
+          "CursorStartLeft": {
+            "Column": 5,
+            "Row": 1
+          },
+          "Solution": "A30Q1",
+          "Help Description": "Clearing the blues drops the red onto the reds beside them: a 2 chain."
+        }
+      ]
+    },
+    {
+      "Set Name": "combo",
+      "Description": "Glossary: Combo",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000000000000000000000000000000000000000000000000001000001000009100001900",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 2
+          },
+          "Solution": "A30Q1",
+          "Help Description": "Swapping the red into the column makes four reds match at once: a 4 combo."
+        }
+      ]
+    },
+    {
+      "Set Name": "link",
+      "Description": "Glossary: Link",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000000000000000000000000000000000000000000000000000000002000001220113393",
+          "CursorStartLeft": {
+            "Column": 5,
+            "Row": 1
+          },
+          "Solution": "A30Q1",
+          "Help Description": "Each match after the first is a link: the reds are the chain's second link, the greens its third."
+        }
+      ]
+    },
+    {
+      "Set Name": "das",
+      "Description": "Glossary: DAS",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000000000000000000000000000000000000000000000000000000000000000000999999",
+          "CursorStartLeft": {
+            "Column": 1,
+            "Row": 2
+          },
+          "Solution": "A20B24A26C24",
+          "Help Description": "Holding a direction moves the cursor once, waits, then runs it across the board."
+        }
+      ]
+    },
+    {
+      "Set Name": "setup",
+      "Description": "Glossary: Setup",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000000000000000000000000000000000000000000000000000000000000000100113393",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 2
+          },
+          "Solution": "A30Q1A1E1A1B1A1B1A33Q1",
+          "Help Description": "Moving the red over the blues first sets up the chain the next swap starts."
+        }
+      ]
+    },
+    {
+      "Set Name": "chain-extension",
+      "Description": "Glossary: Chain Extension",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000000000000000000000000000000000000000000000000000000002000021002113393",
+          "CursorStartLeft": {
+            "Column": 5,
+            "Row": 1
+          },
+          "Solution": "A30Q1A1I1A7Q1A1E1A1C1A55Q1",
+          "Help Description": "While the reds pop, the green is walked over to meet the greens falling after them: the x2 becomes an x3."
+        }
+      ]
+    },
+    {
+      "Set Name": "catch",
+      "Description": "Glossary: Catch",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000000000000000000000000000000000000000000000000000100000300110300999930",
+          "CursorStartLeft": {
+            "Column": 4,
+            "Row": 1
+          },
+          "Solution": "A30Q1A1I1A1C1A66Q1",
+          "Help Description": "The blues clear and the red falls; swapping it sideways as it passes the reds catches it on the grey: a 2 chain."
+        }
+      ]
+    },
+    {
+      "Set Name": "slide",
+      "Description": "Glossary: Slide",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000000000000000000000000000000000000000000000000100000930000311000399000",
+          "CursorStartLeft": {
+            "Column": 1,
+            "Row": 3
+          },
+          "Solution": "A30Q1A1E1A1E1A64Q1",
+          "Help Description": "The cyans clear and the red falls. The grey under the reds is slid left under it: while the swap crosses both columns it holds up the red landing on it and the red above where it left, and the three reds match before either can fall."
+        }
+      ]
+    },
+    {
+      "Set Name": "insert",
+      "Description": "Glossary: Insert",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000000000000000000000000000000000000000000001000003000003000019300991900",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 2
+          },
+          "Solution": "A30Q1A1C1A61Q1",
+          "Help Description": "A red is swapped into the gap between the falling red and the red at the bottom: three reds in a column, a 2 chain."
+        }
+      ]
+    },
+    {
+      "Set Name": "tornado",
+      "Description": "Glossary: Tornado",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000000000000000000000000000000000000000000000000001000003000093100019300",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 1
+          },
+          "Solution": "A30Q1A1C1A61Q1A1I1A1B1Q1",
+          "Help Description": "Two reds are swapped into the column the blues left, under the falling red: a 2 chain."
+        }
+      ]
+    },
+    {
+      "Set Name": "stealth",
+      "Description": "Glossary: Stealth",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000000000000000000000000000000000000000000000000000000010000010000199999",
+          "CursorStartLeft": {
+            "Column": 1,
+            "Row": 1
+          },
+          "Solution": "A30Q1A1R1",
+          "Help Description": "The red passes under the two reds and is swapped on before it can match them."
+        }
+      ]
+    },
+    {
+      "Set Name": "frame-trick",
+      "Description": "Glossary: Frame Trick",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000000000000000000000000000000000000000000000000000100110300999300999930",
+          "CursorStartLeft": {
+            "Column": 4,
+            "Row": 1
+          },
+          "Solution": "A30Q1A1I1A1I1A1C1A63Q1",
+          "Help Description": "The red has to be swapped on the one frame it passes the reds as it falls: a catch, one of the frame tricks."
+        }
+      ]
+    },
+    {
+      "Set Name": "clear",
+      "Description": "Glossary: Clear",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000000000000000000000000000000000000000000000000000000000000[====]119199",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 1
+          },
+          "Solution": "A30Q1",
+          "Help Description": "Matching the reds under the garbage turns it into panels."
+        }
+      ]
+    },
+    {
+      "Set Name": "garbage-clear",
+      "Description": "Glossary: Garbage Clear",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000000000000000000000000000000000000000000000000000000[==========]119199",
+          "GarbagePanelBuffer": "213546452613",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 1
+          },
+          "Solution": "A30Q1",
+          "Help Description": "The reds are the garbage clear: the match that starts the garbage converting, a row at a time, into panels."
+        }
+      ]
+    },
+    {
+      "Set Name": "revealed-row",
+      "Description": "Glossary: Revealed Row",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000000000000000000000000000000000000000000000000000000000000[====]119199",
+          "GarbagePanelBuffer": "213546",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 1
+          },
+          "Solution": "A30Q1",
+          "Help Description": "Clearing the garbage reveals a row of coloured panels."
+        }
+      ]
+    },
+    {
+      "Set Name": "garbage-chain",
+      "Description": "Glossary: Garbage Chain",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000000000000000000000000000000000000000000[==========]919299192999199999",
+          "GarbagePanelBuffer": "992999999999999999",
+          "CursorStartLeft": {
+            "Column": 1,
+            "Row": 3
+          },
+          "Solution": "A30Q1A1B1A1B1A95Q1",
+          "Help Description": "The reds swapped into a column under the garbage clear its bottom layer; while the green it reveals hovers, a green is swapped in under it, and the three greens, a 2 chain, clear the next layer."
+        }
+      ]
+    },
+    {
+      "Set Name": "shogun",
+      "Description": "Glossary: Shogun",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000000000000000000000000000000000000000200[====]919099122099199099999999",
+          "CursorStartLeft": {
+            "Column": 1,
+            "Row": 4
+          },
+          "Solution": "A30Q1",
+          "Help Description": "The reds clear the garbage the green sits on. Once it has converted, the green falls with the panel under it into the hole, and lands beside the greens: a 2 chain."
+        }
+      ]
+    },
+    {
+      "Set Name": "transition-panels",
+      "Description": "Glossary: Transition Panels",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000000000000000000000000000000000000000000000000000000002200[====]992292",
+          "CursorStartLeft": {
+            "Column": 5,
+            "Row": 1
+          },
+          "Solution": "A30Q1",
+          "Help Description": "The greens sit on the garbage, and fall once it has converted to panels."
+        }
+      ]
+    },
+    {
+      "Set Name": "tier",
+      "Description": "Glossary: Tier",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000000000000000000000000000000000000000000999900[====]999099[====]999999",
+          "CursorStartLeft": {
+            "Column": 1,
+            "Row": 12
+          },
+          "Solution": "",
+          "Help Description": "Each layer of panels between or above garbage is a tier."
+        }
+      ]
+    },
+    {
+      "Set Name": "tower",
+      "Description": "Glossary: Tower",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000000000000000000000000009000009000009000009000009000009000009000999999",
+          "CursorStartLeft": {
+            "Column": 1,
+            "Row": 12
+          },
+          "Solution": "",
+          "Help Description": "A tall column standing on its own is a tower."
+        }
+      ]
+    },
+    {
+      "Set Name": "downstacking",
+      "Description": "Glossary: Downstacking",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000000000000000000000000000000000000009000009000009000009000009000999999",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 2
+          },
+          "Solution": "A30Q1A1C1A27Q1A1I1A1B1A25Q1A1C1A27Q1",
+          "Help Description": "Swapping the tower's bottom panels out to either side brings it down."
+        }
+      ]
+    },
+    {
+      "Set Name": "topped-out",
+      "Description": "Glossary: Topped Out",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "[==========][==]00[====][================][====]452316231564564132123645",
+          "CursorStartLeft": {
+            "Column": 5,
+            "Row": 1
+          },
+          "Solution": "",
+          "Help Description": "Garbage stacked on the panels, every block resting on the next, reaches the top of the playfield."
+        }
+      ]
+    },
+    {
+      "Set Name": "locked-out",
+      "Description": "Glossary: Locked Out",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "[==========================================================]123456456123",
+          "CursorStartLeft": {
+            "Column": 1,
+            "Row": 1
+          },
+          "Solution": "",
+          "Help Description": "Topped out, and no swap on the two rows of panels left makes a match."
+        }
+      ]
+    },
+    {
+      "Set Name": "ghost-match",
+      "Description": "Glossary: Ghost Match",
+      "Puzzles": [
+        {
+          "Puzzle Type": "clear",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000000000000000000000000000000000000000000000000000000000000991999991999",
+          "PanelBuffer": "991999999999999999999999",
+          "CursorStartLeft": {
+            "Column": 1,
+            "Row": 12
+          },
+          "Solution": "",
+          "Help Description": "The red rising in from below becomes active under the two reds and matches them."
+        }
+      ]
+    },
+    {
+      "Set Name": "incoming-garbage",
+      "Description": "Glossary: Incoming Garbage",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000000000000000000000000000000999999999999999999999999999999999999999999",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 1
+          },
+          "Solution": "",
+          "Help Description": "Garbage sent by the other player shows above the stack before it drops in through the top."
+        }
+      ]
+    },
+    {
+      "Set Name": "shake-time",
+      "Description": "Glossary: Shake Time",
+      "Puzzles": [
+        {
+          "Puzzle Type": "clear",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 90,
+          "Stack": "000000000000000000000000000000000000000000000000000000[==========]999999",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 1
+          },
+          "Solution": "",
+          "Help Description": "Garbage that has just landed shakes the stack; the bar beside it is the shake time left."
+        }
+      ]
+    },
+    {
+      "Set Name": "stop-time",
+      "Description": "Glossary: Stop Time",
+      "Puzzles": [
+        {
+          "Puzzle Type": "clear",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000000000000000000000000000000000000000000001000001000009100001900999999",
+          "PanelBuffer": "999999999999999999999999",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 3
+          },
+          "Solution": "A90Q1",
+          "Help Description": "The stack rises until the 4 combo stops it; the bar beside it is the stop time left."
+        }
+      ]
+    },
+    {
+      "Set Name": "transition-clear",
+      "Description": "Glossary: Transition Clear",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000000000000000000000000000000000000[====]559999[====]502999992999999299",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 1
+          },
+          "Solution": "A30Q1A1I1A1I1A1I1A1C1A1C1A99Q1",
+          "Help Description": "The greens clear the lower garbage, and once it has converted the pink above it falls into the hole beside the revealed row. Swapping it across lines up three pinks against the garbage above."
+        }
+      ]
+    },
+    {
+      "Set Name": "bridge",
+      "Description": "Glossary: Bridge",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000000000000000000000000000000000000000000000000000000000000110901990999",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 2
+          },
+          "Solution": "A30Q1A1B1A1B1A35Q1A1C1A11Q1A1C1A11Q1",
+          "Help Description": "Dropping the grey into the gap bridges it, so the red can be walked across to the reds."
+        }
+      ]
+    },
+    {
+      "Set Name": "time-delay",
+      "Description": "Glossary: Time Delay",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000000000000000000000000000000000000000200000100050100911919959299959299",
+          "CursorStartLeft": {
+            "Column": 4,
+            "Row": 3
+          },
+          "Solution": "A30Q1",
+          "Help Description": "The pink lands a row down and matches first; the green falls three rows and matches after it, so the two are separate links of one chain: x2, then x3."
+        }
+      ]
+    },
+    {
+      "Set Name": "pedestal",
+      "Description": "Glossary: Pedestal (Support)",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000000000000000000000000000000000000000000[==========]009001999291999919",
+          "GarbagePanelBuffer": "992299999999",
+          "CursorStartLeft": {
+            "Column": 5,
+            "Row": 1
+          },
+          "Solution": "A30Q1A1I1A1C1A1C1A103Q1A1I1A42Q1",
+          "Help Description": "The grey in the third column is the pedestal: the green revealed over it stays a row above the green beside it. Once the greens are revealed, a green is walked under the pedestal, and swapping the landed green under it makes three greens against the block."
+        }
+      ]
+    },
+    {
+      "Set Name": "conserve",
+      "Description": "Glossary: Conserve",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000000000000000000000000[==================================]110143999443",
+          "GarbagePanelBuffer": "125643365412999999999999999999999999",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 2
+          },
+          "Solution": "A30Q1A1B1A127Q1A1I1A292Q1A1B1A4Q1",
+          "Help Description": "Two rows of panels with a yellow and a cyan pair stacked. The revealed row would land on both, two garbage chains for one row of garbage, so once it shows, the yellow under it is swapped aside: the cyans clear the next row, and the saved yellow stacks on the one beside it. The next row lands a blue on them with a yellow above; the blue is downstacked two columns right, off the edge of the saved pair, while the yellow hovers, and the yellow falls onto the saved pair, a 3 chain."
+        }
+      ]
+    },
+    {
+      "Set Name": "combo-storm",
+      "Description": "Glossary: Combo Storm",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000000000000000000000000000000000000000000000000000000000000000000999999",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 1
+          },
+          "Solution": "",
+          "Help Description": "Combo after combo from the other player, each sending its own small piece of garbage, until the board is full."
+        }
+      ]
+    },
+    {
+      "Set Name": "factory",
+      "Description": "Glossary: Factory",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000000000000000000000000000000000000000000000000000000000000000000999999",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 1
+          },
+          "Solution": "",
+          "Help Description": "3 chains from the other player, one after another, each sending a two row block, until the board is full."
+        }
+      ]
+    },
+    {
+      "Set Name": "grounded-catch",
+      "Description": "Glossary: Grounded Catch",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000000000000000000000000000000000000000000000000000100000930000390110399",
+          "CursorStartLeft": {
+            "Column": 4,
+            "Row": 3
+          },
+          "Solution": "A30Q1A1E1A1E1A1C1A65Q1",
+          "Help Description": "The blues clear and the red falls to the floor; swapping it into the gap the moment it lands, beside the reds, is still a 2 chain."
+        }
+      ]
+    },
+    {
+      "Set Name": "match-bridge",
+      "Description": "Glossary: Match Bridge",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000000000000000000000000000000000000000000000000000000[====]100011933939",
+          "CursorStartLeft": {
+            "Column": 4,
+            "Row": 1
+          },
+          "Solution": "A30Q1A1I1A1C1A1C1A1C1A5Q1A1B1A9Q1A1B1A9Q1",
+          "Help Description": "The cyans match, and while they flash the red is walked across them to the reds under the garbage, which it clears."
+        }
+      ]
+    }
+  ]
+}

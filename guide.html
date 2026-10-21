@@ -7,1364 +7,227 @@
   <meta name="description" content="Comprehensive guide and resources for learning Panel Attack, from beginner basics to expert techniques. Tutorials, strategies, and exercises for all skill levels." />
   <meta name="keywords" content="Panel Attack, guide, tutorial, strategy, combos, chains, defense, beginner, advanced, expert, tetris attack, puzzle league">
   <meta charset="utf-8" />
-  <link rel="stylesheet" type="text/css" href="style.css?v=2">
+  <link rel="stylesheet" type="text/css" href="style.css?v=4">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <title>Panel Attack - Guide</title>
   <link rel="shortcut icon" href="images/icon.png">
-  <style>
-    /* Smooth scrolling for the entire page */
-    html {
-      scroll-behavior: smooth;
-    }
-    
-    /* Glossary-specific styles */
-    .glossary-toc {
-      border: 1px solid rgba(255,255,255,.08);
-      border-radius: 12px;
-      padding: 16px 18px;
-      margin: 16px 0 32px 0;
-      background: rgba(255,255,255,.04);
-      backdrop-filter: blur(4px);
-    }
-    .glossary-toc h4 {
-      font-family: 'Oswald', sans-serif;
-      font-size: 18px;
-      margin: 0 0 8px 0;
-      letter-spacing: .04em;
-      text-transform: uppercase;
-      color: #53C3AD;
-    }
-    .glossary-toc-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .glossary-toc a {
-      font-family: 'Noto Sans', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color: #7fd0ff;
-      text-decoration: none;
-      padding: 6px 12px;
-      background: rgba(127, 208, 255, 0.1);
-      border: 1px solid rgba(127, 208, 255, 0.2);
-      border-radius: 20px;
-      font-size: 13px;
-      font-weight: 500;
-      transition: all 0.2s ease;
-      white-space: nowrap;
-    }
-    .glossary-toc a:hover { 
-      background: rgba(127, 208, 255, 0.2);
-      border-color: rgba(127, 208, 255, 0.4);
-      transform: translateY(-1px);
-      box-shadow: 0 2px 8px rgba(127, 208, 255, 0.3);
-    }
-    .glossary-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr));
-      gap: 20px;
-      margin-top: 24px;
-    }
-    .glossary-card {
-      text-align: center;
-      padding: 24px;
-      border-radius: 16px;
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.12);
-      backdrop-filter: blur(8px);
-      box-shadow: 0 4px 16px rgba(0,0,0,.2);
-      transition: all 0.3s ease;
-      scroll-margin-top: 80px;
-    }
-    .glossary-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 32px rgba(0,0,0,.3);
-      border-color: rgba(83, 195, 173, 0.3);
-      background: rgba(255,255,255,.06);
-    }
-    .glossary-card h5 {
-      font-family: 'Oswald', sans-serif;
-      font-size: clamp(28px, 6vw, 40px);
-      font-weight: 600;
-      letter-spacing: .05em;
-      line-height: .9;
-      margin: 0 0 10px 0;
-      text-transform: uppercase;
-      color: #f0f0f3;
-    }
-    .glossary-card p {
-      font-family: 'Noto Sans', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color: #cfd0d6;
-      margin: 0 auto 16px auto;
-      max-width: 62ch;
-      font-size: 16px;
-      line-height: 1.55;
-    }
-    .glossary-diagram {
-      display: inline-block;
-      image-rendering: pixelated;
-      width: clamp(90px, 30vw, 180px);
-      height: auto;
-      filter: drop-shadow(0 2px 0 rgba(0,0,0,.6)) drop-shadow(0 8px 22px rgba(0,0,0,.35));
-      transition: transform 0.2s ease;
-    }
-    .glossary-card:hover .glossary-diagram {
-      transform: scale(1.05);
-    }
-    
-    /* Tier navigation styles */
-    .tier-nav-item {
-      padding: 8px 12px;
-      margin: 4px 0;
-      cursor: pointer;
-      border-radius: 6px;
-      transition: all 0.2s ease;
-      color: #cfd0d6;
-      border: 1px solid transparent;
-    }
-
-    .tier-nav-item:hover {
-      background: rgba(255,255,255,.08);
-      border-color: rgba(83, 195, 173, 0.3);
-    }
-
-    .tier-nav-item.active {
-      background: rgba(83, 195, 173, 0.15);
-      border-color: rgba(83, 195, 173, 0.5);
-      color: #53C3AD;
-    }
-
-    .tier-nav-text {
-      font-family: 'Noto Sans', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      font-size: 14px;
-      font-weight: 500;
-    }
-
-    /* Section navigation styles */
-    .section-nav-item {
-      padding: 8px 12px;
-      margin: 4px 0;
-      cursor: pointer;
-      border-radius: 6px;
-      transition: all 0.2s ease;
-      color: #fff;
-      border: 1px solid transparent;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .section-nav-item:hover {
-      background: rgba(255,255,255,.08);
-      border-color: rgba(83, 195, 173, 0.3);
-    }
-
-    .section-nav-item.expanded {
-      background: rgba(83, 195, 173, 0.15);
-      border-color: rgba(83, 195, 173, 0.5);
-      color: #53C3AD;
-    }
-
-    .section-expand-arrow {
-      font-size: 12px;
-      transition: transform 0.2s ease;
-    }
-
-    .section-nav-item.expanded .section-expand-arrow {
-      transform: rotate(90deg);
-    }
-
-    .tier-list {
-      display: none;
-      margin-left: 16px;
-      margin-top: 4px;
-    }
-
-    .tier-list.expanded {
-      display: block;
-    }
-
-    /* Third-tier navigation styles */
-    .subtier-nav-item {
-      padding: 6px 10px;
-      margin: 2px 0;
-      cursor: pointer;
-      border-radius: 4px;
-      transition: all 0.2s ease;
-      color: #aaa;
-      border: 1px solid transparent;
-      font-size: 12px;
-      margin-left: 16px;
-    }
-
-    .subtier-nav-item:hover {
-      background: rgba(255,255,255,.06);
-      border-color: rgba(83, 195, 173, 0.2);
-      color: #ccc;
-    }
-
-    .subtier-nav-item.active {
-      background: rgba(83, 195, 173, 0.1);
-      border-color: rgba(83, 195, 173, 0.3);
-      color: #53C3AD;
-    }
-
-    .subtier-list {
-      display: none;
-      margin-left: 12px;
-      margin-top: 4px;
-      border-left: 1px solid rgba(255,255,255,.1);
-      padding-left: 8px;
-    }
-
-    .subtier-list.expanded {
-      display: block;
-    }
-
-    .tier-nav-item.has-subtiers {
-      position: relative;
-    }
-
-    .tier-nav-item.has-subtiers::after {
-      content: '▶';
-      position: absolute;
-      right: 8px;
-      font-size: 10px;
-      transition: transform 0.2s ease;
-    }
-
-    .tier-nav-item.has-subtiers.expanded::after {
-      transform: rotate(90deg);
-    }
-    
-    /* Tier content styles */
-    .tier-card {
-      margin-top: 20px;
-    }
-    
-    .tier-item {
-      margin-bottom: 24px;
-      padding-bottom: 16px;
-      border-bottom: 1px solid rgba(255,255,255,.08);
-    }
-    
-    .tier-item:last-child {
-      border-bottom: none;
-      margin-bottom: 0;
-      padding-bottom: 0;
-    }
-    
-    .tier-item h4 {
-      color: #53C3AD;
-      font-family: 'Oswald', sans-serif;
-      font-size: 18px;
-      margin: 0 0 8px 0;
-      text-transform: uppercase;
-      letter-spacing: .04em;
-    }
-    
-    .glossary-card-inline {
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 20px;
-      backdrop-filter: blur(4px);
-    }
-    
-    .glossary-inline-content h5 {
-      font-family: 'Oswald', sans-serif;
-      font-size: 24px;
-      font-weight: 600;
-      letter-spacing: .05em;
-      margin: 0 0 10px 0;
-      text-transform: uppercase;
-      color: #53C3AD;
-    }
-    
-    .glossary-inline-content p {
-      font-family: 'Noto Sans', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color: #cfd0d6;
-      margin: 0 0 16px 0;
-      line-height: 1.55;
-    }
-    
-  </style>
 </head>
 
 <body>
   <!-- SHARED HEADER - Loaded by header.js -->
   <script src="header.js"></script>
+  <script src="clips.js"></script>
+  <script src="guide/sections.js"></script>
+  <script src="guide/glossary.js"></script>
 
-  <div id="body">
-    <!-- Unified Left Navigation Sidebar -->
-    <div class="unified-sidebar">
+  <div id="body" class="sidebar-layout">
+    <nav class="unified-sidebar" aria-label="Guide contents">
       <div class="sidebar-header">
         <h3>Panel Attack Guide</h3>
       </div>
-      
-      
-      <!-- Tier Navigation (shows when a section is selected) -->
-      <div class="tier-nav-section" id="tier-nav-section" style="display: none;">
-        <div id="tier-nav-items" class="tier-nav-items"></div>
-      </div>
-      
-    </div>
+      <div id="guide-nav"></div>
+    </nav>
 
-    <!-- Main Content Area -->
-    <div class="main-content-area">
+    <main id="guide-content" class="main-content-area"></main>
+  </div>
 
-      <!-- OVERVIEW TAB CONTENT -->
-      <div id="overview" class="tab-content active">
-        <div class="flexItem fullWidth card crystal-theme">
-          <div class="card-header">
-            <img src="images/circle1.png" alt="Crystal" class="face face--circle" style="border-color: #53C3AD;">
-            <h3 class="card-name">Panel Attack Guide</h3>
-          </div>
-          <p class="card-desc">This guide contains resources, strategies, and advice for getting better at Panel Attack. Use the navigation on the left to jump to content specific to your skill level.</p>
-          <p class="card-desc">Each section contains collapsible tiers that you can expand to explore content in detail. Only one tier can be expanded at a time to keep the interface clean and focused.</p>
-        </div>
-      </div>
-
-      <!-- BEGINNER TAB CONTENT -->
-      <div id="beginner" class="tab-content">
-      </div>
-
-      <!-- NOVICE TAB CONTENT -->
-      <div id="novice" class="tab-content">
-      </div>
-
-      <!-- INTERMEDIATE TAB CONTENT -->
-      <div id="intermediate" class="tab-content">
-      </div>
-
-      <!-- ADVANCED TAB CONTENT -->
-      <div id="advanced" class="tab-content">
-      </div>
-
-      <!-- EXPERT TAB CONTENT -->
-      <div id="expert" class="tab-content">
-      </div>
-
-      <!-- GLOSSARY TAB CONTENT -->
-      <div id="glossary" class="tab-content">
-      </div>
-
-    </div>
-    
-    </div> <!-- End main-content-area -->
-  </div> <!-- End body -->
-  
-  
   <!-- FOOTER -->
   <div style="text-align: center; color: #888; font-size: 12px; padding: 20px;">
     <script>document.write("&copy; " + new Date().getFullYear() + " Panel Attack");</script>
   </div>
 
-  <!-- TAB SWITCHING JAVASCRIPT -->
   <script>
+    // How far down the window a heading has to reach before the sidebar calls it the one being read
+    const READING_LINE = 150;
 
-    // Global variables for tier system
-    let SECTION_DATA = {};
-    let currentSection = 'overview';
+    function slug(text) {
+      return text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    }
 
+    // The glossary as the guide renders it: each category a tier, each term a sub-tier keyed by its title
+    function glossarySection(glossary) {
+      const tiers = {};
+      glossary.categories.forEach(category => {
+        tiers[category.name] = {};
+        category.terms.forEach(term => { tiers[category.name][term.title] = term; });
+      });
+      return {title: glossary.title, theme: glossary.theme, description: glossary.description, tiers};
+    }
 
+    function badges(section) {
+      return section.badges || (section.badge ? [section.badge] : []);
+    }
 
+    function navIcon(sectionId, section) {
+      const icons = badges(section).map(badge => `<img class="nav-badge" src="${badge}" alt="" width="20" height="20">`).join('');
+      return icons || `<span class="nav-badge">${sectionId === 'glossary' ? '📚' : '📋'}</span>`;
+    }
 
-    // Global function to render all tier content continuously (Wikipedia style)
-    function renderAllTierContent(sectionId, sectionData) {
-      const tabContent = document.getElementById(sectionId);
-      if (!tabContent) return;
+    // clips.js loads a clip when it nears the screen; the file is twice the size it is shown at, so a
+    // high density screen shows it pixel for pixel
+    function glossaryClip(term) {
+      if (!term.clip) return '';
+      const size = term.size ? ` width="${term.size[0]}" height="${term.size[1]}"` : '';
+      return `<video class="glossary-clip" data-src="${term.image}"${size} preload="none" loop muted playsinline aria-label="${term.title} clip"></video>`;
+    }
 
-      // Clear existing content
-      tabContent.innerHTML = '';
+    function introCard(section) {
+      const images = badges(section).map(badge => `<img src="${badge}" alt="${section.title} Badge" class="face face--league" style="border-color: #B87333;">`).join('');
+      return `<div class="flexItem fullWidth card ${section.theme}">
+          <div class="card-header">${images}<h2 class="card-name">${section.title}</h2></div>
+          <p class="card-desc"><strong>Skill Range:</strong> ${section.skillRange}</p>
+          <p class="card-desc">${section.description}</p>
+        </div>`;
+    }
 
-      // Add intro card for sections that need it (all except overview)
-      if (sectionId !== 'overview' && sectionData.skillRange) {
-        const introCard = document.createElement('div');
-        introCard.className = `flexItem fullWidth card ${sectionData.theme}`;
+    function tierItem(item) {
+      return `<div class="tier-item">
+          <h4>${item.title}</h4>
+          <p class="card-desc">${item.description || ''}</p>
+          ${(item.links || []).map(link => `<p class="card-desc">• <a href="${link.url}" target="_blank">${link.text}</a></p>`).join('')}
+          ${(item.goals || []).map(goal => `<p class="card-desc">• <strong>Goal:</strong> ${goal}</p>`).join('')}
+        </div>`;
+    }
 
-        let badgeImg = '';
-        if (sectionData.badges) {
-          badgeImg = sectionData.badges.map(badge => `<img src="${badge}" alt="${sectionData.title} Badge" class="face face--league" style="border-color: #B87333;">`).join('');
-        } else if (sectionData.badge) {
-          badgeImg = `<img src="${sectionData.badge}" alt="${sectionData.title} Badge" class="face face--league" style="border-color: #B87333;">`;
-        }
-
-        introCard.innerHTML = `
-          <div class="card-header">
-            ${badgeImg}
-            <h3 class="card-name">${sectionData.title}</h3>
+    function glossaryTerm(term) {
+      return `<div class="glossary-card-inline" id="${term.id}">
+          <div class="glossary-inline-content">
+            <h5>${term.title}</h5>
+            <p>${term.body}</p>
+            ${glossaryClip(term)}
           </div>
-          <p class="card-desc"><strong>Skill Range:</strong> ${sectionData.skillRange}</p>
-          <p class="card-desc">${sectionData.description}</p>
-        `;
-
-        tabContent.appendChild(introCard);
-      }
-
-      // Render each tier continuously
-      Object.entries(sectionData.tiers).forEach(([tierName, tierItems]) => {
-        const tierCard = document.createElement('div');
-        tierCard.className = `flexItem fullWidth card ${sectionData.theme}`;
-        tierCard.id = `${sectionId}-${tierName.replace(/\s+/g, '-').toLowerCase()}`;
-
-        const tierHeader = document.createElement('div');
-        tierHeader.className = 'card-header';
-        tierHeader.innerHTML = `<h3 class="card-name">${tierName}</h3>`;
-
-        const tierContent = document.createElement('div');
-        tierContent.className = 'tier-content-main';
-
-        // Render tier content based on data type
-        if (sectionId === 'glossary') {
-          // Special handling for glossary items
-          tierItems.forEach(item => {
-            const glossaryCard = document.createElement('div');
-            glossaryCard.className = 'glossary-card-inline';
-            glossaryCard.id = item.id;
-            glossaryCard.innerHTML = `
-              <div class="glossary-inline-content">
-                <h5>${item.title}</h5>
-                <p>${item.body}</p>
-                <img class="glossary-diagram" src="images/glossary/${item.diagram}" alt="${item.title} diagram" onerror="this.style.display='none'">
-              </div>
-            `;
-            tierContent.appendChild(glossaryCard);
-          });
-        } else {
-          // Standard tier content
-          tierItems.forEach(item => {
-            const itemDiv = document.createElement('div');
-            itemDiv.className = 'tier-item';
-            itemDiv.innerHTML = `
-              <h4>${item.title}</h4>
-              <p class="card-desc">${item.description || ''}</p>
-              ${item.links ? item.links.map(link => `<p class="card-desc">• <a href="${link.url}" target="_blank">${link.text}</a></p>`).join('') : ''}
-              ${item.goals ? item.goals.map(goal => `<p class="card-desc">• <strong>Goal:</strong> ${goal}</p>`).join('') : ''}
-            `;
-            tierContent.appendChild(itemDiv);
-          });
-        }
-
-        tierCard.appendChild(tierHeader);
-        tierCard.appendChild(tierContent);
-        tabContent.appendChild(tierCard);
-      });
+        </div>`;
     }
 
-
-
-    // Global function to add scroll spy functionality
-    function addScrollSpy() {
-      let ticking = false;
-
-      function updateActiveSection() {
-        // Skip scroll spy during user-initiated scrolling
-        if (isUserScrolling) {
-          ticking = false;
-          return;
-        }
-
-        const sections = document.querySelectorAll('[id^="section-"]');
-        let currentSectionId = null;
-        let currentTierElement = null;
-        let currentSubTierElement = null;
-
-        // Find which section is currently in view
-        sections.forEach(section => {
-          const rect = section.getBoundingClientRect();
-          if (rect.top <= 150 && rect.bottom >= 150) {
-            currentSectionId = section.id.replace('section-', '');
+    function renderGuide(sections) {
+      const nav = [], content = [];
+      Object.entries(sections).forEach(([sectionId, section]) => {
+        const tierLinks = [], tierCards = [];
+        Object.entries(section.tiers).forEach(([tierName, tier]) => {
+          const tierId = slug(`${sectionId}-${tierName}`);
+          // a glossary category holds its terms by title; every other tier is a list of items
+          const terms = Array.isArray(tier) ? null : Object.values(tier);
+          if (terms) {
+            tierLinks.push(`<a class="tier-nav-item has-subtiers" href="#${tierId}">${tierName}</a>
+              <div class="subtier-list">${terms.map(term => `<a class="subtier-nav-item" href="#${term.id}">${term.title}</a>`).join('')}</div>`);
+          } else {
+            tierLinks.push(`<a class="tier-nav-item" href="#${tierId}">${tierName}</a>`);
           }
+          tierCards.push(`<div class="flexItem fullWidth card guide-tier ${section.theme}" id="${tierId}">
+              <div class="card-header"><h3 class="card-name">${tierName}</h3></div>
+              <div class="tier-content-main">${terms ? terms.map(glossaryTerm).join('') : tier.map(tierItem).join('')}</div>
+            </div>`);
         });
-
-        // If we found a current section, also check for current tier and sub-tier within that section
-        if (currentSectionId) {
-          const allElements = document.querySelectorAll(`[id^="${currentSectionId}-"]`);
-          allElements.forEach(element => {
-            const rect = element.getBoundingClientRect();
-            if (rect.top <= 150 && rect.bottom >= 150) {
-              const id = element.id;
-              const parts = id.split('-');
-
-              // Check if this is a sub-tier (has 3+ parts after section)
-              if (parts.length >= 4) {
-                currentSubTierElement = element;
-              } else if (parts.length === 3) {
-                currentTierElement = element;
-              }
-            }
-          });
-        }
-
-        // Update TOC highlighting and expansion (only if not user scrolling)
-        if (currentSectionId && currentSectionId !== currentlyExpandedSection) {
-          // Auto-expand the current section
-          const sectionNavItem = document.querySelector(`.section-nav-item[data-section-id="${currentSectionId}"]`);
-          if (sectionNavItem) {
-            // Auto-expand when scrolling (fromScroll = true)
-            toggleSection(currentSectionId, sectionNavItem, true);
-          }
-        }
-
-        // Remove active class from all navigation items
-        document.querySelectorAll('.tier-nav-item').forEach(item => item.classList.remove('active'));
-        document.querySelectorAll('.subtier-nav-item').forEach(item => item.classList.remove('active'));
-
-        // Handle individual term highlighting (third tier for glossary)
-        if (currentSectionId === 'glossary') {
-          // For glossary, check if we're viewing an individual term
-          const glossaryTerms = document.querySelectorAll('.glossary-card-inline');
-          let currentTermElement = null;
-          let currentTermTier = null;
-
-          glossaryTerms.forEach(term => {
-            const rect = term.getBoundingClientRect();
-            if (rect.top <= 150 && rect.bottom >= 150) {
-              currentTermElement = term;
-            }
-          });
-
-          if (currentTermElement) {
-            const termId = currentTermElement.id;
-
-            // Find which tier this term belongs to by looking through the data
-            Object.entries(SECTION_DATA.glossary.tiers).forEach(([tierName, tierData]) => {
-              Object.entries(tierData).forEach(([termName, termData]) => {
-                if (termData.id === termId) {
-                  currentTermTier = tierName;
-
-                  // Auto-expand the parent tier if needed
-                  const tierKey = `${currentSectionId}-${tierName}`;
-                  if (currentlyExpandedSubTier !== tierKey) {
-                    const tierNavItem = document.querySelector(`.tier-nav-item.has-subtiers[data-section-id="${currentSectionId}"][data-tier-name="${tierName}"]`);
-                    if (tierNavItem) {
-                      toggleSubTier(currentSectionId, tierName, tierNavItem);
-                    }
-                  }
-
-                  // Highlight the current term in the sub-tier navigation
-                  const correspondingSubTierNavItem = Array.from(document.querySelectorAll('.subtier-nav-item')).find(item => {
-                    const itemText = item.textContent.trim().toLowerCase();
-                    const termText = termName.toLowerCase();
-                    return itemText === termText;
-                  });
-
-                  if (correspondingSubTierNavItem) {
-                    correspondingSubTierNavItem.classList.add('active');
-                  }
-                }
-              });
-            });
-          }
-        } else if (currentSubTierElement) {
-          // Handle other three-tier structures (if any)
-          const subTierId = currentSubTierElement.id;
-          const parts = subTierId.split('-');
-          const tierName = parts[1].replace(/-/g, ' ');
-          const subTierName = parts.slice(2).join('-').replace(/-/g, ' ');
-
-          // Auto-expand the parent tier if needed
-          const tierKey = `${currentSectionId}-${tierName}`;
-          if (currentlyExpandedSubTier !== tierKey) {
-            const tierNavItem = document.querySelector(`.tier-nav-item.has-subtiers[data-section-id="${currentSectionId}"][data-tier-name="${tierName}"]`);
-            if (tierNavItem) {
-              toggleSubTier(currentSectionId, tierName, tierNavItem);
-            }
-          }
-
-          // Highlight the current sub-tier
-          const correspondingSubTierNavItem = Array.from(document.querySelectorAll('.subtier-nav-item')).find(item => {
-            const itemText = item.textContent.trim().toLowerCase();
-            const subTierText = subTierName.toLowerCase();
-            return itemText === subTierText;
-          });
-
-          if (correspondingSubTierNavItem) {
-            correspondingSubTierNavItem.classList.add('active');
-          }
-        } else if (currentTierElement) {
-          // Handle two-tier structure highlighting
-          const tierId = currentTierElement.id;
-          const parts = tierId.split('-');
-          const tierName = parts.slice(1).join('-').replace(/-/g, ' ');
-
-          // Find and highlight the corresponding tier nav item
-          const correspondingNavItem = Array.from(document.querySelectorAll('.tier-nav-item')).find(item => {
-            const itemText = item.textContent.trim().toLowerCase();
-            const tierText = tierName.toLowerCase();
-            return itemText === tierText;
-          });
-
-          if (correspondingNavItem) {
-            correspondingNavItem.classList.add('active');
-          }
-        }
-
-        ticking = false;
-      }
-
-      function requestTick() {
-        if (!ticking) {
-          requestAnimationFrame(updateActiveSection);
-          ticking = true;
-        }
-      }
-
-      // Listen for scroll events
-      window.addEventListener('scroll', requestTick);
-    }
-
-    // Global variables to track currently expanded section and sub-tier
-    let currentlyExpandedSection = null;
-    let currentlyExpandedSubTier = null;
-
-    // Global variables to manage user-initiated scrolling
-    let isUserScrolling = false;
-    let userScrollTimeout = null;
-
-    // Helper function to set user scrolling flag
-    function setUserScrolling() {
-      isUserScrolling = true;
-      // Clear any existing timeout
-      if (userScrollTimeout) {
-        clearTimeout(userScrollTimeout);
-      }
-      // Clear flag after smooth scroll duration (1000ms)
-      userScrollTimeout = setTimeout(() => {
-        isUserScrolling = false;
-      }, 1000);
-    }
-
-    // Helper function to manually highlight clicked TOC items
-    function highlightTOCItem(sectionId, tierName = null, termName = null) {
-      // Remove all active classes
-      document.querySelectorAll('.tier-nav-item').forEach(item => item.classList.remove('active'));
-      document.querySelectorAll('.subtier-nav-item').forEach(item => item.classList.remove('active'));
-
-      // Handle section expansion/highlighting
-      if (sectionId) {
-        const sectionNavItem = document.querySelector(`.section-nav-item[data-section-id="${sectionId}"]`);
-        const tierList = document.querySelector(`.tier-list[data-section-id="${sectionId}"]`);
-
-        if (sectionNavItem && tierList) {
-          // Collapse all other sections first
-          document.querySelectorAll('.section-nav-item').forEach(item => {
-            if (item !== sectionNavItem) {
-              item.classList.remove('expanded');
-            }
-          });
-          document.querySelectorAll('.tier-list').forEach(list => {
-            if (list !== tierList) {
-              list.classList.remove('expanded');
-            }
-          });
-
-          // Always expand/highlight the current section
-          sectionNavItem.classList.add('expanded');
-          tierList.classList.add('expanded');
-          currentlyExpandedSection = sectionId;
-        }
-      }
-
-      // Highlight tier if specified
-      if (tierName) {
-        const tierNavItem = document.querySelector(`[data-section="${sectionId}"][data-tier="${tierName}"]`) ||
-                          Array.from(document.querySelectorAll('.tier-nav-item')).find(item => {
-                            return item.textContent.trim().toLowerCase() === tierName.toLowerCase();
-                          });
-        if (tierNavItem) {
-          tierNavItem.classList.add('active');
-        }
-
-        // Expand sub-tier if needed for glossary terms
-        if (termName && sectionId === 'glossary') {
-          const subTierKey = `${sectionId}-${tierName}`;
-          const subTierList = document.querySelector(`.subtier-list[data-section-id="${sectionId}"][data-tier-name="${tierName}"]`);
-          const tierNavItemWithSubtiers = document.querySelector(`.tier-nav-item.has-subtiers[data-section-id="${sectionId}"][data-tier-name="${tierName}"]`);
-
-          if (subTierList && tierNavItemWithSubtiers) {
-            // Collapse previous sub-tier
-            if (currentlyExpandedSubTier && currentlyExpandedSubTier !== subTierKey) {
-              const prevTierNavItem = document.querySelector(`.tier-nav-item.has-subtiers.expanded`);
-              const prevSubTierList = document.querySelector(`.subtier-list.expanded`);
-              if (prevTierNavItem && prevSubTierList) {
-                prevTierNavItem.classList.remove('expanded');
-                prevSubTierList.classList.remove('expanded');
-              }
-            }
-            // Expand current sub-tier
-            tierNavItemWithSubtiers.classList.add('expanded');
-            subTierList.classList.add('expanded');
-            currentlyExpandedSubTier = subTierKey;
-          }
-
-          // Highlight the specific term
-          const subTierNavItem = Array.from(document.querySelectorAll('.subtier-nav-item')).find(item => {
-            return item.textContent.trim().toLowerCase() === termName.toLowerCase();
-          });
-          if (subTierNavItem) {
-            subTierNavItem.classList.add('active');
-          }
-        }
-      }
-    }
-
-    // Function to toggle sub-tier expansion
-    function toggleSubTier(sectionId, tierName, tierNavItem) {
-      const subTierList = document.querySelector(`.subtier-list[data-section-id="${sectionId}"][data-tier-name="${tierName}"]`);
-      const subTierKey = `${sectionId}-${tierName}`;
-
-      // If this sub-tier is already expanded, collapse it
-      if (currentlyExpandedSubTier === subTierKey) {
-        tierNavItem.classList.remove('expanded');
-        subTierList.classList.remove('expanded');
-        currentlyExpandedSubTier = null;
-        return;
-      }
-
-      // Collapse any previously expanded sub-tier
-      if (currentlyExpandedSubTier) {
-        const prevTierNavItem = document.querySelector(`.tier-nav-item.has-subtiers.expanded`);
-        const prevSubTierList = document.querySelector(`.subtier-list.expanded`);
-        if (prevTierNavItem && prevSubTierList) {
-          prevTierNavItem.classList.remove('expanded');
-          prevSubTierList.classList.remove('expanded');
-        }
-      }
-
-      // Expand this sub-tier
-      tierNavItem.classList.add('expanded');
-      subTierList.classList.add('expanded');
-      currentlyExpandedSubTier = subTierKey;
-
-      // Scroll to the tier content
-      setUserScrolling(); // Set flag before scrolling
-      const targetElement = document.getElementById(`${sectionId}-${tierName.replace(/\s+/g, '-').toLowerCase()}`);
-      if (targetElement) {
-        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }
-
-    // Function to toggle section expansion
-    function toggleSection(sectionId, sectionNavItem, fromScroll = false) {
-      const tierList = document.querySelector(`.tier-list[data-section-id="${sectionId}"]`);
-
-      // If this section is already expanded and it's a user click (not from scroll), collapse it
-      if (currentlyExpandedSection === sectionId && !fromScroll) {
-        sectionNavItem.classList.remove('expanded');
-        tierList.classList.remove('expanded');
-        currentlyExpandedSection = null;
-        return;
-      }
-
-      // If it's the same section and from scroll, just return (don't toggle)
-      if (currentlyExpandedSection === sectionId && fromScroll) {
-        return;
-      }
-
-      // Collapse any previously expanded section
-      if (currentlyExpandedSection) {
-        const prevSectionNavItem = document.querySelector(`.section-nav-item[data-section-id="${currentlyExpandedSection}"]`);
-        const prevTierList = document.querySelector(`.tier-list[data-section-id="${currentlyExpandedSection}"]`);
-        if (prevSectionNavItem && prevTierList) {
-          prevSectionNavItem.classList.remove('expanded');
-          prevTierList.classList.remove('expanded');
-        }
-      }
-
-      // Expand this section
-      sectionNavItem.classList.add('expanded');
-      tierList.classList.add('expanded');
-      currentlyExpandedSection = sectionId;
-
-      // Only scroll to the section content if it's a user click, not from scroll spy
-      if (!fromScroll) {
-        setUserScrolling(); // Set flag before scrolling
-        const targetElement = document.getElementById(`section-${sectionId}`);
-        if (targetElement) {
-          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }
-    }
-
-    // Global function to render all content from all sections continuously
-    function renderAllContent() {
-      // Create comprehensive table of contents in sidebar
-      const tierNavSection = document.getElementById('tier-nav-section');
-      const tierNav = document.getElementById('tier-nav-items');
-
-      if (tierNavSection && tierNav) {
-        tierNavSection.style.display = 'block';
-        tierNav.innerHTML = '';
-      }
-
-      // Get the main content area - we'll render everything in the overview tab
-      const overviewTab = document.getElementById('overview');
-      if (overviewTab) {
-        overviewTab.innerHTML = '';
-      }
-
-      // Render each section
-      Object.entries(SECTION_DATA).forEach(([sectionId, sectionData]) => {
-        // Add section header to table of contents with badge
-        if (tierNav) {
-          const sectionContainer = document.createElement('div');
-
-          const sectionNavItem = document.createElement('div');
-          sectionNavItem.className = 'section-nav-item';
-          sectionNavItem.dataset.sectionId = sectionId;
-
-          // Create badge image if it exists
-          let badgeImg = '';
-          if (sectionData.badges) {
-            badgeImg = sectionData.badges.map(badge => `<img src="${badge}" alt="${sectionData.title} Badge" style="width: 20px; height: 20px; margin-right: 8px; vertical-align: middle;">`).join('');
-          } else if (sectionData.badge) {
-            badgeImg = `<img src="${sectionData.badge}" alt="${sectionData.title} Badge" style="width: 20px; height: 20px; margin-right: 8px; vertical-align: middle;">`;
-          } else if (sectionId === 'overview') {
-            // Special icon for overview
-            badgeImg = `<span style="margin-right: 8px; font-size: 16px;">📋</span>`;
-          } else if (sectionId === 'glossary') {
-            // Special icon for glossary
-            badgeImg = `<span style="margin-right: 8px; font-size: 16px;">📚</span>`;
-          }
-
-          const titleSection = document.createElement('div');
-          titleSection.innerHTML = `${badgeImg}<strong>${sectionData.title}</strong>`;
-          titleSection.style.display = 'flex';
-          titleSection.style.alignItems = 'center';
-
-          const arrow = document.createElement('span');
-          arrow.className = 'section-expand-arrow';
-          arrow.innerHTML = '▶';
-
-          sectionNavItem.appendChild(titleSection);
-          sectionNavItem.appendChild(arrow);
-          sectionNavItem.style.fontWeight = 'bold';
-          sectionNavItem.style.marginTop = sectionId === 'overview' ? '0' : '16px';
-          sectionNavItem.style.color = '#fff';
-
-          // Add click handler for section expansion
-          sectionNavItem.addEventListener('click', function(e) {
-            e.preventDefault();
-            setUserScrolling(); // Set flag before scrolling
-            highlightTOCItem(sectionId); // Manually highlight this section
-
-            // Always scroll to the section (don't toggle)
-            const targetElement = document.getElementById(`section-${sectionId}`);
-            if (targetElement) {
-              targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-          });
-
-          sectionContainer.appendChild(sectionNavItem);
-
-          // Create tier list container (initially hidden)
-          const tierList = document.createElement('div');
-          tierList.className = 'tier-list';
-          tierList.dataset.sectionId = sectionId;
-
-          // Add tier items to the list
-          if (sectionData.tiers) {
-            Object.entries(sectionData.tiers).forEach(([tierName, tierData]) => {
-              const tierNavItem = document.createElement('div');
-              tierNavItem.className = 'tier-nav-item';
-              tierNavItem.textContent = tierName;
-
-              // Check if this tier has sub-tiers (glossary structure)
-              const hasSubTiers = tierData && typeof tierData === 'object' && !Array.isArray(tierData);
-
-              if (hasSubTiers) {
-                tierNavItem.classList.add('has-subtiers');
-                tierNavItem.dataset.sectionId = sectionId;
-                tierNavItem.dataset.tierName = tierName;
-
-                // Add click handler for sub-tier expansion
-                tierNavItem.addEventListener('click', function(e) {
-                  e.stopPropagation();
-                  setUserScrolling(); // Set flag before scrolling
-                  highlightTOCItem(sectionId, tierName); // Manually highlight this tier
-
-                  // Expand sub-tier if not already expanded (but never collapse)
-                  const subTierKey = `${sectionId}-${tierName}`;
-                  const subTierList = document.querySelector(`.subtier-list[data-section-id="${sectionId}"][data-tier-name="${tierName}"]`);
-
-                  if (subTierList) {
-                    // Collapse other sub-tiers
-                    if (currentlyExpandedSubTier && currentlyExpandedSubTier !== subTierKey) {
-                      const prevTierNavItem = document.querySelector(`.tier-nav-item.has-subtiers.expanded`);
-                      const prevSubTierList = document.querySelector(`.subtier-list.expanded`);
-                      if (prevTierNavItem && prevSubTierList) {
-                        prevTierNavItem.classList.remove('expanded');
-                        prevSubTierList.classList.remove('expanded');
-                      }
-                    }
-
-                    // Always expand this sub-tier (no toggle)
-                    tierNavItem.classList.add('expanded');
-                    subTierList.classList.add('expanded');
-                    currentlyExpandedSubTier = subTierKey;
-                  }
-
-                  // Always scroll to the tier content
-                  const targetElement = document.getElementById(`${sectionId}-${tierName.replace(/\s+/g, '-').toLowerCase()}`);
-                  if (targetElement) {
-                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  }
-                });
-
-                // Create sub-tier list container
-                const subTierList = document.createElement('div');
-                subTierList.className = 'subtier-list';
-                subTierList.dataset.sectionId = sectionId;
-                subTierList.dataset.tierName = tierName;
-
-                // Add sub-tier items (individual terms)
-                Object.entries(tierData).forEach(([termName, termData]) => {
-                  const subTierNavItem = document.createElement('div');
-                  subTierNavItem.className = 'subtier-nav-item';
-                  subTierNavItem.textContent = termName;
-                  subTierNavItem.addEventListener('click', function() {
-                    setUserScrolling(); // Set flag before scrolling
-                    highlightTOCItem(sectionId, tierName, termName); // Manually highlight this term
-                    const targetElement = document.getElementById(termData.id);
-                    if (targetElement) {
-                      targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
-                  });
-                  subTierList.appendChild(subTierNavItem);
-                });
-
-                tierList.appendChild(tierNavItem);
-                tierList.appendChild(subTierList);
-              } else {
-                // Standard tier without sub-tiers
-                tierNavItem.addEventListener('click', function() {
-                  setUserScrolling(); // Set flag before scrolling
-                  highlightTOCItem(sectionId, tierName); // Manually highlight this tier
-                  const targetElement = document.getElementById(`${sectionId}-${tierName.replace(/\s+/g, '-').toLowerCase()}`);
-                  if (targetElement) {
-                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  }
-                });
-                tierList.appendChild(tierNavItem);
-              }
-            });
-          }
-
-          sectionContainer.appendChild(tierList);
-          tierNav.appendChild(sectionContainer);
-        }
-
-        // Add section content to main area
-        if (overviewTab) {
-          // Create section container
-          const sectionContainer = document.createElement('div');
-          sectionContainer.id = `section-${sectionId}`;
-          sectionContainer.className = 'section-container';
-          sectionContainer.style.marginBottom = '32px';
-
-          // Add section intro card (for all sections except overview)
-          if (sectionId !== 'overview' && sectionData.skillRange) {
-            const introCard = document.createElement('div');
-            introCard.className = `flexItem fullWidth card ${sectionData.theme}`;
-
-            let badgeImg = '';
-            if (sectionData.badges) {
-              badgeImg = sectionData.badges.map(badge => `<img src="${badge}" alt="${sectionData.title} Badge" class="face face--league" style="border-color: #B87333;">`).join('');
-            } else if (sectionData.badge) {
-              badgeImg = `<img src="${sectionData.badge}" alt="${sectionData.title} Badge" class="face face--league" style="border-color: #B87333;">`;
-            }
-
-            introCard.innerHTML = `
-              <div class="card-header">
-                ${badgeImg}
-                <h2 class="card-name">${sectionData.title}</h2>
-              </div>
-              <p class="card-desc"><strong>Skill Range:</strong> ${sectionData.skillRange}</p>
-              <p class="card-desc">${sectionData.description}</p>
-            `;
-
-            sectionContainer.appendChild(introCard);
-          }
-
-          // Add each tier as subsections
-          if (sectionData.tiers) {
-            Object.entries(sectionData.tiers).forEach(([tierName, tierData]) => {
-              // Check if this tier has sub-tiers (three-tier structure)
-              const hasSubTiers = tierData && typeof tierData === 'object' && !Array.isArray(tierData);
-
-              if (hasSubTiers) {
-                // Handle three-tier structure (like glossary)
-                const tierCard = document.createElement('div');
-                tierCard.className = `flexItem fullWidth card ${sectionData.theme}`;
-                tierCard.id = `${sectionId}-${tierName.replace(/\s+/g, '-').toLowerCase()}`;
-
-                const tierHeader = document.createElement('div');
-                tierHeader.className = 'card-header';
-                tierHeader.innerHTML = `<h2 class="card-name">${tierName}</h2>`;
-
-                const tierContent = document.createElement('div');
-                tierContent.className = 'tier-content-main';
-
-                // Render individual glossary terms
-                Object.entries(tierData).forEach(([termName, termData]) => {
-                  const glossaryCard = document.createElement('div');
-                  glossaryCard.className = 'glossary-card-inline';
-                  glossaryCard.id = termData.id;
-                  glossaryCard.innerHTML = `
-                    <div class="glossary-inline-content">
-                      <h5>${termData.title}</h5>
-                      <p>${termData.body}</p>
-                      <img class="glossary-diagram" src="images/glossary/${termData.diagram}" alt="${termData.title} diagram" onerror="this.style.display='none'">
-                    </div>
-                  `;
-                  tierContent.appendChild(glossaryCard);
-                });
-
-                tierCard.appendChild(tierHeader);
-                tierCard.appendChild(tierContent);
-                sectionContainer.appendChild(tierCard);
-              } else {
-                // Handle two-tier structure (standard sections)
-                const tierCard = document.createElement('div');
-                tierCard.className = `flexItem fullWidth card ${sectionData.theme}`;
-                tierCard.id = `${sectionId}-${tierName.replace(/\s+/g, '-').toLowerCase()}`;
-
-                const tierHeader = document.createElement('div');
-                tierHeader.className = 'card-header';
-                tierHeader.innerHTML = `<h3 class="card-name">${tierName}</h3>`;
-
-                const tierContent = document.createElement('div');
-                tierContent.className = 'tier-content-main';
-
-                // Standard tier content
-                tierData.forEach(item => {
-                  const itemDiv = document.createElement('div');
-                  itemDiv.className = 'tier-item';
-                  itemDiv.innerHTML = `
-                    <h4>${item.title}</h4>
-                    <p class="card-desc">${item.description || ''}</p>
-                    ${item.links ? item.links.map(link => `<p class="card-desc">• <a href="${link.url}" target="_blank">${link.text}</a></p>`).join('') : ''}
-                    ${item.goals ? item.goals.map(goal => `<p class="card-desc">• <strong>Goal:</strong> ${goal}</p>`).join('') : ''}
-                  `;
-                  tierContent.appendChild(itemDiv);
-                });
-
-                tierCard.appendChild(tierHeader);
-                tierCard.appendChild(tierContent);
-                sectionContainer.appendChild(tierCard);
-              }
-            });
-          }
-
-          overviewTab.appendChild(sectionContainer);
-        }
+        nav.push(`<div class="guide-nav-section">
+            <a class="section-nav-item" href="#section-${sectionId}">
+              <span class="section-nav-title">${navIcon(sectionId, section)}<strong>${section.title}</strong></span>
+              <span class="section-expand-arrow" aria-hidden="true">▶</span>
+            </a>
+            <div class="tier-list">${tierLinks.join('')}</div>
+          </div>`);
+        content.push(`<section class="guide-section" id="section-${sectionId}">
+            ${section.skillRange ? introCard(section) : ''}
+            ${tierCards.join('')}
+          </section>`);
       });
+      document.getElementById('guide-nav').innerHTML = nav.join('');
+      document.getElementById('guide-content').innerHTML = content.join('');
+    }
 
-      // Hide all other tab contents and show only overview
-      const tabContents = document.querySelectorAll('.tab-content');
-      tabContents.forEach(content => {
-        if (content.id !== 'overview') {
-          content.style.display = 'none';
+    function navLink(id) {
+      return id && document.querySelector(`#guide-nav a[href="#${CSS.escape(id)}"]`);
+    }
+
+    // Opens the section, and the glossary category, holding what is being read, and lights it
+    function showInNav(sectionId, tierId, termId) {
+      document.querySelectorAll('#guide-nav .active, #guide-nav .expanded').forEach(e => e.classList.remove('active', 'expanded'));
+      const sectionLink = navLink(sectionId);
+      if (sectionLink) {
+        sectionLink.classList.add('expanded');
+        sectionLink.nextElementSibling.classList.add('expanded');
+      }
+      const tierLink = navLink(tierId);
+      if (tierLink) {
+        tierLink.classList.add('active');
+        if (tierLink.classList.contains('has-subtiers')) {
+          tierLink.classList.add('expanded');
+          tierLink.nextElementSibling.classList.add('expanded');
         }
+      }
+      const termLink = navLink(termId);
+      if (termLink) termLink.classList.add('active');
+    }
+
+    // The section, tier and term an element sits in, itself included
+    function placeOf(element) {
+      const within = selector => element && element.closest(selector);
+      return [within('.guide-section'), within('.guide-tier'), within('.glossary-card-inline')].map(e => e && e.id);
+    }
+
+    // The last of these, in page order, whose top has reached the reading line
+    function lastReached(elements) {
+      let reached = null;
+      for (const element of elements) {
+        if (element.getBoundingClientRect().top > READING_LINE) break;
+        reached = element;
+      }
+      return reached;
+    }
+
+    // While the page scrolls to a link that was clicked, the sidebar keeps showing that link rather
+    // than everything scrolled past on the way - and a link near the bottom of the page, whose
+    // heading can never reach the reading line, stays lit. Scrolling by hand hands it back.
+    let followingLink = false;
+
+    function followScroll() {
+      if (followingLink) return;
+      const content = document.getElementById('guide-content');
+      const section = lastReached(content.querySelectorAll('.guide-section')) || content.querySelector('.guide-section');
+      const tier = lastReached(section.querySelectorAll('.guide-tier'));
+      const term = tier && lastReached(tier.querySelectorAll('.glossary-card-inline'));
+      showInNav(section.id, tier && tier.id, term && term.id);
+    }
+
+    function goTo(id, behavior) {
+      const target = document.getElementById(id);
+      if (!target) return;
+      followingLink = true;
+      showInNav(...placeOf(target));
+      target.scrollIntoView({behavior, block: 'start'});
+    }
+
+    function initGuide() {
+      renderGuide(Object.assign({}, window.GUIDE_SECTIONS, {glossary: glossarySection(window.GLOSSARY)}));
+      watchClips(document.getElementById('guide-content'));
+
+      document.getElementById('guide-nav').addEventListener('click', event => {
+        const link = event.target.closest('a[href^="#"]');
+        if (!link || event.metaKey || event.ctrlKey || event.shiftKey) return;
+        event.preventDefault();
+        history.replaceState(null, '', link.getAttribute('href'));
+        goTo(link.getAttribute('href').slice(1), 'smooth');
       });
+      ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach(type =>
+        window.addEventListener(type, event => {
+          if (!event.target.closest || !event.target.closest('#guide-nav')) followingLink = false;
+        }, {passive: true}));
 
-      // Make sure overview tab is visible and active
-      if (overviewTab) {
-        overviewTab.style.display = 'block';
-        overviewTab.classList.add('active');
+      let queued = false;
+      window.addEventListener('scroll', () => {
+        if (queued) return;
+        queued = true;
+        requestAnimationFrame(() => { queued = false; followScroll(); });
+      }, {passive: true});
+
+      // the content is written after the browser looked for the address's anchor, so go to it now
+      if (location.hash) {
+        goTo(decodeURIComponent(location.hash.slice(1)), 'instant');
+      } else {
+        followScroll();
       }
-
     }
 
-    // Unified tier system for all sections
-    function initTierSystem() {
-    console.log('Tier system loading...');
-
-    // Comprehensive data structure for all sections
-    SECTION_DATA = {
-      'overview': {
-        title: 'Overview',
-        theme: 'crystal-theme',
-        tiers: {
-          'Getting Started': [
-            {
-              id: 'overview-intro',
-              title: 'How to Use This Guide',
-              description: 'This guide is organized by skill level. Start with Beginner if you\'re new to the game, then progress through the guide as your skills develop. The Glossary section contains definitions and visual explanations of all the terminology used throughout the guide.'
-            }
-          ],
-          'Reference Material': [
-            {
-              id: 'overview-reference',
-              title: 'Quick Reference Guides',
-              description: 'Essential reference material for Panel Attack:',
-              links: [
-                { url: 'images/guide/Combo_Damage_Guide.png', text: 'Combo Damage Guide' },
-                { url: 'images/guide/Shake_Time_Guide.png', text: 'Shake Time Guide' }
-              ]
-            }
-          ]
-        }
-      },
-      'beginner': {
-        title: 'Beginner',
-        theme: 'copper-theme',
-        skillRange: 'Copper Rank',
-        description: 'Players in this category should focus on getting familiar with the game mechanics, getting better at combos and chains, and getting consistent at defense.',
-        badge: 'images/leagues/00_Copper.png',
-        tiers: {
-          'How to Play - Overview': [
-            {
-              id: 'beginner-tutorials',
-              title: 'Essential Tutorials',
-              description: 'Essential tutorials for learning the basics:',
-              links: [
-                { url: 'https://www.youtube.com/watch?v=Ais1mCvL7lE', text: 'Tetris Attack -- How to Play' },
-                { url: 'https://www.youtube.com/watch?v=3mQ6ty8tTcg', text: 'Puzzle Academy - [#1] The Basics' },
-                { url: 'https://www.youtube.com/watch?v=lm5zW5yPsr0', text: 'Panel Attack Setup and Tutorial' },
-                { url: 'https://www.youtube.com/watch?v=NSgZG1dwYSk', text: 'Panel Attack Basics (old graphics)' }
-              ]
-            }
-          ],
-          'Basic Combos and Chains': [
-            {
-              id: 'beginner-combos',
-              title: 'Fundamental Offensive Techniques',
-              description: 'Learn fundamental offensive techniques:',
-              links: [
-                { url: 'https://www.youtube.com/watch?v=djoCjO4mUzg', text: 'Panel Attack Tutorial! [Combo and Chains]' },
-                { url: 'images/guide/SetForgetSimpleChainPatterns.png', text: '"Set and Forget" Beginner Chain Patterns' },
-                { url: 'images/guide/First_Steps_Into_Offence.png', text: 'Your First Steps Into Offence' }
-              ]
-            }
-          ],
-          'Beginner Exercises': [
-            {
-              id: 'beginner-exercises',
-              title: 'Practice Challenges',
-              description: 'Practice challenges and goals:',
-              links: [
-                { url: 'images/guide/Bronze_Bingo.png', text: 'Bronze Bingo Sheet' }
-              ],
-              goals: [
-                'Complete Pokemon Puzzle League\'s Mimic Mode – Beginner/Intermediate Combo & Chain',
-                'Complete Easy difficulty of stage clear mode in Panel de Pon/Tetris Attack (or 1P stadium in PPL)'
-              ]
-            }
-          ]
-        }
-      },
-      'novice': {
-        title: 'Novice',
-        theme: 'bronze-theme',
-        skillRange: 'Bronze Rank',
-        description: 'Building upon basic skills with more advanced chain techniques and defense fundamentals.',
-        badge: 'images/leagues/01_Bronze.png',
-        tiers: {
-          'Chain Techniques': [
-            {
-              id: 'novice-chain-techniques',
-              title: 'More advanced chaining patterns',
-              description: '',
-              links: [
-                { url: 'https://www.youtube.com/watch?v=msSjOeY8Bhg', text: 'Tetris Attack - Starting a Vertical Chain' },
-                { url: 'https://www.youtube.com/watch?v=_qJ7CwFatyc', text: 'Tetris Attack - Horizontal Chain' }
-              ]
-            }
-          ],
-          'Defense Basics': [
-            {
-              id: 'novice-defense-basics',
-              title: 'Learn to handle incoming garbage',
-              description: '',
-              links: [
-                { url: 'images/guide/Defence_Basics.png', text: 'How Do I Improve My Defence? – Basics' }
-              ]
-            }
-          ],
-          'Novice Exercises': [
-            {
-              id: 'novice-exercises',
-              title: 'Silver-level challenges',
-              description: '',
-              links: [
-                { url: 'images/guide/Silver_Bingo.png', text: 'Silver Bingo Sheet' }
-              ],
-              goals: [
-                'Complete Pokemon Puzzle League\'s Mimic Mode – Beginner/Intermediate Skill Chain',
-                'Complete Hard difficulty of stage clear mode in Panel de Pon/Tetris Attack (or 1P stadium in PPL)'
-              ]
-            }
-          ]
-        }
-      },
-      'intermediate': {
-        title: 'Intermediate',
-        theme: 'silver-theme',
-        skillRange: 'Silver Rank',
-        description: 'Silver players are developing more consistent techniques and defense capabilities. Focus on learning about intricacies of defense and improving chaining skills.',
-        badge: 'images/leagues/02_Silver.png',
-        tiers: {
-          'Advanced Techniques': [
-            {
-              id: 'intermediate-advanced-techniques',
-              title: 'Improve your offensive game',
-              description: '',
-              links: [
-                { url: 'https://www.youtube.com/watch?v=zE6XHfSQbhQ', text: 'Tetris Attack - Advanced Chaining' },
-                { url: 'images/guide/7_Combo_Bad.png', text: 'Why +7 Combos Are Bad' }
-              ]
-            }
-          ],
-          'Garbage Management': [
-            {
-              id: 'intermediate-garbage-management',
-              title: 'Handle tougher defensive situations',
-              description: '',
-              links: [
-                { url: 'https://www.youtube.com/watch?v=qYkguUllMN4', text: 'Panel Attack Tutorial! [Defense]' },
-                { url: 'https://www.youtube.com/watch?v=buukLFjcNFE', text: 'Tetris Attack - Changing styles for VS Mode' }
-              ]
-            }
-          ],
-          'Intermediate Exercises': [
-            {
-              id: 'intermediate-exercises',
-              title: 'Gold-level challenges',
-              description: '',
-              links: [
-                { url: 'images/guide/Gold_Bingo.png', text: 'Gold Bingo Sheet' }
-              ],
-              goals: [
-                'Complete Pokemon Puzzle League\'s Mimic Mode – Advanced and Expert chain/skill chain',
-                'Beat Planet Puzzle League\'s level 10 AI',
-                'Complete Super Hard in Pokemon Puzzle League\'s 1P stadium mode'
-              ]
-            }
-          ]
-        }
-      },
-      'advanced': {
-        title: 'Advanced',
-        theme: 'gold-theme',
-        skillRange: 'Gold to Platinum Ranks',
-        description: 'Gold and Platinum players are very skilled with both offence and defence, and are able to easily do long skill chains. Focus on mastering advanced defense techniques and panel management.',
-        badges: ['images/leagues/03_Gold.png', 'images/leagues/04_Platinum.png'],
-        tiers: {
-          'Advanced Defense': [
-            {
-              id: 'advanced-defense',
-              title: 'Master high-level defensive play',
-              description: '',
-              links: [
-                { url: 'images/guide/Defence_Advanced.png', text: 'How Do I Improve My Defence? – Advanced' }
-              ]
-            }
-          ],
-          'Advanced Exercises': [
-            {
-              id: 'advanced-exercises',
-              title: 'Platinum-level challenges',
-              description: '',
-              links: [
-                { url: 'images/guide/Platinum_Bingo.png', text: 'Platinum Bingo Sheet' }
-              ],
-              goals: [
-                'Complete Super Hard in Pokemon Puzzle League\'s 1P stadium mode without using a continue'
-              ]
-            }
-          ]
-        }
-      },
-      'expert': {
-        title: 'Expert',
-        theme: 'diamond-theme',
-        skillRange: 'Diamond, Master, and Grandmaster Ranks',
-        description: 'Players at this level are comfortable battling on the highest difficulty level for extended periods of time, effectively dishing out powerful offence and surviving while topped out. Focus on optimizing playstyle, practicing high level techniques (factory, transition clear, shogun), and learning to survive in increasingly difficult situations.',
-        badges: ['images/leagues/05_Diamond.png', 'images/leagues/06_Master.png', 'images/leagues/07_Grandmaster.png'],
-        tiers: {
-          'Expert Resources': [
-            {
-              id: 'expert-resources',
-              title: 'Available resources',
-              description: 'At this time, there is not much expert level learning material available. As it is created, it will be added to this guide. If you are a high level player, please consider contributing guides or lessons.',
-              links: [
-                { url: 'images/guide/Diamond_Bingo.png', text: 'Diamond Bingo Sheet' }
-              ]
-            }
-          ]
-        }
-      },
-      'glossary': {
-        title: 'Glossary',
-        theme: 'crystal-theme',
-        description: 'Comprehensive reference for Panel Attack terminology and techniques.',
-        tiers: {
-          "Game Mechanics": {
-            "Combo": {"id": "combo", "title": "Combo", "body": "A match of more than three panels at the same time. Denoted as +4 for a 4 combo, +5 for a 5 combo, etc.", "diagram": "combo_diagram.png"},
-            "Chain": {"id": "chain", "title": "Chain", "body": "When panels fall after a match disappears, causing another match. Denoted as x2 for a 2 chain, x3 for a 3 chain, etc. Referred to as \"skill chains\" when panels are actively swapped to extend the chain. Chains above x13 are referred to as \"mystery chains\" due to the game denoting them as \"x?\".", "diagram": "chain_diagram.png"},
-            "Clear": {"id": "clear", "title": "Clear", "body": "When panels are matched next to garbage blocks, turning the garbage into panels.", "diagram": "clear_diagram.png"},
-            "Tier": {"id": "tier", "title": "Tier", "body": "Layers of panels above or between garbage.", "diagram": "tier_diagram.png"},
-            "Shake Time": {"id": "shake-time", "title": "Shake Time", "body": "The period of time after garbage falls on your stack, causing it to shake. Larger garbage results in more shake time. You cannot lose during shake time, even if you are topped out.", "diagram": "shake-time_diagram.png"},
-            "Stop Time": {"id": "stop-time", "title": "Stop Time", "body": "The period of time after making a chain or combo when your panels stop rising. Larger chains and combos result in more stop time. Less stop time is given on higher difficulty levels; more stop time is given if you are nearly topped out. You cannot lose during stop time, even if you are topped out.", "diagram": "stop-time_diagram.png"},
-            "Time Delay": {"id": "time-delay", "title": "Time Delay", "body": "When falling panels land at slightly different times and form multiple chains instead of a single chain/combo.", "diagram": "time-delay_diagram.png"},
-            "Ghost Match": {"id": "ghost-match", "title": "Ghost Match", "body": "When rising panels become active and form a match. Can also be a ghost combo if multiple matches are made.", "diagram": "ghost-match_diagram.png"},
-            "Garbage Chain": {"id": "garbage-chain", "title": "Garbage Chain", "body": "When panels fall from cleared garbage and cause a chain or combo.", "diagram": "garbage-chain_diagram.png"},
-            "DAS": {"id": "das", "title": "DAS", "body": "\"Delayed Auto Shift\" — Rapidly moving your cursor across the board by holding down a movement key.", "diagram": "das_diagram.png"}
-          },
-          "Frame Tricks": {
-            "Frame Trick": {"id": "frame-trick", "title": "Frame Trick", "body": "Any skill chain that requires frame-perfect timing to execute (e.g. slide, catch).", "diagram": "frame-trick_diagram.png"},
-            "Catch": {"id": "catch", "title": "Catch", "body": "Swapping a falling panel into an adjacent column, requiring frame-perfect timing. A type of skill chain.", "diagram": "catch_diagram.png"},
-            "Slide": {"id": "slide", "title": "Slide", "body": "Swapping a panel underneath a falling panel so it supports two panels at once, requiring frame-perfect timing. A type of skill chain.", "diagram": "slide_diagram.png"},
-            "Insert": {"id": "insert", "title": "Insert", "body": "Swapping a panel into the space between a falling panel and the panel beneath it. A type of skill chain.", "diagram": "insert_diagram.png"},
-            "Stealth": {"id": "stealth", "title": "Stealth", "body": "Swapping a piece over two spaces by quickly pressing both swap buttons while moving in the direction you want to swap the panel. Can be used to move a panel past a match, or extend the length of a catch (also called a stealth chain).", "diagram": "stealth_diagram.png"},
-            "Tornado": {"id": "tornado", "title": "Tornado", "body": "Quickly swapping two panels into the space left from a vertical match to create a chain.", "diagram": "tornado_diagram.png"}
-          },
-          "Offense": {
-            "Combo Storm": {"id": "combo-storm", "title": "Combo Storm", "body": "Performing many combos in rapid succession to send many small garbage pieces, resulting in low shake time for your opponent; can kill very quickly.", "diagram": "combo-storm_diagram.png"},
-            "Factory": {"id": "factory", "title": "Factory", "body": "Rapidly sending many x3 chains to your opponent, resulting in a garbage pattern that is very difficult to clear.", "diagram": "factory_diagram.png"}
-          },
-          "Defense": {
-            "Topped Out": {"id": "topped-out", "title": "Topped Out", "body": "When panels and/or garbage reach the top of your playfield. Being topped out for too long results in defeat.", "diagram": "topped-out_diagram.png"},
-            "Locked Out": {"id": "locked-out", "title": "Locked Out", "body": "When you are topped out with no possible moves to make.", "diagram": "locked-out_diagram.png"},
-            "Tower": {"id": "tower", "title": "Tower", "body": "A tall, isolated column of panels. Very dangerous; holds garbage up high, often prevents clears, and inhibits how high you can raise your stack.", "diagram": "tower_diagram.png"},
-            "Downstacking": {"id": "downstacking", "title": "Downstacking", "body": "Removing panels from towers (or the highest points of your stack) to reduce its height.", "diagram": "downstacking_diagram.png"},
-            "Shogun": {"id": "shogun", "title": "Shogun", "body": "When a panel from a higher tier falls and creates a chain after the garbage beneath it is cleared.", "diagram": "shogun_diagram.png"},
-            "Transition Clear": {"id": "transition-clear", "title": "Transition Clear", "body": "Aligning three panels as shown below to easily \"transition\" from one layer of garbage to the next.", "diagram": "transition-clear_diagram.png"}
-          }
-        }
-      }
-    };
-
-    // Global state for tier management (only one tier expanded at a time)
-    let currentlyExpandedTier = null;
-    
-    // Global state for navigation
-    let currentSection = 'overview';
-    let currentTier = null;
-    
-    
-    
-    
-    // Render all content continuously and create comprehensive table of contents
-    renderAllContent();
-
-    // Initialize scroll spy functionality
-    addScrollSpy();
-    }
-    
-    
-    // Initialize tier system when DOM is ready
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initTierSystem);
-    } else {
-      initTierSystem();
-    }
-    
-    // Also try after a short delay as backup
-    setTimeout(initTierSystem, 100);
+    document.addEventListener('DOMContentLoaded', initGuide);
   </script>
 </body>
 
