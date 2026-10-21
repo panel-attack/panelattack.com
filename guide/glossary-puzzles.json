@@ -96,7 +96,7 @@
             "Column": 3,
             "Row": 2
           },
-          "Solution": "A30Q1A1E1A1B1A1B1A33Q1",
+          "Solution": "A30Q1A9E1A9B1A9B1A9Q1",
           "Help Description": "Moving the red over the blues first sets up the chain the next swap starts."
         }
       ]
@@ -116,7 +116,7 @@
             "Column": 5,
             "Row": 1
           },
-          "Solution": "A30Q1A1I1A7Q1A1E1A1C1A55Q1",
+          "Solution": "A30Q1A9I1A19Q1A9E1A9C1A19Q1",
           "Help Description": "While the reds pop, the green is walked over to meet the greens falling after them: the x2 becomes an x3."
         }
       ]
@@ -136,7 +136,7 @@
             "Column": 4,
             "Row": 1
           },
-          "Solution": "A30Q1A1I1A1C1A66Q1",
+          "Solution": "A30Q1A9I1A9C1A50Q1",
           "Help Description": "The blues clear and the red falls; swapping it sideways as it passes the reds catches it on the grey: a 2 chain."
         }
       ]
@@ -156,7 +156,7 @@
             "Column": 1,
             "Row": 3
           },
-          "Solution": "A30Q1A1E1A1E1A64Q1",
+          "Solution": "A30Q1A9E1A9E1A48Q1",
           "Help Description": "The cyans clear and the red falls. The grey under the reds is slid left under it: while the swap crosses both columns it holds up the red landing on it and the red above where it left, and the three reds match before either can fall."
         }
       ]
@@ -176,7 +176,7 @@
             "Column": 3,
             "Row": 2
           },
-          "Solution": "A30Q1A1C1A61Q1",
+          "Solution": "A30Q1A9C1A53Q1",
           "Help Description": "A red is swapped into the gap between the falling red and the red at the bottom: three reds in a column, a 2 chain."
         }
       ]
@@ -196,7 +196,7 @@
             "Column": 3,
             "Row": 1
           },
-          "Solution": "A30Q1A1C1A61Q1A1I1A1B1Q1",
+          "Solution": "A30Q1A1C1A61Q1A1I1A1B1A1Q1",
           "Help Description": "Two reds are swapped into the column the blues left, under the falling red: a 2 chain."
         }
       ]
@@ -236,7 +236,7 @@
             "Column": 4,
             "Row": 1
           },
-          "Solution": "A30Q1A1I1A1I1A1C1A63Q1",
+          "Solution": "A30Q1A9I1A9I1A9C1A39Q1",
           "Help Description": "The red has to be swapped on the one frame it passes the reds as it falls: a catch, one of the frame tricks."
         }
       ]
@@ -319,7 +319,7 @@
             "Column": 1,
             "Row": 3
           },
-          "Solution": "A30Q1A1B1A1B1A95Q1",
+          "Solution": "A30Q1A9B1A9B1A79Q1",
           "Help Description": "The reds swapped into a column under the garbage clear its bottom layer; while the green it reveals hovers, a green is swapped in under it, and the three greens, a 2 chain, clear the next layer."
         }
       ]
@@ -419,7 +419,7 @@
             "Column": 3,
             "Row": 2
           },
-          "Solution": "A30Q1A1C1A27Q1A1I1A1B1A25Q1A1C1A27Q1",
+          "Solution": "A30Q1A9C1A19Q1A9I1A9B1A9Q1A9C1A19Q1",
           "Help Description": "Swapping the tower's bottom panels out to either side brings it down."
         }
       ]
@@ -561,7 +561,7 @@
             "Column": 3,
             "Row": 1
           },
-          "Solution": "A30Q1A1I1A1I1A1I1A1C1A1C1A99Q1",
+          "Solution": "A30Q1A9I1A9I1A9I1A9C1A9C1A59Q1",
           "Help Description": "The greens clear the lower garbage, and once it has converted the pink above it falls into the hole beside the revealed row. Swapping it across lines up three pinks against the garbage above."
         }
       ]
@@ -581,7 +581,7 @@
             "Column": 3,
             "Row": 2
           },
-          "Solution": "A30Q1A1B1A1B1A35Q1A1C1A11Q1A1C1A11Q1",
+          "Solution": "A30Q1A9B1A9B1A19Q1A9C1A9Q1A9C1A9Q1",
           "Help Description": "Dropping the grey into the gap bridges it, so the red can be walked across to the reds."
         }
       ]
@@ -622,7 +622,7 @@
             "Column": 5,
             "Row": 1
           },
-          "Solution": "A30Q1A1I1A1C1A1C1A103Q1A1I1A42Q1",
+          "Solution": "A30Q1A9I1A9C1A9C1A79Q1A9I1A34Q1",
           "Help Description": "The grey in the third column is the pedestal: the green revealed over it stays a row above the green beside it. Once the greens are revealed, a green is walked under the pedestal, and swapping the landed green under it makes three greens against the block."
         }
       ]
@@ -638,12 +638,12 @@
           "Stop": 0,
           "Shake": 0,
           "Stack": "000000000000000000000000[==================================]110143999443",
-          "GarbagePanelBuffer": "125643365412999999999999999999999999",
+          "GarbagePanelBuffer": "125643362412999999999999999999999999",
           "CursorStartLeft": {
             "Column": 3,
             "Row": 2
           },
-          "Solution": "A30Q1A1B1A127Q1A1I1A292Q1A1B1A4Q1",
+          "Solution": "A30Q1A9B1A119Q1A9I1A284Q1A9B1A9Q1",
           "Help Description": "Two rows of panels with a yellow and a cyan pair stacked. The revealed row would land on both, two garbage chains for one row of garbage, so once it shows, the yellow under it is swapped aside: the cyans clear the next row, and the saved yellow stacks on the one beside it. The next row lands a blue on them with a yellow above; the blue is downstacked two columns right, off the edge of the saved pair, while the yellow hovers, and the yellow falls onto the saved pair, a 3 chain."
         }
       ]
@@ -703,7 +703,7 @@
             "Column": 4,
             "Row": 3
           },
-          "Solution": "A30Q1A1E1A1E1A1C1A65Q1",
+          "Solution": "A30Q1A9E1A9E1A9C1A41Q1",
           "Help Description": "The blues clear and the red falls to the floor; swapping it into the gap the moment it lands, beside the reds, is still a 2 chain."
         }
       ]
@@ -723,7 +723,7 @@
             "Column": 4,
             "Row": 1
           },
-          "Solution": "A30Q1A1I1A1C1A1C1A1C1A5Q1A1B1A9Q1A1B1A9Q1",
+          "Solution": "A30Q1A5I1A5C1A5C1A5C1A5Q1A5B1A5Q1A5B1A5Q1",
           "Help Description": "The cyans match, and while they flash the red is walked across them to the reds under the garbage, which it clears."
         }
       ]

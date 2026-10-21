@@ -1,0 +1,313 @@
+{
+  "Version": 3,
+  "Puzzle Sets": [
+    {
+      "Set Name": "moving",
+      "Description": "How to Play: Moving",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "135246246135351462462513",
+          "CursorStartLeft": {
+            "Column": 1,
+            "Row": 1
+          },
+          "Solution": "A20B1A9B1A9B1A9B1A9I1A9I1A9I1A9C1A9C1A9C1A9C1A9E1A9E1A9E1",
+          "Help Description": "The cursor walks around the board without swapping anything."
+        }
+      ]
+    },
+    {
+      "Set Name": "swapping",
+      "Description": "How to Play: Swapping",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "135246246135351462462513",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 2
+          },
+          "Solution": "A30Q1A59Q1",
+          "Help Description": "Swapping trades the two panels under the cursor, and swapping again trades them back."
+        }
+      ]
+    },
+    {
+      "Set Name": "dropping",
+      "Description": "How to Play: Dropping",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "100000200000300000406135",
+          "CursorStartLeft": {
+            "Column": 1,
+            "Row": 4
+          },
+          "Solution": "A30Q1A9E1A39Q1",
+          "Help Description": "A panel swapped over the empty column falls until it lands."
+        }
+      ]
+    },
+    {
+      "Set Name": "matching",
+      "Description": "How to Play: Matching",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000040000045112134",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 1
+          },
+          "Solution": "A30Q1A9B1A9B1A59Q1",
+          "Help Description": "Three reds across, then three greens up and down."
+        }
+      ]
+    },
+    {
+      "Set Name": "raising",
+      "Description": "How to Play: Raising",
+      "Puzzles": [
+        {
+          "Puzzle Type": "clear",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "246135524613352461135246",
+          "PanelBuffer": "461352613524135246352461524613246135461352613524135246352461524613246135",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 1
+          },
+          "Solution": "A200g50",
+          "Help Description": "The stack rises a little at a time, then the raise button brings up rows quickly."
+        }
+      ]
+    },
+    {
+      "Set Name": "game-over",
+      "Description": "How to Play: Game Over",
+      "Puzzles": [
+        {
+          "Puzzle Type": "clear",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "246135524613352461135246613524461352246135524613352461135246",
+          "PanelBuffer": "461352613524135246352461524613246135461352613524135246352461524613246135",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 1
+          },
+          "Solution": "",
+          "Help Description": "The stack rises to the top of the board and the game is lost."
+        }
+      ]
+    },
+    {
+      "Set Name": "combos",
+      "Description": "How to Play: Combos",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "994999994999999499994999995999995999559599",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 5
+          },
+          "Solution": "A30Q1A9E1A9E1A9E1A9E1A79Q1",
+          "Help Description": "Four panels at once make a +4, then five make a +5."
+        }
+      ]
+    },
+    {
+      "Set Name": "chains",
+      "Description": "How to Play: Chains",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "002000001220113393",
+          "CursorStartLeft": {
+            "Column": 5,
+            "Row": 1
+          },
+          "Solution": "A30Q1",
+          "Help Description": "The blues drop the red onto the reds for an x2, and the green onto the greens for an x3."
+        }
+      ]
+    },
+    {
+      "Set Name": "stop-time",
+      "Description": "How to Play: Stop Time",
+      "Puzzles": [
+        {
+          "Puzzle Type": "clear",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "400000400000942000491220113393999999",
+          "PanelBuffer": "999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999",
+          "CursorStartLeft": {
+            "Column": 1,
+            "Row": 4
+          },
+          "Solution": "A40Q1A9E1A9E1A9B1A9B1A9B1A9B1A99Q1",
+          "Help Description": "A +4 stops the stack for a moment, and the x3 after it for twice as long."
+        }
+      ]
+    },
+    {
+      "Set Name": "danger",
+      "Description": "How to Play: Stop Time in Danger",
+      "Puzzles": [
+        {
+          "Puzzle Type": "clear",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "110100991990991990999999999999999999999999999999999999999999",
+          "PanelBuffer": "999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999",
+          "GarbagePanelBuffer": "152435214352413524",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 10
+          },
+          "Solution": "A290Q1",
+          "Help Description": "An opponent's chain drops two rows of garbage onto an uneven stack already near the top, filling the top row; health drains until the +5 under the garbage saves the board with a long danger stop, turns the garbage's bottom row into panels, and the stack rises again once the stop runs out."
+        }
+      ]
+    },
+    {
+      "Set Name": "vs",
+      "Description": "How to Play: Sending Garbage",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000002000029000092001092113393",
+          "CursorStartLeft": {
+            "Column": 5,
+            "Row": 4
+          },
+          "Solution": "A30Q1A9E1A9E1A9E1A59Q1",
+          "Help Description": "The +4 sends a small block and the x2 a block as wide as the board."
+        }
+      ]
+    },
+    {
+      "Set Name": "chain-garbage",
+      "Description": "How to Play: Chain Garbage",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "999999999999999999",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 1
+          },
+          "Solution": "",
+          "Help Description": "An x2 sends one row of garbage, an x3 two rows and an x4 three."
+        }
+      ]
+    },
+    {
+      "Set Name": "shock-panels",
+      "Description": "How to Play: Shock Panels",
+      "Puzzles": [
+        {
+          "Puzzle Type": "clear",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "524613352461135246",
+          "PanelBuffer": "613524138246352861528613246135461352613524135246352461524613246135461352613524135246",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 1
+          },
+          "Solution": "A30g80A9E1A9E1A9E1A30Q1",
+          "Help Description": "Raising brings up a row with shock panels in it; matching three of them sends a shock garbage block."
+        }
+      ]
+    },
+    {
+      "Set Name": "linked-garbage",
+      "Description": "How to Play: Linked Garbage",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "[=]000{====}[==]00[====]114132",
+          "GarbagePanelBuffer": "251643634251",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 1
+          },
+          "Solution": "A30Q1",
+          "Help Description": "The reds clear the block above them and the block resting on it; the shock block on top of those keeps the block above it out of the clear."
+        }
+      ]
+    },
+    {
+      "Set Name": "thick-garbage",
+      "Description": "How to Play: Thick Garbage",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "[================]112136456254",
+          "GarbagePanelBuffer": "614523245136132312",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 2
+          },
+          "Solution": "A30Q1A9I1A9B1A174Q1A9B1A184Q1",
+          "Help Description": "Three matches against the block, each peeling one more layer off it: the reds under it, the greens stacked up through the first layer it turns into panels, then the blues through the second."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,737 @@
+{
+  "Version": 3,
+  "Puzzle Sets": [
+    {
+      "Set Name": "first-combo",
+      "Description": "Your First Combos: A +5 Combo",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "421521211241452453135211224133",
+          "CursorStartLeft": {
+            "Column": 4,
+            "Row": 5
+          },
+          "Solution": "A30Q1A9E1A9E1A9E1A9E1A9C1A9C1A9Q1A9B1A14Q1A9I1A9I1A44Q1",
+          "Help Description": "Greens in three rows next to each other, a fourth and fifth brought in, then the swap that makes a +5."
+        }
+      ]
+    },
+    {
+      "Set Name": "vertical-4",
+      "Description": "Your First Combos: Vertical +4",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "001900001900009100001900",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 2
+          },
+          "Solution": "A30Q1",
+          "Help Description": "The red swapped into the column makes a vertical +4."
+        }
+      ]
+    },
+    {
+      "Set Name": "vertical-5",
+      "Description": "Your First Combos: Vertical +5",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "009200009200002900009200009200",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 3
+          },
+          "Solution": "A30Q1",
+          "Help Description": "The green swapped into the middle makes a vertical +5."
+        }
+      ]
+    },
+    {
+      "Set Name": "vertical-6",
+      "Description": "Your First Combos: Vertical +6",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "003400004300003400",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 2
+          },
+          "Solution": "A30Q1",
+          "Help Description": "One swap lines up three cyans and three yellows side by side for a +6."
+        }
+      ]
+    },
+    {
+      "Set Name": "l-shaped-5",
+      "Description": "Your First Combos: L-shaped +5",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "995900995900559500",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 1
+          },
+          "Solution": "A30Q1",
+          "Help Description": "The pink swapped into the corner makes an L-shaped +5."
+        }
+      ]
+    },
+    {
+      "Set Name": "t-shaped-5",
+      "Description": "Your First Combos: T-shaped +5",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "969900696600969900",
+          "CursorStartLeft": {
+            "Column": 1,
+            "Row": 2
+          },
+          "Solution": "A30Q1",
+          "Help Description": "The blue swapped into the middle makes a T-shaped +5."
+        }
+      ]
+    },
+    {
+      "Set Name": "first-chain",
+      "Description": "Your First Chains: A x2 Chain",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "445215235144311252134541221425533142",
+          "CursorStartLeft": {
+            "Column": 4,
+            "Row": 3
+          },
+          "Solution": "A30Q1A9I1A9C1A9C1A9C1A19Q1",
+          "Help Description": "A yellow is moved beside another, then the cyans clear and the yellow on top of them falls in for a x2."
+        }
+      ]
+    },
+    {
+      "Set Name": "chain-reds",
+      "Description": "Your First Chains: Extending With Reds",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "445215235144311252134541221425533142",
+          "CursorStartLeft": {
+            "Column": 4,
+            "Row": 3
+          },
+          "Solution": "A30Q1A9E1A9E1A9C1A19Q1A9I1A9I1A9I1A9C1A9C1A9Q1",
+          "Help Description": "The yellows set up as before and a red moved in under them make the chain a x3."
+        }
+      ]
+    },
+    {
+      "Set Name": "chain-greens",
+      "Description": "Your First Chains: Extending With Greens",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "445215235144311252134541221425533142",
+          "CursorStartLeft": {
+            "Column": 4,
+            "Row": 3
+          },
+          "Solution": "A30Q1A9E1A39Q1A9E1A9B1A19Q1A9C1A19Q1A9I1A9I1A9I1A9C1A9C1A9C1A19Q1",
+          "Help Description": "The yellows set up as before and two greens moved in under them make the chain a x3."
+        }
+      ]
+    },
+    {
+      "Set Name": "chain-both",
+      "Description": "Your First Chains: Extending With Both",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "445215235144311252134541221425533142",
+          "CursorStartLeft": {
+            "Column": 4,
+            "Row": 3
+          },
+          "Solution": "A30Q1A9E1A9E1A9C1A19Q1A9I1A9B1A19Q1A9E1A9B1A19Q1A9C1A19Q1A9I1A9I1A9I1A9C1A9C1A9C1A19Q1",
+          "Help Description": "With both the reds and the greens moved in, the x3 is a +6 of reds and greens."
+        }
+      ]
+    },
+    {
+      "Set Name": "double-horizontal-a",
+      "Description": "Set and Forget Chain Patterns: Double Horizontal",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "991999112292",
+          "CursorStartLeft": {
+            "Column": 5,
+            "Row": 1
+          },
+          "Solution": "A30Q1",
+          "Help Description": "The greens clear and the red above them falls between the other two."
+        }
+      ]
+    },
+    {
+      "Set Name": "double-horizontal-b",
+      "Description": "Set and Forget Chain Patterns: Double Horizontal",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "911999122929",
+          "CursorStartLeft": {
+            "Column": 4,
+            "Row": 1
+          },
+          "Solution": "A30Q1",
+          "Help Description": "The greens clear and the two reds above them fall beside the third."
+        }
+      ]
+    },
+    {
+      "Set Name": "double-vertical-a",
+      "Description": "Set and Forget Chain Patterns: Double Vertical",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "929000939000399000939000929000929000",
+          "CursorStartLeft": {
+            "Column": 1,
+            "Row": 4
+          },
+          "Solution": "A30Q1",
+          "Help Description": "The cyans clear and the green above them falls onto the two below."
+        }
+      ]
+    },
+    {
+      "Set Name": "double-vertical-b",
+      "Description": "Set and Forget Chain Patterns: Double Vertical",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "929000929000939000399000939000929000",
+          "CursorStartLeft": {
+            "Column": 1,
+            "Row": 3
+          },
+          "Solution": "A30Q1",
+          "Help Description": "The cyans clear and the two greens above them fall onto the one below."
+        }
+      ]
+    },
+    {
+      "Set Name": "horizontal-to-vertical-a",
+      "Description": "Set and Forget Chain Patterns: Horizontal to Vertical",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "091990091990022920091990",
+          "CursorStartLeft": {
+            "Column": 4,
+            "Row": 2
+          },
+          "Solution": "A30Q1",
+          "Help Description": "The greens clear and the two reds above them fall onto the one below."
+        }
+      ]
+    },
+    {
+      "Set Name": "horizontal-to-vertical-b",
+      "Description": "Set and Forget Chain Patterns: Horizontal to Vertical",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "091990022920091990091990",
+          "CursorStartLeft": {
+            "Column": 4,
+            "Row": 3
+          },
+          "Solution": "A30Q1",
+          "Help Description": "The greens clear and the red above them falls onto the two below."
+        }
+      ]
+    },
+    {
+      "Set Name": "vertical-to-horizontal",
+      "Description": "Set and Forget Chain Patterns: Vertical to Horizontal",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "009190009390003990001310",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 2
+          },
+          "Solution": "A30Q1",
+          "Help Description": "The cyans clear and the red on top falls between the other two."
+        }
+      ]
+    },
+    {
+      "Set Name": "clearing-garbage",
+      "Description": "Defence Basics: Clearing Garbage",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "[==========]000004342004413501545144",
+          "GarbagePanelBuffer": "415352352415",
+          "CursorStartLeft": {
+            "Column": 5,
+            "Row": 4
+          },
+          "Solution": "A30Q1A9E1A9E1A49Q1",
+          "Help Description": "The yellow on the tower is moved down, and three yellows clear against the garbage."
+        }
+      ]
+    },
+    {
+      "Set Name": "clearing-garbage-chain",
+      "Description": "Defence Basics: Garbage Chain",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "[==========]004044013245152425",
+          "GarbagePanelBuffer": "124235341524",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 3
+          },
+          "Solution": "A30Q1",
+          "Help Description": "Three yellows clear against the garbage, and the pink it turns into falls onto two pinks for a garbage chain."
+        }
+      ]
+    },
+    {
+      "Set Name": "topped-out",
+      "Description": "Defence Basics: Topped Out",
+      "Puzzles": [
+        {
+          "Puzzle Type": "clear",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "[================]000[=][====][=]000[====]303000215421244551325535853112",
+          "PanelBuffer": "231531123253234312412534234253415342231431414324",
+          "GarbagePanelBuffer": "135243241352352414543542252421",
+          "CursorStartLeft": {
+            "Column": 2,
+            "Row": 1
+          },
+          "Solution": "A8Q1A9I1A9I1A9B1A11Q1A9I1A9I1A9C1A9C1A59Q1A9B1A14Q1A9E1A9E1A9E1A9C1A9Q1",
+          "Help Description": "Topped out with no clear, a +4 of pinks buys stop time to move a loose cyan down, and three greens then clear against the garbage."
+        }
+      ]
+    },
+    {
+      "Set Name": "backup-combo",
+      "Description": "Defence Basics: Backup Combo",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "[==========]513232014100025210033443042342215112152321245532",
+          "CursorStartLeft": {
+            "Column": 5,
+            "Row": 2
+          },
+          "Solution": "A30Q1",
+          "Help Description": "Greens kept ready in the bottom corner, set off by one swap for a +4."
+        }
+      ]
+    },
+    {
+      "Set Name": "raise-for-panels",
+      "Description": "Defence Basics: Raise for Panels",
+      "Puzzles": [
+        {
+          "Puzzle Type": "clear",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "[====]000[=][==========]005521532135445454",
+          "PanelBuffer": "221535132324423153254345432521143253351312232145",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 2
+          },
+          "Solution": "A60g40",
+          "Help Description": "Three rows of panels under the garbage, raised for more."
+        }
+      ]
+    },
+    {
+      "Set Name": "risky-garbage-chain",
+      "Description": "Defence Basics: Risky Garbage Chain",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "[==================================]010110513240523245",
+          "GarbagePanelBuffer": "341241234125121352",
+          "CursorStartLeft": {
+            "Column": 2,
+            "Row": 3
+          },
+          "Solution": "A120Q1",
+          "Help Description": "Three reds clear against the garbage, and a green and a yellow it turns into fall onto two of each for a x2 garbage chain of six panels."
+        }
+      ]
+    },
+    {
+      "Set Name": "downstack-slowly",
+      "Description": "Downstacking Carefully: Downstack Slowly",
+      "Puzzles": [
+        {
+          "Puzzle Type": "clear",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "[==================================][==========]000004000003000004400002501505",
+          "PanelBuffer": "254143515234234352325143151351414245545354231213",
+          "GarbagePanelBuffer": "241352241352241352241352",
+          "CursorStartLeft": {
+            "Column": 5,
+            "Row": 5
+          },
+          "Solution": "A20Q1A9E1A69Q1A9E1A9E1A9C1A29Q1A9I1A9B1A49Q1",
+          "Help Description": "A tower holds up garbage reaching off the top, and moving its panels down one at a time lets the garbage fall and shake each time."
+        }
+      ]
+    },
+    {
+      "Set Name": "dont-ruin-the-clear",
+      "Description": "Downstacking Carefully: Don't Ruin the Clear",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "[===]0[=]000030000140000330000550005130001",
+          "GarbagePanelBuffer": "423514315243",
+          "CursorStartLeft": {
+            "Column": 2,
+            "Row": 2
+          },
+          "Solution": "A30Q1A9I1A9C1A39Q1",
+          "Help Description": "The pink is moved off the cyans so they drop together, and one more cyan swapped in clears four against the garbage."
+        }
+      ]
+    },
+    {
+      "Set Name": "high-stack",
+      "Description": "High Stack Defence: High Stack",
+      "Puzzles": [
+        {
+          "Puzzle Type": "clear",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "300041435543342512431251254315",
+          "PanelBuffer": "341533423134311545253451434132121423542512234151125423312132",
+          "CursorStartLeft": {
+            "Column": 2,
+            "Row": 5
+          },
+          "Solution": "A30g60",
+          "Help Description": "The stack is raised very high before the opponent's garbage lands on it."
+        }
+      ]
+    },
+    {
+      "Set Name": "plus-7",
+      "Description": "Why +7 Combos Are Bad: A Two-Color +7",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "001000002100001200001200",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 3
+          },
+          "Solution": "A30Q1",
+          "Help Description": "Four reds and three greens make a +7."
+        }
+      ]
+    },
+    {
+      "Set Name": "plus-7-to-6",
+      "Description": "Why +7 Combos Are Bad: Make It a +6",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "001000002100001200001200",
+          "CursorStartLeft": {
+            "Column": 2,
+            "Row": 4
+          },
+          "Solution": "A30Q1A9E1A9B1A29Q1",
+          "Help Description": "The fourth red is swapped off the column and falls away, and the same swap makes a +6."
+        }
+      ]
+    },
+    {
+      "Set Name": "plus-7-to-8-green",
+      "Description": "Why +7 Combos Are Bad: Make It a +8",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "001020002190001290001290",
+          "CursorStartLeft": {
+            "Column": 4,
+            "Row": 4
+          },
+          "Solution": "A30Q1A9E1A9C1A19Q1",
+          "Help Description": "A fourth green is swapped onto the green column, and the same swap makes a +8."
+        }
+      ]
+    },
+    {
+      "Set Name": "plus-7-to-8-red",
+      "Description": "Why +7 Combos Are Bad: Make It a +8",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "010000091000092100091200091200",
+          "CursorStartLeft": {
+            "Column": 2,
+            "Row": 5
+          },
+          "Solution": "A30Q1A9E1A9E1A9B1A19Q1",
+          "Help Description": "A fifth red is swapped onto the red column, and the same swap makes a +8."
+        }
+      ]
+    },
+    {
+      "Set Name": "t-shaped-7",
+      "Description": "Why +7 Combos Are Bad: T-shaped +7",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "060000960000696600969900969900",
+          "CursorStartLeft": {
+            "Column": 1,
+            "Row": 3
+          },
+          "Solution": "A30Q1",
+          "Help Description": "Five blues up and two across make a T-shaped +7."
+        }
+      ]
+    },
+    {
+      "Set Name": "t-shaped-7-to-l",
+      "Description": "Why +7 Combos Are Bad: Make It an L +5",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "060000960000696600969900969900",
+          "CursorStartLeft": {
+            "Column": 1,
+            "Row": 2
+          },
+          "Solution": "A30Q1A9I1A19Q1",
+          "Help Description": "The blue under the branch is swapped out of the column, and the same swap makes an L-shaped +5."
+        }
+      ]
+    },
+    {
+      "Set Name": "t-shaped-7-to-vertical",
+      "Description": "Why +7 Combos Are Bad: Make It a Vertical +5",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "060000960000696600969900969900",
+          "CursorStartLeft": {
+            "Column": 4,
+            "Row": 3
+          },
+          "Solution": "A30Q1A9C1A19Q1A9C1A9C1A19Q1",
+          "Help Description": "The end of the branch drops off and its middle moves out to the end, leaving a gap, and the same swap makes a vertical +5."
+        }
+      ]
+    },
+    {
+      "Set Name": "t-shaped-7-to-l-up",
+      "Description": "Why +7 Combos Are Bad: Make It an L +5",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "060000960000696600969900969900",
+          "CursorStartLeft": {
+            "Column": 1,
+            "Row": 4
+          },
+          "Solution": "A30Q1A9E1A19Q1",
+          "Help Description": "The blue over the branch is swapped out of the column, and the same swap makes an L-shaped +5 the other way up."
+        }
+      ]
+    },
+    {
+      "Set Name": "shogun",
+      "Description": "Shoguns and Transition Clears: Shogun",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "154345[====]000045003035524052145533",
+          "GarbagePanelBuffer": "241531352414",
+          "CursorStartLeft": {
+            "Column": 5,
+            "Row": 2
+          },
+          "Solution": "A30Q1",
+          "Help Description": "Three pinks clear against the garbage, the panel it turns into falls under the cyan above it, and the cyan lands between two more for a x2."
+        }
+      ]
+    },
+    {
+      "Set Name": "transition-clear",
+      "Description": "Shoguns and Transition Clears: Transition Clear",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "[====]115452[====]104010524132148334",
+          "GarbagePanelBuffer": "213125452314315243",
+          "CursorStartLeft": {
+            "Column": 2,
+            "Row": 1
+          },
+          "Solution": "A30Q1A9I1A9I1A9I1A9C1A71Q1",
+          "Help Description": "Three yellows clear the lower garbage, the red in the tier above falls one space, and one swap lines up three reds against the next layer."
+        }
+      ]
+    }
+  ]
+}

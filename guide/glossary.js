@@ -3,7 +3,6 @@
 window.GLOSSARY = {
   "title": "Glossary",
   "theme": "crystal-theme",
-  "description": "Comprehensive reference for Panel Attack terminology and techniques.",
   "categories": [
     {
       "name": "Game Mechanics",
@@ -96,6 +95,7 @@ window.GLOSSARY = {
           "id": "shake-time",
           "title": "Shake Time",
           "body": "The period of time after garbage falls on your stack, causing it to shake. Larger garbage results in more shake time. You cannot lose during shake time, even if you are topped out.",
+          "reference": "shakeTime",
           "image": "images/glossary/shake-time.mp4",
           "clip": {
             "steps": [],
@@ -542,7 +542,8 @@ window.GLOSSARY = {
               "x2"
             ],
             "rows": 5,
-            "tail": 180
+            "tail": 180,
+            "pace": 2
           },
           "size": [
             288,
@@ -761,13 +762,13 @@ window.GLOSSARY = {
               {
                 "row": 2,
                 "column": 5,
-                "frame": 40
+                "frame": 60
               },
               {
                 "row": 1,
                 "column": 4,
                 "frame": [
-                  60,
+                  75,
                   140
                 ]
               }
@@ -802,18 +803,16 @@ window.GLOSSARY = {
               },
               {
                 "row": 2,
-                "column": 4,
-                "frame": 84
+                "column": 4
               },
               {
                 "row": 2,
-                "column": 3,
-                "frame": 98
+                "column": 3
               }
             ],
             "matches": 1,
             "rows": 3,
-            "to": 115,
+            "to": 127,
             "tail": 120
           },
           "image": "images/glossary/bridge.mp4",
@@ -836,24 +835,22 @@ window.GLOSSARY = {
               },
               {
                 "row": 2,
-                "column": 1,
-                "frame": 44
+                "column": 1
               },
               {
                 "row": 2,
-                "column": 2,
-                "frame": 56
+                "column": 2
               },
               {
                 "row": 2,
-                "column": 3,
-                "frame": 68
+                "column": 3
               }
             ],
             "matches": 2,
             "rows": 4,
-            "to": 85,
-            "tail": 240
+            "to": 101,
+            "tail": 240,
+            "pace": 6
           },
           "size": [
             288,

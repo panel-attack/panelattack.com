@@ -7,7 +7,7 @@
   <meta name="description" content="Comprehensive guide and resources for learning Panel Attack, from beginner basics to expert techniques. Tutorials, strategies, and exercises for all skill levels." />
   <meta name="keywords" content="Panel Attack, guide, tutorial, strategy, combos, chains, defense, beginner, advanced, expert, tetris attack, puzzle league">
   <meta charset="utf-8" />
-  <link rel="stylesheet" type="text/css" href="style.css?v=4">
+  <link rel="stylesheet" type="text/css" href="style.css?v=22">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <title>Panel Attack - Guide</title>
   <link rel="shortcut icon" href="images/icon.png">
@@ -15,10 +15,14 @@
 
 <body>
   <!-- SHARED HEADER - Loaded by header.js -->
-  <script src="header.js"></script>
-  <script src="clips.js"></script>
-  <script src="guide/sections.js"></script>
-  <script src="guide/glossary.js"></script>
+  <script src="header.js?v=22"></script>
+  <script src="clips.js?v=22"></script>
+  <script src="guide/sections.js?v=22"></script>
+  <script src="guide/glossary.js?v=22"></script>
+  <script src="guide/howToPlay.js?v=22"></script>
+  <script src="guide/lessons.js?v=22"></script>
+  <script src="guide/references.js?v=22"></script>
+  <script src="guide/achievements.js?v=22"></script>
 
   <div id="body" class="sidebar-layout">
     <nav class="unified-sidebar" aria-label="Guide contents">
@@ -44,14 +48,50 @@
       return text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
     }
 
-    // The glossary as the guide renders it: each category a tier, each term a sub-tier keyed by its title
+    // A tier is either a list of items, or entries that each get a link of their own under the tier
+    // in the sidebar - a glossary category's terms, a skill level's fundamentals
+    function entries(list, render) {
+      return {entries: list, render};
+    }
+
     function glossarySection(glossary) {
       const tiers = {};
-      glossary.categories.forEach(category => {
-        tiers[category.name] = {};
-        category.terms.forEach(term => { tiers[category.name][term.title] = term; });
+      glossary.categories.forEach(category => { tiers[category.name] = entries(category.terms, glossaryTerm); });
+      return {title: glossary.title, theme: glossary.theme, tiers};
+    }
+
+    // Each lesson's steps get links of their own; a step shows the clip of the glossary term it names
+    function howToPlaySection(howToPlay, glossary) {
+      const clips = {};
+      glossary.categories.forEach(category => category.terms.forEach(term => { clips[term.id] = term; }));
+      const controls = {title: 'Controls', html: `<img class="guide-controller" src="${howToPlay.controls.image}" alt="A controller: the directional pad moves the cursor, the two lower face buttons swap, the shoulder buttons raise, Start pauses">
+          <p class="card-desc">${howToPlay.controls.keyboard}</p>`};
+      const tiers = {'Introduction': [{description: howToPlay.intro}, controls]};
+      howToPlay.lessons.forEach(lesson => {
+        tiers[lesson.name] = entries(lesson.steps.map(step =>
+          Object.assign({}, step, {id: `play-${step.id}`, clip: step.glossary ? clips[step.glossary] : step})), howToPlayStep);
       });
-      return {title: glossary.title, theme: glossary.theme, description: glossary.description, tiers};
+      return {title: howToPlay.title, theme: howToPlay.theme, tiers};
+    }
+
+    // A skill level: what to practice heads it, then its fundamentals, the achievements of its
+    // difficulty as goals, its lessons, its puzzles, its videos, and what comes next
+    function skillSection(sectionId, section, achievements) {
+      const tiers = {};
+      if (section.fundamentals) {
+        tiers['Fundamentals'] = entries(section.fundamentals.map(fundamental =>
+          Object.assign({id: slug(`${sectionId}-${fundamental.name}`), title: fundamental.name}, fundamental)), fundamentalEntry);
+      }
+      if (section.lessons) {
+        tiers['Lessons'] = entries(section.lessons.map(lesson =>
+          Object.assign({id: slug(`${sectionId}-${lesson.name}`), title: lesson.name}, lesson)), lessonEntry);
+      }
+      const goals = achievements.filter(achievement => achievement.difficulty === section.title);
+      if (goals.length) tiers['Goals'] = [goalsItem(goals)];
+      if (section.nextTier) tiers['Ready for More'] = [{description: section.nextTier}];
+      if (section.puzzles) tiers['Puzzles'] = [Object.assign({title: 'From Esme\'s Puzzle Guide'}, section.puzzles)];
+      if (section.resources) tiers['Videos'] = [{links: section.resources}];
+      return Object.assign({}, section, {tiers});
     }
 
     function badges(section) {
@@ -60,41 +100,136 @@
 
     function navIcon(sectionId, section) {
       const icons = badges(section).map(badge => `<img class="nav-badge" src="${badge}" alt="" width="20" height="20">`).join('');
-      return icons || `<span class="nav-badge">${sectionId === 'glossary' ? '📚' : '📋'}</span>`;
+      return icons || `<span class="nav-badge">${{glossary: '📚', 'how-to-play': '🎮'}[sectionId] || '📋'}</span>`;
     }
 
     // clips.js loads a clip when it nears the screen; the file is twice the size it is shown at, so a
     // high density screen shows it pixel for pixel
-    function glossaryClip(term) {
-      if (!term.clip) return '';
-      const size = term.size ? ` width="${term.size[0]}" height="${term.size[1]}"` : '';
-      return `<video class="glossary-clip" data-src="${term.image}"${size} preload="none" loop muted playsinline aria-label="${term.title} clip"></video>`;
+    function guideClip(entry) {
+      if (!entry || !entry.clip) return '';
+      const size = entry.size ? ` width="${entry.size[0]}" height="${entry.size[1]}"` : '';
+      return `<video class="guide-clip" data-src="${entry.image}"${size} preload="none" loop muted playsinline aria-label="${entry.title} clip"></video>`;
+    }
+
+    function bullets(list) {
+      return list && list.length ? `<ul class="guide-list">${list.map(line => `<li>${line}</li>`).join('')}</ul>` : '';
     }
 
     function introCard(section) {
       const images = badges(section).map(badge => `<img src="${badge}" alt="${section.title} Badge" class="face face--league" style="border-color: #B87333;">`).join('');
+      // below the top level, a level is the least a player should be comfortable at
+      const level = section.level < 10 ? `${section.level} minimum` : section.level;
       return `<div class="flexItem fullWidth card ${section.theme}">
           <div class="card-header">${images}<h2 class="card-name">${section.title}</h2></div>
-          <p class="card-desc"><strong>Skill Range:</strong> ${section.skillRange}</p>
-          <p class="card-desc">${section.description}</p>
+          <p class="card-desc"><strong>Skill Range:</strong> ${section.skillRange} · <strong>Level:</strong> ${level}</p>
+          <p class="card-desc">${section.focus}</p>
+          ${bullets(section.practice)}
         </div>`;
+    }
+
+    function link(entry) {
+      const outdated = entry.outdated ? ' <span class="guide-tag guide-tag--outdated">Outdated</span>' : '';
+      return `<p class="card-desc">• <a href="${entry.url}" target="_blank">${entry.text}</a>${outdated}</p>`;
     }
 
     function tierItem(item) {
       return `<div class="tier-item">
-          <h4>${item.title}</h4>
-          <p class="card-desc">${item.description || ''}</p>
-          ${(item.links || []).map(link => `<p class="card-desc">• <a href="${link.url}" target="_blank">${link.text}</a></p>`).join('')}
-          ${(item.goals || []).map(goal => `<p class="card-desc">• <strong>Goal:</strong> ${goal}</p>`).join('')}
+          ${item.title ? `<h4>${item.title}</h4>` : ''}
+          ${item.description ? `<p class="card-desc">${item.description}</p>` : ''}
+          ${item.html || ''}
+          ${(item.links || []).map(link).join('')}
         </div>`;
     }
 
+    function goalsItem(goals) {
+      const categories = [];
+      goals.forEach(goal => {
+        let category = categories.find(c => c.name === goal.category);
+        if (!category) categories.push(category = {name: goal.category, goals: []});
+        category.goals.push(goal);
+      });
+      const text = goal => goal.text + (goal.online && goal.category !== 'Online' ? ' <span class="guide-tag">Online</span>' : '');
+      return {html: categories.map(category => `<div class="goal-group">
+          <h4>${category.name}</h4>
+          ${bullets(category.goals.map(text))}
+        </div>`).join('')};
+    }
+
     function glossaryTerm(term) {
-      return `<div class="glossary-card-inline" id="${term.id}">
-          <div class="glossary-inline-content">
+      return `<div class="guide-entry" id="${term.id}">
+          <div class="guide-entry-content">
             <h5>${term.title}</h5>
             <p>${term.body}</p>
-            ${glossaryClip(term)}
+            ${term.reference ? referenceTable(term.reference) : ''}
+            ${guideClip(term)}
+          </div>
+        </div>`;
+    }
+
+    function howToPlayStep(step) {
+      return `<div class="guide-entry" id="${step.id}">
+          <div class="guide-entry-content">
+            <h5>${step.title}</h5>
+            <p>${step.body}</p>
+            ${step.reference ? referenceTable(step.reference) : guideClip(step.clip)}
+          </div>
+        </div>`;
+    }
+
+    // A garbage block's picture is drawn at a fixed size per panel, so blocks compare by width
+    function garbageBlock([width, height]) {
+      return `<img class="reference-garbage" src="images/guide/garbage/${width}x${height}.png" alt="${width} by ${height} garbage" style="width: calc(var(--garbage-panel) * ${width})">`;
+    }
+
+    function referenceTable(name) {
+      const table = window.GUIDE_REFERENCES[name];
+      const cards = row => `<div class="reference-attack">${row.attack.map(card => `<img class="reference-card" src="images/guide/cards/${card}.png" alt="${card.replace(/^combo0?/, '+').replace(/^chain0?/, 'x')}">`).join('')}`
+        + (row.label ? `<span class="reference-label">${row.label}</span>` : '') + '</div>';
+      const cells = row => [cards(row), `<div class="reference-blocks">${row.blocks.map(garbageBlock).join('')}</div>`]
+        .concat(row.frames ? [row.frames, (row.frames / 60).toFixed(2).replace(/0$/, '')] : []);
+      return `<div class="reference-scroll"><table class="reference-table">
+          <thead><tr>${table.columns.map(column => `<th>${column}</th>`).join('')}</tr></thead>
+          <tbody>${table.rows.map(row => `<tr>${cells(row).map(cell => `<td>${cell}</td>`).join('')}</tr>`).join('')}</tbody>
+        </table></div>${table.note ? `<p>${table.note}</p>` : ''}`;
+    }
+
+    function lessonEntry(lesson) {
+      const list = lesson.list ? `${lesson.listTitle ? `<p><strong>${lesson.listTitle}</strong></p>` : ''}${bullets(lesson.list)}` : '';
+      return `<div class="guide-entry" id="${lesson.id}">
+          <div class="guide-entry-content">
+            <h5>${lesson.title}</h5>
+            ${lesson.paragraphs.map(paragraph => `<p>${paragraph}</p>`).join('')}
+            ${list}
+            ${lessonExamples(lesson.name)}
+          </div>
+        </div>`;
+    }
+
+    function lessonExamples(name) {
+      const lesson = window.GUIDE_LESSONS.lessons.find(candidate => candidate.name === name);
+      if (!lesson) return '';
+      // a pattern shown more than once plays its examples side by side under one title
+      const groups = [];
+      lesson.steps.forEach(step => {
+        const last = groups[groups.length - 1];
+        if (last && last[0].title === step.title && last[0].caption === step.caption) last.push(step);
+        else groups.push([step]);
+      });
+      return groups.map(([first, ...rest]) => `<div class="lesson-example">
+            <p><strong>${first.title}</strong></p>
+            ${first.caption ? `<p>${first.caption}</p>` : ''}
+            <div class="lesson-clips">${[first, ...rest].map(guideClip).join('')}</div>
+          </div>`).join('');
+    }
+
+    function fundamentalEntry(fundamental) {
+      const signs = fundamental.signs ? `<p><strong>Signs there's room for improvement:</strong></p>${bullets(fundamental.signs)}` : '';
+      return `<div class="guide-entry" id="${fundamental.id}">
+          <div class="guide-entry-content">
+            <h5>${fundamental.title}</h5>
+            <p class="guide-entry-kind">${fundamental.kind} · ${fundamental.tags.join(', ')}</p>
+            <p>${fundamental.body || 'Coming soon.'}</p>
+            ${signs}
           </div>
         </div>`;
     }
@@ -105,17 +240,16 @@
         const tierLinks = [], tierCards = [];
         Object.entries(section.tiers).forEach(([tierName, tier]) => {
           const tierId = slug(`${sectionId}-${tierName}`);
-          // a glossary category holds its terms by title; every other tier is a list of items
-          const terms = Array.isArray(tier) ? null : Object.values(tier);
-          if (terms) {
+          const listed = Array.isArray(tier);
+          if (!listed) {
             tierLinks.push(`<a class="tier-nav-item has-subtiers" href="#${tierId}">${tierName}</a>
-              <div class="subtier-list">${terms.map(term => `<a class="subtier-nav-item" href="#${term.id}">${term.title}</a>`).join('')}</div>`);
+              <div class="subtier-list">${tier.entries.map(entry => `<a class="subtier-nav-item" href="#${entry.id}">${entry.title}</a>`).join('')}</div>`);
           } else {
             tierLinks.push(`<a class="tier-nav-item" href="#${tierId}">${tierName}</a>`);
           }
           tierCards.push(`<div class="flexItem fullWidth card guide-tier ${section.theme}" id="${tierId}">
               <div class="card-header"><h3 class="card-name">${tierName}</h3></div>
-              <div class="tier-content-main">${terms ? terms.map(glossaryTerm).join('') : tier.map(tierItem).join('')}</div>
+              <div class="tier-content-main">${listed ? tier.map(tierItem).join('') : tier.entries.map(tier.render).join('')}</div>
             </div>`);
         });
         nav.push(`<div class="guide-nav-section">
@@ -138,7 +272,7 @@
       return id && document.querySelector(`#guide-nav a[href="#${CSS.escape(id)}"]`);
     }
 
-    // Opens the section, and the glossary category, holding what is being read, and lights it
+    // Opens the section, and the tier, holding what is being read, and lights it
     function showInNav(sectionId, tierId, termId) {
       document.querySelectorAll('#guide-nav .active, #guide-nav .expanded').forEach(e => e.classList.remove('active', 'expanded'));
       const sectionLink = navLink(sectionId);
@@ -161,7 +295,7 @@
     // The section, tier and term an element sits in, itself included
     function placeOf(element) {
       const within = selector => element && element.closest(selector);
-      return [within('.guide-section'), within('.guide-tier'), within('.glossary-card-inline')].map(e => e && e.id);
+      return [within('.guide-section'), within('.guide-tier'), within('.guide-entry')].map(e => e && e.id);
     }
 
     // The last of these, in page order, whose top has reached the reading line
@@ -184,7 +318,7 @@
       const content = document.getElementById('guide-content');
       const section = lastReached(content.querySelectorAll('.guide-section')) || content.querySelector('.guide-section');
       const tier = lastReached(section.querySelectorAll('.guide-tier'));
-      const term = tier && lastReached(tier.querySelectorAll('.glossary-card-inline'));
+      const term = tier && lastReached(tier.querySelectorAll('.guide-entry'));
       showInNav(section.id, tier && tier.id, term && term.id);
     }
 
@@ -197,7 +331,13 @@
     }
 
     function initGuide() {
-      renderGuide(Object.assign({}, window.GUIDE_SECTIONS, {glossary: glossarySection(window.GLOSSARY)}));
+      const sections = {};
+      Object.entries(window.GUIDE_SECTIONS).forEach(([sectionId, section]) => {
+        sections[sectionId] = section.level ? skillSection(sectionId, section, window.ACHIEVEMENTS.achievements) : section;
+        if (sectionId === 'overview') sections['how-to-play'] = howToPlaySection(window.HOW_TO_PLAY, window.GLOSSARY);
+      });
+      sections.glossary = glossarySection(window.GLOSSARY);
+      renderGuide(sections);
       watchClips(document.getElementById('guide-content'));
 
       document.getElementById('guide-nav').addEventListener('click', event => {

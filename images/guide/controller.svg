@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300" role="img" aria-label="A generic controller: the directional pad moves the cursor, the two lower face buttons swap, the shoulder buttons raise the stack, and Start pauses">
+  <style>
+    text { font-family: 'Noto Sans', Arial, sans-serif; font-size: 15px; fill: #fff; }
+    .label { font-weight: bold; }
+    .line { stroke: #fff; stroke-width: 1.5; fill: none; opacity: 0.8; }
+  </style>
+  <path d="M146 90 C148 74 160 68 182 68 C204 68 214 74 216 88 Z" fill="#555"/>
+  <path d="M374 90 C372 74 360 68 338 68 C316 68 306 74 304 88 Z" fill="#555"/>
+  <path d="M 260 94 C 304 94 328 84 356 84 C 396 84 416 110 425 150 C 436 205 439 248 417 266 C 396 280 375 260 362 234 C 352 213 340 204 324 204 H 196 C 180 204 168 213 158 234 C 145 260 124 280 103 266 C 81 248 84 205 95 150 C 104 110 124 84 164 84 C 192 84 216 94 260 94Z" fill="#3a3a3a" stroke="#777" stroke-width="2"/>
+  <path d="M154 120 h20 v20 h20 v20 h-20 v20 h-20 v-20 h-20 v-20 h20 Z" fill="#1d1d1d"/>
+  <rect x="235" y="140" width="22" height="9" rx="4" fill="#1d1d1d"/>
+  <rect x="267" y="140" width="22" height="9" rx="4" fill="#1d1d1d"/>
+  <circle cx="364" cy="122" r="11" fill="#1d1d1d"/>
+  <circle cx="342" cy="144" r="11" fill="#1d1d1d"/>
+  <circle cx="386" cy="144" r="11" fill="#e8c547"/>
+  <circle cx="364" cy="166" r="11" fill="#e8c547"/>
+  <path class="line" d="M182 74 V40 H220"/>
+  <path class="line" d="M338 74 V40 H300"/>
+  <text class="label" x="260" y="45" text-anchor="middle">Raise</text>
+  <path class="line" d="M164 182 V280 H170"/>
+  <text x="176" y="285"><tspan class="label">D-pad</tspan> Move cursor</text>
+  <path class="line" d="M278 149 V240 H300"/>
+  <text x="306" y="245"><tspan class="label">Start</tspan> Pause</text>
+  <path class="line" d="M397 144 H450 V200"/>
+  <path class="line" d="M375 166 H450"/>
+  <text class="label" x="450" y="220" text-anchor="middle">Swap</text>
+</svg>

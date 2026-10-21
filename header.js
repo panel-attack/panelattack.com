@@ -2,7 +2,7 @@
 function loadHeader() {
   // A page in a subdirectory says how to get back to the site root with data-base, and which nav
   // item to light up with data-active, because its own filename is not one of them.
-  const tag = document.querySelector('script[src$="header.js"]');
+  const tag = document.querySelector('script[src*="header.js"]');
   const base = (tag && tag.dataset.base) || '';
   const declaredActive = tag && tag.dataset.active;
 
@@ -35,7 +35,7 @@ function loadHeader() {
   const headerHTML = `
   <div class="header">
     <div class="topnav">
-      <a class="logo" href="${base}index.html"><img height="32" src="${base}images/PanelAttackLogoWide.png" alt="Panel Attack"/></a>
+      <a class="logo" href="${base}index.html"><img height="32" src="${base}images/PanelAttackLogoWide_96.png" alt="Panel Attack"/></a>
       ${navLinks}
       <button class="nav-menu-icon" id="nav-menu-toggle">☰</button>
       <div class="nav-dropdown" id="nav-dropdown">

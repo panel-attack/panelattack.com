@@ -1183,7 +1183,7 @@ iframe {
   letter-spacing: 0.04em;
 }
 
-.glossary-card-inline {
+.guide-entry {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 12px;
@@ -1194,17 +1194,17 @@ iframe {
   scroll-margin-top: 80px;
 }
 
-.glossary-card-inline:hover {
+.guide-entry:hover {
   background: rgba(255, 255, 255, 0.06);
   border-color: rgba(83, 195, 173, 0.3);
   transform: translateY(-2px);
 }
 
-.glossary-card-inline:last-child {
+.guide-entry:last-child {
   margin-bottom: 0;
 }
 
-.glossary-inline-content h5 {
+.guide-entry-content h5 {
   font-family: 'Oswald', sans-serif;
   font-size: 24px;
   font-weight: 600;
@@ -1214,7 +1214,7 @@ iframe {
   color: #53C3AD;
 }
 
-.glossary-inline-content p {
+.guide-entry-content p {
   font-family: 'Noto Sans', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: #cfd0d6;
   font-size: 16px;
@@ -1224,7 +1224,7 @@ iframe {
 
 /* A filmed clip, at the size it was filmed unless the window is narrower. clips.js plays it while it
    is on screen and pauses it on a click. */
-.glossary-clip {
+.guide-clip {
   display: block;
   image-rendering: pixelated;
   max-width: 100%;
@@ -1232,8 +1232,169 @@ iframe {
   border-radius: 6px;
 }
 
+.lesson-example {
+  margin-top: 1.5em;
+}
+
+.lesson-clips {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.lesson-clips .guide-clip {
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.guide-entry-content p a {
+  font: inherit;
+}
+
+.reference-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.reference-table {
+  --garbage-panel: 18px;
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.reference-table th {
+  font: 600 14px 'Noto Sans', sans-serif;
+  color: #ccc;
+  text-align: left;
+  padding: 6px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.reference-table td {
+  font: 16px 'Noto Sans', sans-serif;
+  padding: 6px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  vertical-align: middle;
+}
+
+.reference-attack {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.reference-card {
+  display: block;
+  width: 36px;
+  height: 36px;
+  image-rendering: pixelated;
+}
+
+.reference-label {
+  font: 14px 'Noto Sans', sans-serif;
+  margin-left: 8px;
+  white-space: nowrap;
+}
+
+.reference-blocks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.reference-garbage {
+  display: block;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .reference-table {
+    --garbage-panel: 12px;
+  }
+
+  .reference-table th,
+  .reference-table td {
+    padding: 6px 6px;
+  }
+
+  .reference-table th {
+    font-size: 12px;
+  }
+
+  .reference-card {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.guide-controller {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto 10px;
+}
+
 video[data-src] {
   cursor: pointer;
+}
+
+.guide-list {
+  margin: 0 0 20px 0;
+  padding-left: 22px;
+  color: #E8E8E8;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* style.css opens with `body, * { font: 18px arial }`, so a list item sets its own */
+.guide-list li {
+  font-family: 'Noto Sans', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 4px;
+}
+
+.guide-entry-content .guide-list {
+  color: #cfd0d6;
+}
+
+.guide-entry-content p.guide-entry-kind {
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #9aa0a6;
+  margin-top: -6px;
+}
+
+.guide-tag {
+  display: inline-block;
+  font-family: 'Oswald', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 1px 8px;
+  margin-left: 6px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #cfd0d6;
+  vertical-align: 2px;
+}
+
+.guide-tag--outdated {
+  border-color: rgba(230, 160, 80, 0.6);
+  color: #E6A050;
+}
+
+.goal-group h4 {
+  color: #C0EEBF;
+  font-size: 16px;
+}
+
+.goal-group .guide-list {
+  margin-bottom: 12px;
 }
 
 /* Responsive adjustments for unified sidebar */
