@@ -242,26 +242,6 @@
       ]
     },
     {
-      "Set Name": "clear",
-      "Description": "Glossary: Clear",
-      "Puzzles": [
-        {
-          "Puzzle Type": "moves",
-          "StartTiming": "Immediately",
-          "Moves": 99,
-          "Stop": 0,
-          "Shake": 0,
-          "Stack": "000000000000000000000000000000000000000000000000000000000000[====]119199",
-          "CursorStartLeft": {
-            "Column": 3,
-            "Row": 1
-          },
-          "Solution": "A30Q1",
-          "Help Description": "Matching the reds under the garbage turns it into panels."
-        }
-      ]
-    },
-    {
       "Set Name": "garbage-clear",
       "Description": "Glossary: Garbage Clear",
       "Puzzles": [
@@ -547,6 +527,28 @@
       ]
     },
     {
+      "Set Name": "pre-stop-time",
+      "Description": "Glossary: Pre-Stop Time",
+      "Puzzles": [
+        {
+          "Puzzle Type": "clear",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000000000000000000000000000000000000000000[==========]119199999999999999",
+          "PanelBuffer": "999999999999999999999999",
+          "GarbagePanelBuffer": "213546452613",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 3
+          },
+          "Solution": "A60Q1",
+          "Help Description": "The stack rises until the reds clear the garbage, then holds still while it pops; the bar beside it is the pre-stop time left."
+        }
+      ]
+    },
+    {
       "Set Name": "transition-clear",
       "Description": "Glossary: Transition Clear",
       "Puzzles": [
@@ -725,6 +727,26 @@
           },
           "Solution": "A30Q1A5I1A5C1A5C1A5C1A5Q1A5B1A5Q1A5B1A5Q1",
           "Help Description": "The cyans match, and while they flash the red is walked across them to the reds under the garbage, which it clears."
+        }
+      ]
+    },
+    {
+      "Set Name": "hover-chain",
+      "Description": "Glossary: Hover Chain",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000000000000000000000000000000000000000000000000199999199999919999339399",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 1
+          },
+          "Solution": "A30Q1A9I1A9C1A9C1A31Q1",
+          "Help Description": "The cyans clear, and in their last frames the red is swapped in under the two reds, still moving as they start to hover; all three fall together and the reds above it carry the chain."
         }
       ]
     }

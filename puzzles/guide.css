@@ -425,3 +425,14 @@
     max-width: 280px;
   }
 }
+
+@media (max-width: 600px) {
+  .puzzle-main figure.puzzle {
+    grid-template-columns: 1fr;
+  }
+
+  .puzzle-main figure.puzzle figcaption {
+    grid-row: auto;
+    grid-column: 1;
+  }
+}

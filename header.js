@@ -12,16 +12,16 @@ function loadHeader() {
   }
 
   const navItems = [
-    { href: 'index.html', text: 'Home', pages: ['index.html'] },
-    { href: 'about.html', text: 'About', pages: ['about.html'] },
-    { href: 'communities.html', text: 'Community', pages: ['communities.html'] },
-    { href: 'guide.html', text: 'Guide', pages: ['guide.html'] },
-    { href: 'help.html', text: 'Help', pages: ['help.html'] },
-    { href: 'credits.html', text: 'Credits', pages: ['credits.html'] }
+    { href: 'index.html', text: 'Home' },
+    { href: 'about.html', text: 'About' },
+    { href: 'communities.html', text: 'Community' },
+    { href: 'guide.html', text: 'Guide' },
+    { href: 'help.html', text: 'Help' },
+    { href: 'credits.html', text: 'Credits' }
   ];
   
   // A page outside the nav, like migration.html, lights nothing and offers every item in the dropdown
-  const currentItem = navItems.find(item => item.pages.includes(currentPage));
+  const currentItem = navItems.find(item => item.href === currentPage);
 
   const navLinks = navItems.map(item => {
     const isActive = item === currentItem;
@@ -67,16 +67,10 @@ function setupMobileMenu() {
     dropdown.classList.toggle('show');
   });
 
-  // Close dropdown when clicking outside
   document.addEventListener('click', (e) => {
     if (!dropdown.contains(e.target) && !menuToggle.contains(e.target)) {
       dropdown.classList.remove('show');
     }
-  });
-
-  // Prevent dropdown clicks from closing the menu
-  dropdown.addEventListener('click', (e) => {
-    e.stopPropagation();
   });
 }
 
@@ -93,7 +87,6 @@ function setupActiveButtonClick() {
         e.stopPropagation();
         dropdown.classList.toggle('show');
       } else {
-        // In desktop view, prevent the active nav item from doing anything
         e.preventDefault();
       }
     });

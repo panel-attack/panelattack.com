@@ -335,9 +335,7 @@ iframe {
 }
 
 .nav-dropdown.show {
-  display: flex !important;
-  visibility: visible !important;
-  opacity: 1 !important;
+  display: flex;
 }
 
 .nav-dropdown a {
@@ -426,25 +424,7 @@ iframe {
     text-align: center;
     float: none;
   }
-  
-  /* Ensure dropdown is visible on mobile */
-  .nav-dropdown {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    margin-top: 5px;
-  }
-  
-  .nav-dropdown.show {
-    display: flex !important;
-    flex-direction: column;
-  }
-  
-  .nav-dropdown a {
-    display: flex !important;
-    float: none !important;
-  }
+
 }
 
 /* WORLD SECTION - CHARACTER STYLE */
@@ -503,9 +483,6 @@ iframe {
   background: rgba(0, 0, 0, 0.2);
 }
 .face--league {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
   object-fit: contain;
   box-sizing: border-box;
   background: rgba(0, 0, 0, 0.2);
@@ -566,29 +543,11 @@ iframe {
 }
 .gold-theme .card-name { color: #FFF8DC; }
 
-.platinum-theme {
-  border-color: #E5E4E2;
-  background: linear-gradient(135deg, rgba(229, 228, 226, 0.15), rgba(229, 228, 226, 0.05));
-}
-.platinum-theme .card-name { color: #F5F5F5; }
-
 .diamond-theme {
   border-color: #B9F2FF;
   background: linear-gradient(135deg, rgba(185, 242, 255, 0.15), rgba(185, 242, 255, 0.05));
 }
 .diamond-theme .card-name { color: #E0F6FF; }
-
-.master-theme {
-  border-color: #9932CC;
-  background: linear-gradient(135deg, rgba(153, 50, 204, 0.15), rgba(153, 50, 204, 0.05));
-}
-.master-theme .card-name { color: #DDA0DD; }
-
-.grandmaster-theme {
-  border-color: #FFD700;
-  background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 140, 0, 0.15), rgba(255, 20, 147, 0.15));
-}
-.grandmaster-theme .card-name { color: #FFF8DC; }
 
 /* Card staggered animation delays */
 .flexItem:nth-of-type(3) .card { animation-delay: 0.1s; }
@@ -1190,14 +1149,7 @@ iframe {
   padding: 20px;
   margin-bottom: 20px;
   backdrop-filter: blur(4px);
-  transition: all 0.3s ease;
   scroll-margin-top: 80px;
-}
-
-.guide-entry:hover {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(83, 195, 173, 0.3);
-  transform: translateY(-2px);
 }
 
 .guide-entry:last-child {
@@ -1226,7 +1178,6 @@ iframe {
    is on screen and pauses it on a click. */
 .guide-clip {
   display: block;
-  image-rendering: pixelated;
   max-width: 100%;
   height: auto;
   border-radius: 6px;
@@ -1288,7 +1239,6 @@ iframe {
   display: block;
   width: 36px;
   height: 36px;
-  image-rendering: pixelated;
 }
 
 .reference-label {
@@ -1334,6 +1284,10 @@ iframe {
   width: 100%;
   max-width: 520px;
   margin: 0 auto 10px;
+}
+
+.guide-picture {
+  max-width: 420px;
 }
 
 video[data-src] {

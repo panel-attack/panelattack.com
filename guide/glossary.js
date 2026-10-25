@@ -33,7 +33,7 @@ window.GLOSSARY = {
         {
           "id": "chain",
           "title": "Chain",
-          "body": "When panels fall after a match disappears, causing another match. Denoted as x2 for a 2 chain, x3 for a 3 chain, etc. Referred to as \"skill chains\" when panels are actively swapped to extend the chain. Chains above x13 are referred to as \"mystery chains\" due to the game denoting them as \"x?\".",
+          "body": "When panels fall after a match disappears, causing another match. Denoted as x2 for a 2 chain, x3 for a 3 chain, etc. Called \"skill chains\" when you swap panels to extend the chain. Chains above x13 are referred to as \"mystery chains\" due to the game denoting them as \"x?\".",
           "image": "images/glossary/chain.mp4",
           "clip": {
             "steps": [
@@ -54,10 +54,9 @@ window.GLOSSARY = {
           ]
         },
         {
-          "id": "clear",
-          "title": "Clear",
-          "body": "When panels are matched next to garbage blocks, turning the garbage into panels.",
-          "image": "images/glossary/clear.mp4",
+          "id": "garbage-clear",
+          "title": "Garbage Clear",
+          "body": "A match you make touching a garbage block, which starts turning the garbage into panels a row at a time. Any other match is just a clear.",
           "clip": {
             "steps": [
               {
@@ -67,13 +66,13 @@ window.GLOSSARY = {
               }
             ],
             "matches": 1,
-            "rows": 3,
-            "hold": false,
-            "tail": 240
+            "rows": 4,
+            "tail": 200
           },
+          "image": "images/glossary/garbage-clear.mp4",
           "size": [
             288,
-            198
+            246
           ]
         },
         {
@@ -113,7 +112,7 @@ window.GLOSSARY = {
         {
           "id": "stop-time",
           "title": "Stop Time",
-          "body": "The period of time after making a chain or combo when your panels stop rising. Larger chains and combos result in more stop time. Less stop time is given on higher difficulty levels; more stop time is given if you are nearly topped out. You cannot lose during stop time, even if you are topped out.",
+          "body": "The period of time after making a chain or combo when your panels stop rising. Larger chains and combos result in more stop time. You get less stop time on higher difficulty levels, and more if you are topped out. You cannot lose during stop time, even if you are topped out.",
           "image": "images/glossary/stop-time.mp4",
           "clip": {
             "steps": [
@@ -134,6 +133,33 @@ window.GLOSSARY = {
             "to": 225,
             "tail": 240
           },
+          "size": [
+            351,
+            414
+          ]
+        },
+        {
+          "id": "pre-stop-time",
+          "title": "Pre-Stop Time",
+          "body": "The time while panels or garbage are still popping from your matches. Your stack doesn't rise and your health doesn't drain until the last pop finishes, and only then does any stop time from a combo or chain start counting down.",
+          "clip": {
+            "steps": [
+              {
+                "row": 3,
+                "column": 3,
+                "frame": 60
+              }
+            ],
+            "matches": 1,
+            "multibar": true,
+            "frame": true,
+            "hold": false,
+            "rows": 7,
+            "lowest": 0,
+            "to": "rise",
+            "tail": 240
+          },
+          "image": "images/glossary/pre-stop-time.mp4",
           "size": [
             351,
             414
@@ -417,6 +443,35 @@ window.GLOSSARY = {
           "size": [
             288,
             294
+          ]
+        },
+        {
+          "id": "hover-chain",
+          "title": "Hover Chain",
+          "body": "A chain you set up by swapping a panel above a clear in the last 4 frames before it's locked, so the swap is still moving as the panels start to hover. The panels above it carry the chain, so it must land at the bottom or middle of the match.",
+          "clip": {
+            "steps": [
+              {
+                "row": 1,
+                "column": 3,
+                "frame": 30
+              },
+              {
+                "row": 2,
+                "column": 1,
+                "frame": 92
+              }
+            ],
+            "expect": [
+              "x2"
+            ],
+            "rows": 4,
+            "tail": 180
+          },
+          "image": "images/glossary/hover-chain.mp4",
+          "size": [
+            288,
+            246
           ]
         },
         {
@@ -865,7 +920,7 @@ window.GLOSSARY = {
         {
           "id": "topped-out",
           "title": "Topped Out",
-          "body": "When panels and/or garbage reach the top of your playfield. Being topped out for too long results in defeat.",
+          "body": "When panels and/or garbage reach the top of your playfield. Stay topped out for too long and you lose.",
           "image": "images/glossary/topped-out.mp4",
           "clip": {
             "steps": [],
@@ -998,28 +1053,6 @@ window.GLOSSARY = {
           "size": [
             288,
             390
-          ]
-        },
-        {
-          "id": "garbage-clear",
-          "title": "Garbage Clear",
-          "body": "The match that starts converting a garbage block.",
-          "clip": {
-            "steps": [
-              {
-                "row": 1,
-                "column": 3,
-                "frame": 30
-              }
-            ],
-            "matches": 1,
-            "rows": 4,
-            "tail": 200
-          },
-          "image": "images/glossary/garbage-clear.mp4",
-          "size": [
-            288,
-            246
           ]
         },
         {

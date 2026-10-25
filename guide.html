@@ -7,7 +7,7 @@
   <meta name="description" content="Comprehensive guide and resources for learning Panel Attack, from beginner basics to expert techniques. Tutorials, strategies, and exercises for all skill levels." />
   <meta name="keywords" content="Panel Attack, guide, tutorial, strategy, combos, chains, defense, beginner, advanced, expert, tetris attack, puzzle league">
   <meta charset="utf-8" />
-  <link rel="stylesheet" type="text/css" href="style.css?v=22">
+  <link rel="stylesheet" type="text/css" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <title>Panel Attack - Guide</title>
   <link rel="shortcut icon" href="images/icon.png">
@@ -15,14 +15,14 @@
 
 <body>
   <!-- SHARED HEADER - Loaded by header.js -->
-  <script src="header.js?v=22"></script>
-  <script src="clips.js?v=22"></script>
-  <script src="guide/sections.js?v=22"></script>
-  <script src="guide/glossary.js?v=22"></script>
-  <script src="guide/howToPlay.js?v=22"></script>
-  <script src="guide/lessons.js?v=22"></script>
-  <script src="guide/references.js?v=22"></script>
-  <script src="guide/achievements.js?v=22"></script>
+  <script src="header.js"></script>
+  <script src="clips.js"></script>
+  <script src="guide/sections.js"></script>
+  <script src="guide/glossary.js"></script>
+  <script src="guide/howToPlay.js"></script>
+  <script src="guide/lessons.js"></script>
+  <script src="guide/references.js"></script>
+  <script src="guide/achievements.js"></script>
 
   <div id="body" class="sidebar-layout">
     <nav class="unified-sidebar" aria-label="Guide contents">
@@ -43,6 +43,7 @@
   <script>
     // How far down the window a heading has to reach before the sidebar calls it the one being read
     const READING_LINE = 150;
+    const TOP_LEVEL = 10;
 
     function slug(text) {
       return text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
@@ -74,8 +75,8 @@
       return {title: howToPlay.title, theme: howToPlay.theme, tiers};
     }
 
-    // A skill level: what to practice heads it, then its fundamentals, the achievements of its
-    // difficulty as goals, its lessons, its puzzles, its videos, and what comes next
+    // A skill level: what to practice heads it, then its fundamentals, its lessons, the achievements
+    // of its difficulty as goals, what comes next, its puzzles and its videos
     function skillSection(sectionId, section, achievements) {
       const tiers = {};
       if (section.fundamentals) {
@@ -94,13 +95,9 @@
       return Object.assign({}, section, {tiers});
     }
 
-    function badges(section) {
-      return section.badges || (section.badge ? [section.badge] : []);
-    }
-
     function navIcon(sectionId, section) {
-      const icons = badges(section).map(badge => `<img class="nav-badge" src="${badge}" alt="" width="20" height="20">`).join('');
-      return icons || `<span class="nav-badge">${{glossary: '📚', 'how-to-play': '🎮'}[sectionId] || '📋'}</span>`;
+      const icons = (section.badges || []).map(badge => `<img class="nav-badge" src="${badge}" alt="" width="20" height="20">`).join('');
+      return icons || `<span class="nav-badge">${{glossary: '📚', 'how-to-play': '🎮', 'puzzle-guide': '🧩'}[sectionId] || '📋'}</span>`;
     }
 
     // clips.js loads a clip when it nears the screen; the file is twice the size it is shown at, so a
@@ -112,18 +109,21 @@
     }
 
     function bullets(list) {
-      return list && list.length ? `<ul class="guide-list">${list.map(line => `<li>${line}</li>`).join('')}</ul>` : '';
+      return list && list.length ? `<ul class="guide-list">${list.map(line =>
+        typeof line === 'string' ? `<li>${line}</li>` : `<li>${line.text}${bullets(line.list)}</li>`).join('')}</ul>` : '';
     }
 
     function introCard(section) {
-      const images = badges(section).map(badge => `<img src="${badge}" alt="${section.title} Badge" class="face face--league" style="border-color: #B87333;">`).join('');
+      const images = (section.badges || []).map(badge => `<img src="${badge}" alt="${section.title} Badge" class="face face--circle face--league">`).join('');
       // below the top level, a level is the least a player should be comfortable at
-      const level = section.level < 10 ? `${section.level} minimum` : section.level;
+      const level = section.level < TOP_LEVEL ? `${section.level} minimum` : section.level;
       return `<div class="flexItem fullWidth card ${section.theme}">
           <div class="card-header">${images}<h2 class="card-name">${section.title}</h2></div>
           <p class="card-desc"><strong>Skill Range:</strong> ${section.skillRange} · <strong>Level:</strong> ${level}</p>
           <p class="card-desc">${section.focus}</p>
           ${bullets(section.practice)}
+          ${section.alsoPracticeTitle ? `<p class="card-desc">${section.alsoPracticeTitle}</p>` : ''}
+          ${bullets(section.alsoPractice)}
         </div>`;
     }
 
@@ -148,7 +148,7 @@
         if (!category) categories.push(category = {name: goal.category, goals: []});
         category.goals.push(goal);
       });
-      const text = goal => goal.text + (goal.online && goal.category !== 'Online' ? ' <span class="guide-tag">Online</span>' : '');
+      const text = goal => goal.text.replace(/\b(APM|GPM)\b/gi, word => `<a href="#play-analytics">${word}</a>`) + (goal.online && goal.category !== 'Online' ? ' <span class="guide-tag">Online</span>' : '');
       return {html: categories.map(category => `<div class="goal-group">
           <h4>${category.name}</h4>
           ${bullets(category.goals.map(text))}
@@ -171,6 +171,8 @@
           <div class="guide-entry-content">
             <h5>${step.title}</h5>
             <p>${step.body}</p>
+            ${step.picture ? `<img class="guide-controller guide-picture" src="${step.picture}" alt="${step.title}">` : ''}
+            ${bullets(step.list)}
             ${step.reference ? referenceTable(step.reference) : guideClip(step.clip)}
           </div>
         </div>`;
@@ -186,7 +188,7 @@
       const cards = row => `<div class="reference-attack">${row.attack.map(card => `<img class="reference-card" src="images/guide/cards/${card}.png" alt="${card.replace(/^combo0?/, '+').replace(/^chain0?/, 'x')}">`).join('')}`
         + (row.label ? `<span class="reference-label">${row.label}</span>` : '') + '</div>';
       const cells = row => [cards(row), `<div class="reference-blocks">${row.blocks.map(garbageBlock).join('')}</div>`]
-        .concat(row.frames ? [row.frames, (row.frames / 60).toFixed(2).replace(/0$/, '')] : []);
+        .concat(row.frames ? [row.frames, String(Number((row.frames / 60).toFixed(2)))] : []);
       return `<div class="reference-scroll"><table class="reference-table">
           <thead><tr>${table.columns.map(column => `<th>${column}</th>`).join('')}</tr></thead>
           <tbody>${table.rows.map(row => `<tr>${cells(row).map(cell => `<td>${cell}</td>`).join('')}</tr>`).join('')}</tbody>
@@ -228,7 +230,7 @@
           <div class="guide-entry-content">
             <h5>${fundamental.title}</h5>
             <p class="guide-entry-kind">${fundamental.kind} · ${fundamental.tags.join(', ')}</p>
-            <p>${fundamental.body || 'Coming soon.'}</p>
+            ${[].concat(fundamental.body || 'Coming soon.').map(block => Array.isArray(block) ? bullets(block) : `<p>${block}</p>`).join('')}
             ${signs}
           </div>
         </div>`;
@@ -266,6 +268,52 @@
       });
       document.getElementById('guide-nav').innerHTML = nav.join('');
       document.getElementById('guide-content').innerHTML = content.join('');
+    }
+
+    // Links the first mention of each glossary term in every entry and card to its definition,
+    // longest terms first so "Garbage Chain" wins over "Chain". A term never links inside its own
+    // entry, a heading or an existing link.
+    function linkGlossaryTerms(root, glossary) {
+      const terms = glossary.categories.flatMap(category => category.terms).map(term => ({
+        id: term.id,
+        name: term.title.replace(/\s*\(.*\)$/, ''),
+      })).sort((a, b) => b.name.length - a.name.length);
+      const escape = text => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const pattern = new RegExp(`\\b(${terms.map(term => escape(term.name)).join('|')})(?:s|es|ing|ed|d)?\\b`, 'gi');
+      const termFor = word => terms.find(term => word.toLowerCase().startsWith(term.name.toLowerCase())
+        && (term.name !== term.name.toUpperCase() || word.startsWith(term.name)));
+      const skip = 'a, h1, h2, h3, h4, h5, h6, .guide-entry-kind, .guide-tag';
+
+      const containers = '.guide-entry, .tier-item, .card';
+      root.querySelectorAll(containers).forEach(container => {
+        const linked = new Set([container.id]);
+        const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, {
+          acceptNode: node => node.parentElement.closest(skip) || node.parentElement.closest(containers) !== container
+            ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT,
+        });
+        const nodes = [];
+        while (walker.nextNode()) nodes.push(walker.currentNode);
+        nodes.forEach(node => {
+          const text = node.textContent;
+          const pieces = [];
+          let last = 0;
+          for (const {0: word, index} of text.matchAll(pattern)) {
+            const term = termFor(word);
+            if (!term || linked.has(term.id)) continue;
+            linked.add(term.id);
+            pieces.push(document.createTextNode(text.slice(last, index)));
+            const link = document.createElement('a');
+            link.href = `#${term.id}`;
+            link.className = 'glossary-link';
+            link.textContent = word;
+            pieces.push(link);
+            last = index + word.length;
+          }
+          if (!pieces.length) return;
+          pieces.push(document.createTextNode(text.slice(last)));
+          node.replaceWith(...pieces);
+        });
+      });
     }
 
     function navLink(id) {
@@ -337,7 +385,9 @@
         if (sectionId === 'overview') sections['how-to-play'] = howToPlaySection(window.HOW_TO_PLAY, window.GLOSSARY);
       });
       sections.glossary = glossarySection(window.GLOSSARY);
+      sections['puzzle-guide'] = window.PUZZLE_GUIDE;
       renderGuide(sections);
+      linkGlossaryTerms(document.getElementById('guide-content'), window.GLOSSARY);
       watchClips(document.getElementById('guide-content'));
 
       document.getElementById('guide-nav').addEventListener('click', event => {

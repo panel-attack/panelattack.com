@@ -4,7 +4,7 @@
 window.HOW_TO_PLAY = {
   "title": "How to Play",
   "theme": "crystal-theme",
-  "intro": "Panel Attack is a puzzle action game. Panels rise from the bottom of your board, and you swap them side to side to line up three or more of the same color. Matched panels disappear, the panels above them fall, and the stack keeps rising. If the board fills to the top you lose. There are many modes to play both solo and multiplayer.",
+  "intro": "Panel Attack is a puzzle action game. Panels rise from the bottom of your board, and you swap them side to side to line up three or more of the same color. Matched panels disappear, the panels above them fall, and the stack keeps rising. If the board fills to the top, you are in danger of losing. There are many modes to play both solo and multiplayer.",
   "controls": {
     "image": "images/guide/controller.svg?v=3",
     "keyboard": "On a keyboard the defaults are the arrow keys to move, Z or X to swap, C or V to raise, and Enter to pause. Controllers start unassigned: set them up under Configure input in the main menu."
@@ -227,7 +227,7 @@ window.HOW_TO_PLAY = {
         {
           "id": "game-over",
           "title": "Game Over",
-          "body": "If the board fills to the top you lose.",
+          "body": "If the board fills to the top, you are in danger of losing. Your health drains while you stay topped out, unless something holds the stack still: stop time from a combo or chain, shake time from garbage landing, or pre-stop time while your matches are still popping. When your health runs out, you lose. Get back below the top and your health refills.",
           "clip": {
             "steps": [],
             "topOut": true,
@@ -308,7 +308,7 @@ window.HOW_TO_PLAY = {
         {
           "id": "skill-chains",
           "title": "Skill Chains",
-          "body": "You can keep a chain going by swapping panels into place while the last match is still clearing. This is a skill chain. It matters because you cannot lose while panels are clearing, and you rarely have time to build a whole chain ahead of time.",
+          "body": "You can keep a chain going by swapping panels into place while the last match is still clearing. This is a skill chain. It matters because you cannot lose during pre-stop time, while panels are clearing, and you rarely have time to build a whole chain ahead of time.",
           "glossary": "chain-extension"
         }
       ]
@@ -354,7 +354,7 @@ window.HOW_TO_PLAY = {
         {
           "id": "danger",
           "title": "Stop Time in Danger",
-          "body": "When your stack is close to the top, combos and chains earn extra stop time. That is often the breathing room you need to dig out.",
+          "body": "When you are topped out, with a panel in the top row, combos and chains earn extra stop time. Close to the top isn't enough. That is often the breathing room you need to dig out.",
           "clip": {
             "steps": [
               {
@@ -547,7 +547,7 @@ window.HOW_TO_PLAY = {
         {
           "id": "thick-garbage",
           "title": "Thick Garbage",
-          "body": "Clearing a thick block only turns its bottom layer into panels. Each layer has to be cleared on its own.",
+          "body": "Clearing a thick block only turns its bottom layer into panels. You have to clear each layer on its own.",
           "clip": {
             "steps": [
               {
@@ -579,6 +579,27 @@ window.HOW_TO_PLAY = {
           "size": [
             288,
             342
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Match Stats",
+      "steps": [
+        {
+          "id": "analytics",
+          "title": "Match Stats",
+          "body": "The panel beside your board counts what you do in a match. It starts on; you can turn it off under Options, General, Enable analytics. Per minute means per minute of the match clock, from before the countdown, with pauses left out. It refreshes once a second.",
+          "picture": "images/guide/analytics.svg?v=1",
+          "list": [
+            "Panel: panels you've matched. Garbage you clear doesn't count.",
+            "Face: garbage you've sent, in lines. A chain counts a line per link after the first, a combo half a line per 3-wide block and a line per wider one, and a shock match a line per shock panel past the second. It counts in every mode.",
+            "Bricks: GPM, the garbage you've sent per minute.",
+            "Brackets: cursor moves. Holding a direction counts once, however far the cursor runs.",
+            "Arrows: swaps. A swap the game refuses doesn't count.",
+            "Controller: APM, your moves plus swaps per minute. Raising doesn't count.",
+            "Chain cards: how many chains you ended at each length. A ? card counts the ones longer than the theme has cards for.",
+            "Combo cards: how many combos of each size you made, chain links included."
           ]
         }
       ]

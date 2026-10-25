@@ -122,9 +122,9 @@ window.ACHIEVEMENTS = {
       "online": false
     },
     {
-      "id": "time-attack-lv10-10-gpm",
+      "id": "time-attack-lv5-10-gpm",
       "name": null,
-      "text": "Time Attack: Lv10: 10 gpm",
+      "text": "Time Attack: Lv5: 10 gpm",
       "category": "Time Attack",
       "difficulty": "Beginner",
       "online": false
@@ -346,17 +346,17 @@ window.ACHIEVEMENTS = {
       "online": false
     },
     {
-      "id": "time-attack-lv10-12-gpm",
+      "id": "time-attack-lv5-12-gpm",
       "name": null,
-      "text": "Time Attack: Lv10: 12 gpm",
+      "text": "Time Attack: Lv5: 12 gpm",
       "category": "Time Attack",
       "difficulty": "Novice",
       "online": false
     },
     {
-      "id": "time-attack-lv10-14-gpm",
+      "id": "time-attack-lv5-14-gpm",
       "name": null,
-      "text": "Time Attack: Lv10: 14 gpm",
+      "text": "Time Attack: Lv5: 14 gpm",
       "category": "Time Attack",
       "difficulty": "Novice",
       "online": false
@@ -714,17 +714,17 @@ window.ACHIEVEMENTS = {
       "online": false
     },
     {
-      "id": "time-attack-lv10-16-gpm",
+      "id": "time-attack-lv8-16-gpm",
       "name": null,
-      "text": "Time Attack: Lv10: 16 gpm",
+      "text": "Time Attack: Lv8: 16 gpm",
       "category": "Time Attack",
       "difficulty": "Intermediate",
       "online": false
     },
     {
-      "id": "time-attack-lv10-18-gpm",
+      "id": "time-attack-lv8-18-gpm",
       "name": null,
-      "text": "Time Attack: Lv10: 18 gpm",
+      "text": "Time Attack: Lv8: 18 gpm",
       "category": "Time Attack",
       "difficulty": "Intermediate",
       "online": false
