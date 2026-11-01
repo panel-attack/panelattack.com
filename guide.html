@@ -76,7 +76,11 @@
     }
 
     // A skill level: what to practice heads it, then its fundamentals, its lessons, the achievements
-    // of its difficulty as goals, what comes next, its puzzles and its videos
+    // of its difficulty as goals, what comes next, its puzzles and its videos.
+    // The unreliable frame tricks are left out of the goals; inserts are reliable enough to aim for.
+    const UNRELIABLE_FRAME_TRICKS = ['perform-a-stealth', 'perform-a-catch', 'perform-a-slide', 'perform-a-tornado'];
+    // The achievements catalog files a shogun under Frame Tricks, but it is a garbage chain
+    const GOAL_CATEGORIES = {'perform-a-shogun': 'Garbage Chains'};
     function skillSection(sectionId, section, achievements) {
       const tiers = {};
       if (section.fundamentals) {
@@ -87,7 +91,9 @@
         tiers['Lessons'] = entries(section.lessons.map(lesson =>
           Object.assign({id: slug(`${sectionId}-${lesson.name}`), title: lesson.name}, lesson)), lessonEntry);
       }
-      const goals = achievements.filter(achievement => achievement.difficulty === section.title);
+      const goals = achievements
+        .filter(achievement => achievement.difficulty === section.title && !UNRELIABLE_FRAME_TRICKS.includes(achievement.id))
+        .map(achievement => Object.assign({}, achievement, {category: GOAL_CATEGORIES[achievement.id] || achievement.category}));
       if (goals.length) tiers['Goals'] = [goalsItem(goals)];
       if (section.nextTier) tiers['Ready for More'] = [{description: section.nextTier}];
       if (section.puzzles) tiers['Puzzles'] = [Object.assign({title: 'From Esme\'s Puzzle Guide'}, section.puzzles)];
@@ -158,7 +164,7 @@
     function glossaryTerm(term) {
       return `<div class="guide-entry" id="${term.id}">
           <div class="guide-entry-content">
-            <h5>${term.title}</h5>
+            <div class="guide-entry-header"><h5>${term.title}</h5></div>
             <p>${term.body}</p>
             ${term.reference ? referenceTable(term.reference) : ''}
             ${guideClip(term)}
@@ -169,7 +175,7 @@
     function howToPlayStep(step) {
       return `<div class="guide-entry" id="${step.id}">
           <div class="guide-entry-content">
-            <h5>${step.title}</h5>
+            <div class="guide-entry-header"><h5>${step.title}</h5></div>
             <p>${step.body}</p>
             ${step.picture ? `<img class="guide-controller guide-picture" src="${step.picture}" alt="${step.title}">` : ''}
             ${bullets(step.list)}
@@ -199,7 +205,7 @@
       const list = lesson.list ? `${lesson.listTitle ? `<p><strong>${lesson.listTitle}</strong></p>` : ''}${bullets(lesson.list)}` : '';
       return `<div class="guide-entry" id="${lesson.id}">
           <div class="guide-entry-content">
-            <h5>${lesson.title}</h5>
+            <div class="guide-entry-header"><h5>${lesson.title}</h5></div>
             ${lesson.paragraphs.map(paragraph => `<p>${paragraph}</p>`).join('')}
             ${list}
             ${lessonExamples(lesson.name)}
@@ -225,11 +231,14 @@
     }
 
     function fundamentalEntry(fundamental) {
-      const signs = fundamental.signs ? `<p><strong>Signs there's room for improvement:</strong></p>${bullets(fundamental.signs)}` : '';
+      const signs = fundamental.signs ? `<p class="guide-entry-label">Signs there's room for improvement</p>${bullets(fundamental.signs)}` : '';
       return `<div class="guide-entry" id="${fundamental.id}">
           <div class="guide-entry-content">
-            <h5>${fundamental.title}</h5>
-            <p class="guide-entry-kind">${fundamental.kind} · ${fundamental.tags.join(', ')}</p>
+            <div class="guide-entry-header">
+              <h5>${fundamental.title}</h5>
+              <span class="guide-entry-kind">${fundamental.kind}</span>
+              <span class="guide-entry-tags">${fundamental.tags.join(' · ')}</span>
+            </div>
             ${[].concat(fundamental.body || 'Coming soon.').map(block => Array.isArray(block) ? bullets(block) : `<p>${block}</p>`).join('')}
             ${signs}
           </div>
@@ -272,7 +281,7 @@
 
     // Links the first mention of each glossary term in every entry and card to its definition,
     // longest terms first so "Garbage Chain" wins over "Chain". A term never links inside its own
-    // entry, a heading or an existing link.
+    // entry, a heading, an existing link or a .no-glossary span, for a word used in its everyday sense.
     function linkGlossaryTerms(root, glossary) {
       const terms = glossary.categories.flatMap(category => category.terms).map(term => ({
         id: term.id,
@@ -282,7 +291,7 @@
       const pattern = new RegExp(`\\b(${terms.map(term => escape(term.name)).join('|')})(?:s|es|ing|ed|d)?\\b`, 'gi');
       const termFor = word => terms.find(term => word.toLowerCase().startsWith(term.name.toLowerCase())
         && (term.name !== term.name.toUpperCase() || word.startsWith(term.name)));
-      const skip = 'a, h1, h2, h3, h4, h5, h6, .guide-entry-kind, .guide-tag';
+      const skip = 'a, h1, h2, h3, h4, h5, h6, .guide-entry-kind, .guide-entry-tags, .guide-entry-label, .guide-tag, .no-glossary';
 
       const containers = '.guide-entry, .tier-item, .card';
       root.querySelectorAll(containers).forEach(container => {

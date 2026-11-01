@@ -802,17 +802,16 @@ window.GUIDE_LESSONS = {
               }
             ],
             "matches": 0,
-            "level": 5,
             "attacks": {
               "delayBeforeRepeat": 100000,
               "attackPatterns": [
                 {
                   "chain": [
                     40,
-                    50,
-                    60
+                    107,
+                    174
                   ],
-                  "chainEndTime": 70
+                  "chainEndTime": 234
                 }
               ]
             },
@@ -821,8 +820,7 @@ window.GUIDE_LESSONS = {
             "rows": 12,
             "lowest": 0,
             "hold": false,
-            "tail": 230,
-            "to": 320
+            "tail": 400
           },
           "image": "images/lessons/high-stack.mp4",
           "size": [
@@ -1102,7 +1100,7 @@ window.GUIDE_LESSONS = {
         {
           "id": "transition-clear",
           "title": "Transition Clear",
-          "caption": "When the garbage clears, the red falls one space, and the next layer clears quickly whatever panels the cleared garbage turned into.",
+          "caption": "When the garbage clears, the red falls one space. Swapped into place just as it lands, it clears the next layer as part of the chain, an x3, whatever panels the cleared garbage turned into.",
           "clip": {
             "steps": [
               {
@@ -1120,7 +1118,7 @@ window.GUIDE_LESSONS = {
               }
             ],
             "expect": [
-              "x2"
+              "x3"
             ],
             "matches": 3,
             "rows": 9,

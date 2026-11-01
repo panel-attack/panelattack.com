@@ -268,6 +268,66 @@
       ]
     },
     {
+      "Set Name": "large-chains-while-clearing",
+      "Description": "How to Play: Large Chains While Clearing",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000009003009001009005009002339114559221449113393",
+          "CursorStartLeft": {
+            "Column": 5,
+            "Row": 1
+          },
+          "Solution": "A30Q1",
+          "Help Description": "An x7 keeps the board clearing, and an x3's two rows fall onto the grey tower mid-chain."
+        }
+      ]
+    },
+    {
+      "Set Name": "x2-and-combos-wait",
+      "Description": "How to Play: x2 and Combos Wait",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "000009003009001009005009002339114559221449113393",
+          "CursorStartLeft": {
+            "Column": 5,
+            "Row": 1
+          },
+          "Solution": "A30Q1",
+          "Help Description": "An x7 keeps the board clearing; an x2's row and a +4 wait until it ends, then fall, the x2 first."
+        }
+      ]
+    },
+    {
+      "Set Name": "combos-left-to-right",
+      "Description": "How to Play: Combos Fall Left to Right",
+      "Puzzles": [
+        {
+          "Puzzle Type": "moves",
+          "StartTiming": "Immediately",
+          "Moves": 99,
+          "Stop": 0,
+          "Shake": 0,
+          "Stack": "999999999999999999999999",
+          "CursorStartLeft": {
+            "Column": 3,
+            "Row": 1
+          },
+          "Solution": "",
+          "Help Description": "Three +5s fall in columns 1-4, 2-5 and 3-6."
+        }
+      ]
+    },
+    {
       "Set Name": "linked-garbage",
       "Description": "How to Play: Linked Garbage",
       "Puzzles": [

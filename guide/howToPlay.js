@@ -230,7 +230,6 @@ window.HOW_TO_PLAY = {
           "body": "If the board fills to the top, you are in danger of losing. Your health drains while you stay topped out, unless something holds the stack still: stop time from a combo or chain, shake time from garbage landing, or pre-stop time while your matches are still popping. When your health runs out, you lose. Get back below the top and your health refills.",
           "clip": {
             "steps": [],
-            "topOut": true,
             "frame": true,
             "rows": 12,
             "lowest": 0,
@@ -509,6 +508,151 @@ window.HOW_TO_PLAY = {
           "size": [
             312,
             714
+          ]
+        },
+        {
+          "id": "garbage-order",
+          "title": "Garbage Order",
+          "body": "Garbage sent to you doesn't fall straight away. The clips below show what holds it back.",
+          "list": [
+            {
+              "text": "Before it can fall, garbage takes about 1.5 seconds (90 frames) to reach the telegraph above your board and leave it, then 1 more second (60 frames):",
+              "list": [
+                "A chain's garbage stays in the telegraph until the chain ends, and its 1.5 seconds start from the last link.",
+                "Combo garbage can't leave the telegraph while any chain garbage is in it, and shock garbage can't while chain or combo garbage is.",
+                "Combo garbage can't leave while a narrower combo block is still there, and a new block of the same width restarts the wait for all of them."
+              ]
+            },
+            {
+              "text": "Then it falls one block at a time, never while your top row has panels in it, in this order:",
+              "list": [
+                "Chain garbage first, in the order the chains ended. Two or more rows thick (x3 and up), it falls even while you have panels clearing, falling or being swapped.",
+                "An x2's one row waits, like combo garbage, until none of your panels are clearing, falling or being swapped. While it waits, it holds back any chain garbage queued behind it.",
+                "Combo garbage next, narrowest first. It waits the same way, so you can hold it back by keeping matches going.",
+                "Shock garbage last, waiting the same way."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "large-chains-while-clearing",
+          "title": "Large Chains While Clearing",
+          "body": "Chain garbage two or more rows thick falls even while your panels are clearing. In the clip, an x3's two rows land in the middle of an x7.",
+          "clip": {
+            "steps": [
+              {
+                "row": 1,
+                "column": 5,
+                "frame": 30
+              }
+            ],
+            "expect": [
+              "x7"
+            ],
+            "attacks": {
+              "delayBeforeRepeat": 100000,
+              "attackPatterns": [
+                {
+                  "chain": [
+                    20,
+                    87
+                  ],
+                  "chainEndTime": 147
+                }
+              ]
+            },
+            "frame": true,
+            "rows": 12,
+            "tail": 500
+          },
+          "image": "images/howToPlay/large-chains-while-clearing.mp4",
+          "size": [
+            312,
+            690
+          ]
+        },
+        {
+          "id": "x2-and-combos-wait",
+          "title": "x2 and Combos Wait",
+          "body": "An x2's one row and combo garbage wait until none of your panels are clearing, falling or being swapped. In the clip, an x2 and a +4 arrive during an x7 and fall only once it is over, the x2 first.",
+          "clip": {
+            "steps": [
+              {
+                "row": 1,
+                "column": 5,
+                "frame": 30
+              }
+            ],
+            "expect": [
+              "x7"
+            ],
+            "attacks": {
+              "delayBeforeRepeat": 100000,
+              "attackPatterns": [
+                {
+                  "chain": [
+                    20
+                  ],
+                  "chainEndTime": 80
+                },
+                {
+                  "width": 3,
+                  "height": 1,
+                  "startTime": 100
+                }
+              ]
+            },
+            "frame": true,
+            "rows": 12,
+            "tail": 610,
+            "to": 640
+          },
+          "image": "images/howToPlay/x2-and-combos-wait.mp4",
+          "size": [
+            312,
+            690
+          ]
+        },
+        {
+          "id": "combos-left-to-right",
+          "title": "Combos Fall Left to Right",
+          "body": "Each width of combo block takes turns between set places, keeping its own turn through the game:",
+          "list": [
+            "3-wide: the left half, then the right half (columns 1–3, then 4–6)",
+            "4-wide: columns 1–4, then 2–5, then 3–6",
+            "5-wide: columns 1–5, then 2–6",
+            "6-wide: the whole row"
+          ],
+          "clip": {
+            "steps": [],
+            "attacks": {
+              "delayBeforeRepeat": 100000,
+              "attackPatterns": [
+                {
+                  "width": 4,
+                  "height": 1,
+                  "startTime": 20
+                },
+                {
+                  "width": 4,
+                  "height": 1,
+                  "startTime": 40
+                },
+                {
+                  "width": 4,
+                  "height": 1,
+                  "startTime": 60
+                }
+              ]
+            },
+            "frame": true,
+            "rows": 12,
+            "tail": 320
+          },
+          "image": "images/howToPlay/combos-left-to-right.mp4",
+          "size": [
+            312,
+            690
           ]
         }
       ]
