@@ -70,7 +70,7 @@ window.GUIDE_SECTIONS = {
         name: 'Maintaining stack supply',
         kind: 'Cornerstone',
         tags: ['Conceptual', 'Technical'],
-        body: 'Raise your stack whenever you have no garbage queued to fall onto your board. In 1P modes where no garbage is sent to you, that means raising often, only stopping to clear parts of your stack with combos, chains, etc.',
+        body: 'Raise your stack to gain more panels whenever you have room to do so. Take caution such that you do not accidentally top yourself out from below, or raise so much such that you end up topped with a small amount of new garbage overhead. In 1P modes where no garbage is sent to you, that means raising often, only stopping to clear parts of your stack with combos, chains, etc.',
         signs: [
           'You overburn panels, run out of possible matches and lock out',
           'You stay low stack, possibly with stretches of time where there are no possible matches, yet there\'s plenty of space to raise several rows'
@@ -94,7 +94,7 @@ window.GUIDE_SECTIONS = {
         name: 'Managing shock panels',
         kind: 'Cornerstone',
         tags: ['Conceptual'],
-        body: 'Manage the number of shock panels on your board so you seldom end up with 1–2 shock panels you can\'t clear (without popping enough panels to eventually reveal a third one by raising your stack).',
+        body: 'Manage the number of shock panels on your board so you seldom end up with 1–2 shock panels you can\'t clear (without eventually revealing a third one after clearing through your opponent\'s garbage queue, and raising your stack). If you have more than three shock panels on your board, try to safely solve in a way that you end up with no shock panels. Reminder that +3 clears with shock panels do not generate stop time even though they do send garbage. So if you intend on gaining stop time with shock panels, they need to be part of a combo or a chain.',
         signs: [
           'your board consistently has 1–2 shock panels you can\'t clear',
           'when you have ≥3 shock panels, they\'re not organized so you can readily clear them should an opportunity arise'
@@ -191,7 +191,7 @@ window.GUIDE_SECTIONS = {
         body: 'When you clear large garbage while low stack, use your panels sparingly, so you gain back more panels than you spend.',
         signs: [
           'garbage chaining too much while low stack',
-          'burning panels that don\'t help clear garbage, while low stack or on the way there',
+          'excessively burning panels that do not clear garbage, especially while low stack, or as part of an inefficient solve towards a garbage clear',
           'often losing games by locking out',
           'often locked out of a garbage clear, so you have to burn more panels elsewhere to expose one'
         ]
@@ -214,7 +214,7 @@ window.GUIDE_SECTIONS = {
         name: 'Streamlining gameplay (Level 5)',
         kind: 'Cornerstone',
         tags: ['Conceptual', 'Technical'],
-        body: 'For all of the above, cut down the time you spend idle when you could be doing something on your board. For example, while a chain is clearing, solve for an extension to it or set up a solve somewhere else on your board, instead of waiting for it to finish. If this is hard at Level 5, practice it at a lower level first to grasp the idea.',
+        body: 'For all of the above, cut down the time you spend idle when you could be doing something else on your board. For example, while a chain is clearing, solve for an extension to it or set up a solve somewhere else on your board, instead of waiting for the chain to finish. If this is hard at Level 5, practice it at a lower level first to grasp the idea.',
         signs: [
           {
             text: 'staring at the board without actively:',
@@ -294,7 +294,7 @@ window.GUIDE_SECTIONS = {
         ],
         signs: [
           'when low stack, burning panels to clear small amounts of garbage, when that time is better spent raising to gain more panels first',
-          'when high stack, spending too long unprepared to clear garbage',
+          'when high stack, spending too much time unprepared to clear garbage',
           'sending large chains when smaller chains and combo garbage would set up more kill opportunities',
           'sending too little combo garbage and small chains when your opponent clearly won\'t be topped out',
           'cutting a chain too early or too late. Too early usually means not sending enough; too late usually means missing the chance to block off several rows of your opponent\'s board before they can raise or recover'
@@ -305,13 +305,13 @@ window.GUIDE_SECTIONS = {
         kind: 'Milestone',
         tags: ['Conceptual'],
         body: [
-          'Adjust your stack height, by burning panels or by raising to gain more, to suit the attacks you expect. A tall stack clears large garbage faster and gives you longer shake time to use. But a tall stack is dangerous against small combo garbage, which gives little shake time: caught topped out and unprepared to clear it, you can lose the game.',
-          'A short stack lets more garbage onto your board. If that garbage is all blocks one row tall (only combo and x2 chain garbage), a single garbage clear turns all of it into panels and refreshes your supply. If it is mostly large chain garbage, you spend more time waiting on long clearing animations, especially when it covers several rows, across several garbage clears.',
-          'Where you can, clear garbage with chains or combos rather than plain +3 clears. If you can slow your opponent down with a large block, for example when they play low stack with lots of empty space, use the extra pre-stop time from clearing garbage to set up more chain links for a counterattack. Ideally, do it without spending too many panels, which risks locking out, or spending them in a way that complicates your next solve.',
-          'Sooner or later you will clear through garbage separated by revealed panels: several garbage layers with tiers of panels between them, as when clearing back-to-back large garbage or a factory. With each layer you clear off large garbage, it gets harder to chain off the revealed panels. That is why you need a buffer clear (a clear elsewhere on the board, ideally a combo or chain, that buys time to solve for the next garbage clear), or a shogun or transition clear set up after you fully clear a chain garbage block.'
+          'Adjust your stack height, by burning panels or by raising to gain more, to counter against the attacks you\'re anticipating. A tall stack clears large garbage faster and gives you longer shake time to use. But a tall stack is dangerous against small combo garbage, which gives little shake time: if you\'re caught topped out under small combo garbage and are unprepared to clear it, you can lose the game.',
+          'A short stack lets more garbage onto your board. If all of those garbage blocks are one row tall each (only combo and x2 chain garbage), a single garbage clear converts it entirely into panels, refreshing your stack supply. If it is mostly large chain garbage, you spend more time waiting on long clearing animations, especially when it covers several rows, across several garbage clears.',
+          'Where you can, clear garbage with chains or combos rather than plain +3 clears. If you can slow your opponent down with a large block (for example: when they play low stack with lots of empty space) use the extra pre-stop time from clearing garbage to set up more chain links for a counterattack. Ideally, do it without spending too many panels, which risks locking out, or spending them in a way that complicates your next solve.',
+          'Sooner or later you will clear through garbage separated by revealed panels: several garbage layers with tiers of panels between them, as when clearing back-to-back large garbage or a factory. With each layer you clear off of large garbage, the smaller it gets, making it harder to chain off the revealed panels on reaction. When larger pieces of garbage get smaller, preparing buffer clears (a clear elsewhere on the board, ideally a combo or chain) can buy you the extra time needed to solve for the next garbage clear. Before you\'re about to clear the last layer of a chain garbage block, look out for opportunities to set up shoguns and transition clears (especially in case no buffer clear is available upon fully clearing the chain garbage block).'
         ],
         signs: [
-          'being too careful with panels when high stack, instead of using more of them to attack, especially against combo garbage',
+          'hoarding too many panels when high stack, instead of using more of them to attack, especially against combo garbage',
           'burning too many panels when low stack, so later garbage clears need long solves and you are far more likely to run out of stop time or health, especially against large chain garbage',
           'clearing garbage only with +3 clears',
           'being caught unprepared, or spending more panels than you need, to get through a garbage layer (for example, with no buffer clear, shogun or transition clear set up)'
@@ -321,7 +321,7 @@ window.GUIDE_SECTIONS = {
         name: 'Smaller chain factory (x3, x4)',
         kind: 'Cornerstone',
         tags: ['Technical'],
-        body: 'Once you are comfortable filling your opponent\'s board with chain garbage, work on doing it with garbage blocks that give less shake time. That means sending more, smaller blocks, which makes it more likely your opponent has garbage layers to transition through as they clear.',
+        body: 'Once you are comfortable filling your opponent\'s board with chain garbage, work on doing it with garbage blocks that give less shake time. That means sending more, smaller blocks, making it more likely your opponent has garbage layers to transition through as they clear.',
         signs: [
           'idling after cutting at the x3 or x4 link, instead of going for the next solve, whether that is a clear, chain, combo or garbage clear',
           'relying only on active (skill) chaining, building the chain on the fly, instead of planning some links before you set off the trigger',
@@ -375,7 +375,7 @@ window.GUIDE_SECTIONS = {
         name: 'Streamlining gameplay (Level 8)',
         kind: 'Cornerstone',
         tags: ['Conceptual', 'Technical'],
-        body: 'While you practice all of the above, cut down the time you spend idle when you could be doing something on your board. For example, while a chain is clearing, solve for an extension to it or set up a solve somewhere else, instead of waiting for it to finish. If you rely only on inserts and other frame tricks, you will find you have less time to wait at Level 8 than at Level 5, and less time to find and carry out your next solve. Where you can, skip techniques that make you wait and spend that time preparing or carrying out solves elsewhere. It widens your vision and makes you far more likely to find other places on the board to solve.',
+        body: 'While you practice all of the above, cut down the time you spend idle when you could be doing something else on your board. For example, while a chain is clearing, solve for an extension to it or set up a solve somewhere else, instead of waiting for the chain to finish. If you rely only on inserts and other frame tricks, you will find you have less time to wait at Level 8 than at Level 5, and less time to find and carry out your next solve. Where you can, skip techniques that make you wait and spend that time preparing or carrying out solves elsewhere. It widens your vision and makes you far more likely to find other places on the board to solve.',
         signs: [
           {
             text: 'staring at the board without actively:',
@@ -467,7 +467,7 @@ window.GUIDE_SECTIONS = {
         name: 'Planning and executing follow-ups',
         kind: 'Milestone',
         tags: ['Conceptual'],
-        body: 'The stronger your opponent, the less likely they are to lose to an opener or a single strong wave of offense. Keep up the aggression so they never get to empty their garbage queue and enjoy a moment of guaranteed safety, with too little garbage coming to top them out. Do it by backing up every opener or attack with a follow-up. After an attack, raise your stack again if it is safe, and get ready to attack again, so a constant stream of garbage reaches your opponent.',
+        body: 'The stronger your opponent, the less likely they are to lose to an opener or a single strong wave of offense. Keep up the aggression so they never get to empty their garbage queue and enjoy a moment of guaranteed safety, with too little garbage coming to top them out. Do it by backing up every opener or attack with a follow-up. After an attack, raise your stack again if it is safe, and get ready to attack again, keeping your opponent under a constant stream of garbage.',
         signs: [
           'not raising again in time, or not enough, to make the most of your panels',
           'your opponent isn\'t always topped out, or under threat of being topped out',
@@ -481,12 +481,12 @@ window.GUIDE_SECTIONS = {
         tags: ['Conceptual', 'Technical'],
         body: [
           'Don\'t always burn your stack from high all the way down to low. Often shaving off only part of it works better, such as to counter a specific attack: when you expect a large garbage block to top you out, keep most of it off screen, so you get the most from its shake time and spend less time on the first garbage clear.',
-          'Keeping the bottom of your stack gives you room to set up pocket combos or chain setups you can pop in a pinch. Managing more panels takes extra foresight and sharper vision, so you avoid unintended matches and clear walls: any match, combo or chain, often with a vertical part, that badly limits moving panels sideways across rows. Clear walls are very dangerous when you are topped out and can barely move panels down, since dropping a panel needs a hole to drop it into.'
+          'Keeping the bottom of your stack gives you room to set up pocket combos or chain setups you can pop in a pinch. Managing more panels takes extra foresight and sharper vision, so take care to avoid unintended matches and clear walls: any match, combo or chain, often with a vertical component, that badly limits moving panels sideways across rows. Clear walls are very dangerous when you are topped out and can barely move panels down, since dropping a panel needs a hole to drop it into.'
         ],
         signs: [
           'burning too much, so you often lock out',
           'burning too much, so you give up the pressure advantage, often slowed by a large piece of garbage fully on screen',
-          'downstacking in the wrong order, or a weaker one',
+          'downstacking in the wrong order, or in an order that limits your defensive options, and/or leads to weaker follow-ups in the immediate short-term',
           'solving in an order that makes unintended clears, which get in the way of finishing the solve',
           'losing games because you didn\'t solve towards a garbage clear well enough, leaving solves that are too demanding or complicated'
         ]
@@ -496,7 +496,7 @@ window.GUIDE_SECTIONS = {
         kind: 'Milestone',
         tags: ['Conceptual', 'Technical'],
         body: [
-          'Adapt to how each game unfolds: shift the balance between offense and defense, and change how you attack (heavy chains, factories or combo offense). Depending on your board, cursor position, garbage queue and opponent, a solve that is normally the best one for offense or defense may not be possible or safe. For example, you might be attacking with factory garbage with some combo garbage in between, but your opponent clears it faster than you send it, so it isn\'t a threat. Heavier chains would give you a chance to top them out first.',
+          'Adapt to how each game unfolds: shift the balance between offense and defense, and change how you attack (heavy chains, factories or combo offense). Depending on your board, cursor position, garbage queue, and opponent, a solve that is normally the best one for offense or defense may not be possible or safe. For example, you might be attacking with factory garbage with some combo garbage in between, but your opponent clears it faster than you send it, so it isn\'t a threat. Heavier chains would give you a chance to top them out first.',
           'Practice making a conscious call on whether to take another, maybe weaker, solve to make sure you survive right now. For example, when you are defending garbage in low stack and close to losing, a +3 match may be better than stretching yourself to make a +4 combo, even though the +4 sends garbage and gives you stop time. In the same spot, you might clear garbage with a +6 that is easier to prepare, sending a 5-wide block with more shake time, instead of a +5 that takes a longer solve and sends a 4-wide block with less shake time. Better still, manage your panels so you never end up there, forced to choose when no choice is good: a "don\'t-be-here" situation.',
           'None of this applies the same way if you are fast enough to make the harder solves without trouble. Judge each case against what you can reliably pull off right now.'
         ],
@@ -514,10 +514,10 @@ window.GUIDE_SECTIONS = {
         kind: 'Milestone',
         tags: ['Conceptual', 'Technical'],
         body: [
-          'While you practice all of the above, cut down the time you spend idle when you could be doing something on your board. For example, while a chain is clearing, solve for an extension to it or set up a solve somewhere else, instead of waiting for it to finish.',
+          'While you practice all of the above, cut down the time you spend idle when you could be doing something else on your board. For example, while a chain is clearing, solve for an extension to it or set up a solve somewhere else, instead of waiting for the chain to finish.',
           'If you rely on inserts and other frame tricks, you will have even less time to wait at Level 10 than at Level 8 or Level 5, and less time to find and carry out your next solve. Where you can, skip techniques that make you wait and spend that time preparing or carrying out solves elsewhere. It widens your vision and awareness, and makes you far more likely to find other places on the board to solve.',
           'Level 10 gives you only one frame of health (about 0.017 seconds), against 21 frames (0.35 seconds) at Level 8 and 51 frames (0.85 seconds) at Level 5, so being topped out without pre-stop, stop or shake time is far more likely to lose you the game. Expect to be topped out all the time, and be ready to keep stringing together clears, combos, chains and garbage clears so that single frame of health never runs out.',
-          'The sixth panel color makes unintended clears, and full boards that are hard to read, less likely, but it makes defending against garbage riskier: you can lock out outright, or find every solve ends in a lockout.'
+          'The sixth panel color makes unintended clears, and full board clears that are hard to read less likely, but it makes defending against garbage trickier: you can lock out outright, or find every solve ends in a lockout.'
         ],
         signs: [
           {
@@ -529,7 +529,7 @@ window.GUIDE_SECTIONS = {
             ]
           },
           'finding or carrying out solves later than you would at Level 8',
-          'locking out from burning too much, with 6 colors instead of 5',
+          'locking out from burning too much, with six colors instead of five',
           'struggling with timing at Level 10 speed compared with Level 8',
           'running out of stop time at Level 10, which likely loses the game outright, when you would survive on health at Level 8',
           'relying too much on inserts or frame tricks to chain, or using nothing else'
