@@ -526,10 +526,15 @@ window.HOW_TO_PLAY = {
             {
               "text": "Then it falls one block at a time, never while your top row has panels in it, in this order:",
               "list": [
-                "Chain garbage first, in the order the chains ended. Two or more rows thick (x3 and up), it falls even while you have panels clearing, falling or being swapped.",
-                "An x2's one row waits, like combo garbage, until none of your panels are clearing, falling or being swapped. While it waits, it holds back any chain garbage queued behind it.",
-                "Combo garbage next, narrowest first. It waits the same way, so you can hold it back by keeping matches going.",
-                "Shock garbage last, waiting the same way."
+                {
+                  "text": "Chain garbage first, in the order the chains ended",
+                  "list": [
+                    "x2 chain garbage waits until none of your panels are clearing, falling or being swapped. While it waits, it also holds back any chain garbage queued behind it.",
+                    "Larger chain garbage two or more rows thick (from x3 chains or larger) falls even while you have panels clearing, falling or being swapped."
+                  ]
+                },
+                "Combo garbage next, narrowest first. It waits similar to x2 chain garbage (only falling when no panels are clearing, falling or being swapped, but unlike x2 chain garbage, combo garbage does not hold back chain garbage), so you can hold it back by keeping matches going.",
+                "Shock garbage always goes to the back of the garbage queue, waiting the same way as x2 chain garbage and combo garbage (only falling when no panels are clearing, falling or being swapped, but unlike x2 chain garbage, shock garbage does not hold back chain garbage)."
               ]
             }
           ]
@@ -537,7 +542,7 @@ window.HOW_TO_PLAY = {
         {
           "id": "large-chains-while-clearing",
           "title": "Large Chains While Clearing",
-          "body": "Chain garbage two or more rows thick falls even while your panels are clearing. In the clip, an x3's two rows land in the middle of an x7.",
+          "body": "When there is no garbage queued from x2 chains, chain garbage two or more rows thick falls even while your panels are clearing. In the clip, a garbage block from an x3 chain lands while the chain on the board continues to grow.",
           "clip": {
             "steps": [
               {
@@ -616,7 +621,7 @@ window.HOW_TO_PLAY = {
         {
           "id": "combos-left-to-right",
           "title": "Combos Fall Left to Right",
-          "body": "Each width of combo block takes turns between set places, keeping its own turn through the game:",
+          "body": "Each width of combo block takes turns between set places, keeping its own turn through the game. Column 1 is the leftmost column, counting up to column 6 on the right:",
           "list": [
             "3-wide: the left half, then the right half (columns 1–3, then 4–6)",
             "4-wide: columns 1–4, then 2–5, then 3–6",

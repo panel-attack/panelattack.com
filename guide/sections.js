@@ -607,13 +607,13 @@ window.GUIDE_SECTIONS = {
         kind: 'Capstone',
         tags: ['Technical'],
         body: [
-          'Streamline your attacks as much as you can, with little or no break between them. It takes well-practiced reactions and strong solve vision and accuracy. Ideally your opponent stays topped out all the time, with no chance to empty their garbage queue.',
-          'You make most solves with plenty of time, such as during garbage clears or while large combos or chain extensions resolve. Some solves are only there for a moment, often from matches the revealed panels make after a garbage clear, and some of those lead to much better boards: easier to read and solve, with more panels and better, faster offense. As you sharpen your reactions, pattern recognition and solve accuracy, you will run into far fewer roadblocks in your attacks.'
+          'Streamline your attacks as much as you can, with little or no break between them. Maintaining this throughout each game requires well-practiced reactions, strong solve vision and accuracy, excellent focus, and formidable endurance. Ideally your opponent stays topped out all the time, with no chance to empty their garbage queue.',
+          'You make most solves with plenty of time, such as during garbage clears or while large combos or chain extensions resolve. Some solves are available only for a brief moment, often from matches the revealed panels make after a garbage clear. Moreover, some of these (temporarily available) solves may lead to much better boards: easier to read and solve, with more panels and better, faster offense. As you sharpen your reactions, pattern recognition and solve accuracy, you will run into far fewer roadblocks in your attacks.'
         ],
         signs: [
-          'routing a solve wrongly, breaking your stream of attacks',
-          'making mistakes carrying out a solve, breaking your stream of attacks',
-          'focusing too hard on a combo or chain in progress, instead of moving elsewhere to prepare your next offensive or defensive move',
+          'routing a solve incorrectly, breaking your stream of attacks',
+          'making mistakes while carrying out a solve, breaking your stream of attacks',
+          'focusing too hard on a combo or chain in progress, instead of moving elsewhere to prepare your next offensive or defensive solve',
           'rushing an attack when waiting a little longer would let you send more, or attack with less risky solves'
         ]
       },
@@ -622,13 +622,13 @@ window.GUIDE_SECTIONS = {
         kind: 'Capstone',
         tags: ['Technical'],
         body: [
-          'Keep a rough count of the garbage your opponent has queued, and adjust your stack height and shape to clear it quickly and efficiently. Knowing what falls next, such as only combo garbage or large chains, tells you how to adjust your stack height. <a href="#play-garbage-order">Garbage Order</a> in How to Play explains what falls first. Each time you read it right and act on it, you empty your garbage queue faster.',
-          'As with attacking, you make most garbage clears with plenty of time, such as while downstacking or while large combos or chain extensions resolve. Some solves are only there for a moment, often from matches the revealed panels make after a garbage clear, and some of those lead to much better boards: shorter solves, better places to touch the garbage, fewer panels burned. As you sharpen your reactions, pattern recognition and solve accuracy, you will lose far fewer games early.',
-          'Also practice judging when to use the panels in your second tier or higher to clear garbage near the top of your board, either leaving the garbage below alone for now, or clearing it at the same time as the garbage touching your first tier at the bottom of your stack. That call depends on your pattern recognition, your board, the next wave of garbage, and your reactions and accuracy.'
+          'Keep a rough count of the garbage your opponent has queued, and adjust your stack height and shape to clear it quickly and efficiently. Knowing what falls next, such as only combo garbage or large chains, tells you how to adjust your stack height. <a href="#play-garbage-order">Garbage Order</a> in How to Play explains what falls first. The more accurately you read the garbage queue and respond accordingly, the faster you empty it.',
+          'As with attacking, you make most garbage clears with plenty of time, such as while downstacking or while large combos or chain extensions resolve. Some solves are available only for a brief moment, often from matches the revealed panels make after a garbage clear. Moreover, some of these (temporarily available) solves may lead to much better boards: shorter solves, better places to touch the garbage, fewer panels burned. As you sharpen your reactions, pattern recognition and solve accuracy, you will lose far fewer games early.',
+          'Practice judging when to use the panels in your second tier or higher to clear garbage near the top of your board, either leaving the garbage below alone for now, or clearing it at the same time as the garbage touching your first tier at the bottom of your stack. That call depends on your pattern recognition, your board, the next wave of garbage, and your reactions and accuracy.'
         ],
         signs: [
           'letting too many rows of chain garbage onto your board, so your opponent can fill your garbage queue further while you slowly work through one piece',
-          'clearing combo garbage one piece at a time, which stalls the rest from falling, instead of letting it all land and clearing it with one match (unless you do it on purpose, to have a garbage clear ready once the rest lands at once)',
+          'clearing combo garbage one piece at a time, which stalls the rest from falling, instead of letting it all land and clearing it with one match (unless you do it on purpose, to have a garbage clear ready once the rest lands, in order to clear it all at once)',
           'routing solves in ways that clear garbage poorly: digging out the center and leaving towers, burning too many panels, or scrambling too much',
           'rushing to defend when waiting a little longer would let you clear garbage while counterattacking, or prepare garbage clears with less risky solves',
           'relying on solves beyond what you can do yet (routes, speed, reactions, frame tricks or other techniques), which need more practice on those skills before they work every time'
@@ -639,19 +639,19 @@ window.GUIDE_SECTIONS = {
         kind: 'Capstone',
         tags: ['Conceptual'],
         body: [
-          'By now you should avoid the basic pitfalls, such as clearing through the middle of your stack and leaving two towers, or burning your stack all the way into a lockout. Sharp vision, pattern recognition and reaction speed matter enormously for solves that need extra preparation: at the simplest, avoiding clear walls and other unintended matches; at the most involved, preparing future solves that depend on the current one going a particular way. Solving more efficiently leaves you clearer follow-ups, whether or not things go to plan, so you are less likely to get caught in a scramble or out of position with no solve in sight. When a situation calls for a particular combo or chain, solve in a way that doesn\'t get in the way of your plan.',
+          'By now you should avoid the basic pitfalls, such as clearing through the middle of your stack and leaving two towers, or burning your stack all the way into a lockout. Sharp vision, pattern recognition and reaction speed matter enormously for solves that need extra preparation: at its simplest, avoiding clear walls and other unintended matches; at its most complicated, preparing future solves that depend on the current one going a particular way. Solving more efficiently leaves you clearer follow-ups, whether or not things go to plan, so you are less likely to get caught in a scramble or out of position with no solve in sight. When a situation calls for a particular combo or chain, solve in a way that doesn\'t get in the way of your plan.',
           'A common example is a board explosion from combo garbage: several matches go off across the board, so panels fall different distances in each column. Quickly scan your board for areas you can reliably solve in time, provided you can handle what comes right after the explosion, and commit to a route you can comfortably follow.'
         ],
         signs: [
-          'downstacking more or less than you meant to',
+          'downstacking more or less than you intended',
           {
             text: 'often caught with a poor stack <span class="no-glossary">setup</span>:',
             list: [
               'you can\'t keep attacking despite having plenty of panels',
-              'your attacks stop while you still need to spend more panels, even on attacks, to set up a garbage clear',
-              'you miss out on more combos, combo chain links or chain starters after an attack'
+              'your attacks stop while you still need to spend more panels, even if it generates a small amount of additional offense, to set up a garbage clear'
             ]
           },
+          'you miss out on more combos, combo chain links or chain starters after an attack',
           'often struggling to judge how far panels will fall in each column',
           'struggling to read busier boards, such as during board explosions, in one area or across the whole board'
         ]
@@ -661,10 +661,10 @@ window.GUIDE_SECTIONS = {
         kind: 'Capstone',
         tags: ['Conceptual'],
         body: [
-          'Practice sending what you want with what your board gives you. As long as scrambles or other dangerous boards don\'t get in the way, send the garbage you mean to, ideally whatever threatens your opponent most. Strong pattern recognition and excellent solve routing let you send what you want, when you want and how you want, more often than not.',
+          'Practice sending the garbage you want with what your board gives you. As long as scrambles or other dangerous boards don\'t get in the way, send the garbage you mean to, ideally whatever threatens your opponent most. Strong pattern recognition and excellent solve routing let you send what you want, when you want and how you want, more often than not.',
           'By now you can take advantage of the order the game drops garbage in (see <a href="#play-garbage-order">Garbage Order</a>). Watch what has been sent and what is still to fall, and adjust your attacks to catch your opponent off guard. For example:',
           [
-            'when your opponent expects larger chain garbage to fall, send x2 chains: an x2 waits while they keep clearing, and holds back any larger chain garbage queued behind it',
+            'when your opponent expects larger chain garbage to fall, send x2 chains: garbage from x2 chains does not fall while your opponent clears panels or garbage, holding back any larger chain garbage queued behind it',
             'when your opponent is struggling under a combo storm and hoping for chain garbage to give them more shake time, keep hopping from clear to clear with combos only, or keep extending your current chain, while more combo garbage lands on their board',
             'when your opponent downstacks to a low stack to recover after a board explosion, send a well-timed chain that will likely take up several rows on screen',
             'when your opponent struggles to transition through garbage layers, send factories fast enough to guarantee several tiers of panels, ideally with combo garbage between each piece of chain garbage'
